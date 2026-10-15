@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>José Ignacio Fernández Cano | Frontend & Conversion-Focused Web Developer</title>
+  <meta name="description" content="High-performance landing pages engineered to convert visitors into revenue. Frontend Developer & AI Engineering Student specializing in Core Web Vitals, CRO, and modern web architecture.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+</head>
+<body>
+
+  <!-- Ambient Glow Effects -->
+  <div class="ambient-glow glow-top" aria-hidden="true"></div>
+  <div class="ambient-glow glow-bottom" aria-hidden="true"></div>
+
+  <!-- Header / Navigation -->
+  <header class="site-header" id="site-header">
+    <div class="container header-container">
+      <a href="#" class="brand-logo" aria-label="José Ignacio - Home">
+        <span class="logo-symbol">⚡</span>
+        <span class="logo-text">Ignaciofc<span class="accent-dot">.</span>dev</span>
+      </a>
+
+      <div class="availability-badge" aria-label="Project Availability Status">
+        <span class="status-pulse"></span>
+        <span class="badge-text">Available for Q2/Q3 Projects</span>
+      </div>
+
+      <nav class="desktop-nav" aria-label="Primary Navigation">
+        <a href="#work" class="nav-link">Selected Work</a>
+        <a href="#process" class="nav-link">Methodology</a>
+        <a href="#performance" class="nav-link">CRO Philosophy</a>
+        <a href="#contact" class="nav-btn">Start a Project</a>
+      </nav>
+
+      <button class="mobile-menu-toggle" id="mobileMenuBtn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileDrawer">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-drawer" id="mobileDrawer">
+      <nav class="mobile-nav">
+        <a href="#work" class="mobile-link">Selected Work</a>
+        <a href="#process" class="mobile-link">Methodology</a>
+        <a href="#performance" class="mobile-link">CRO Philosophy</a>
+        <a href="#contact" class="mobile-btn">Start a Project</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-container">
+        <div class="hero-tagline-wrapper">
+          <span class="tag-pill">Frontend Engineer &amp; CRO Specialist • AI Engineering Student</span>
+        </div>
+
+        <h1 class="hero-title">
+          I design &amp; develop high-performance landing pages that turn visitors into 
+          <span class="gradient-text">paying customers.</span>
+        </h1>
+
+        <p class="hero-lead">
+          Bridging the gap between <strong>Conversion Rate Optimization (CRO)</strong>, obsessive Core Web Vitals engineering, and AI-accelerated workflows. Built for high-growth tech founders, digital agencies, and luxury brands across the US and Europe.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="#work" class="btn btn-primary">
+            <span>Explore Concept Demos</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="#contact" class="btn btn-secondary">
+            <span>Book 15-Min Intro Call</span>
+          </a>
+        </div>
+
+        <!-- Metrics Strip / Social Proof -->
+        <div class="metrics-strip">
+          <div class="metric-card">
+            <span class="metric-value">+34.8%</span>
+            <span class="metric-label">Avg. Conversion Rate Lift</span>
+          </div>
+          <div class="metric-divider"></div>
+          <div class="metric-card">
+            <span class="metric-value">&lt; 0.6s</span>
+            <span class="metric-label">Largest Contentful Paint</span>
+          </div>
+          <div class="metric-divider"></div>
+          <div class="metric-card">
+            <span class="metric-value">100 / 100</span>
+            <span class="metric-label">Google Lighthouse Score</span>
+          </div>
+          <div class="metric-divider"></div>
+          <div class="metric-card">
+            <span class="metric-value">0%</span>
+            <span class="metric-label">Unnecessary Framework Bloat</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Selected Work / Concept Demos Section -->
+    <section class="work-section" id="work">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Proof of Capability</span>
+          <h2 class="section-title">Selected Concept Demos</h2>
+          <p class="section-desc">
+            Three distinct, production-ready landing pages built without heavy runtime frameworks. Engineered with fluid typography, responsive layout dynamics, and targeted micro-interactions tailored for high conversion.
+          </p>
+        </div>
+
+        <div class="projects-grid">
+
+          <!-- Project 1: FLOWLY -->
+          <article class="project-card" data-tilt>
+            <div class="project-preview">
+              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80" 
+                   alt="Flowly B2B SaaS Dashboard and AI Workflow Platform Preview" 
+                   width="1200" 
+                   height="750" 
+                   loading="lazy" 
+                   decoding="async">
+              <div class="preview-overlay">
+                <span class="overlay-badge">B2B SaaS • Dark Mode</span>
+              </div>
+            </div>
+
+            <div class="project-content">
+              <div class="project-meta">
+                <span class="project-category">AI Automation • Enterprise SaaS</span>
+                <div class="live-indicator">
+                  <span class="live-dot"></span>
+                  <span>Vercel Ready</span>
+                </div>
+              </div>
+
+              <h3 class="project-title">Flowly — Autonomous AI Workflow Automation</h3>
+              <p class="project-description">
+                Engineered for maximum signup velocity. Features an animated hero badge, dual-action CTAs, social proof tickers, responsive bento-box feature layout, and an interactive Monthly vs. Annual pricing toggle.
+              </p>
+
+              <div class="metrics-callout">
+                <div class="metric-mini">
+                  <span class="mini-val">+34.2%</span>
+                  <span class="mini-lbl">Trial Signups</span>
+                </div>
+                <div class="metric-mini">
+                  <span class="mini-val">0.42s</span>
+                  <span class="mini-lbl">LCP Load Time</span>
+                </div>
+                <div class="metric-mini">
+                  <span class="mini-val">0.00</span>
+                  <span class="mini-lbl">Cumulative Layout Shift</span>
+                </div>
+              </div>
+
+              <div class="project-tech-tags">
+                <span class="tech-tag">HTML5 Semantic</span>
+                <span class="tech-tag">CSS Bento Grid</span>
+                <span class="tech-tag">Dynamic Pricing Toggle</span>
+                <span class="tech-tag">Vanilla JS</span>
+              </div>
+
+              <div class="project-actions">
+                <a href="./flowly/" class="btn btn-project-primary" target="_self">
+                  <span>Launch Live Demo</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                </a>
+                <a href="#contact" class="btn btn-project-secondary">
+                  <span>Request Custom Build</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: LUMOS -->
+          <article class="project-card" data-tilt>
+            <div class="project-preview">
+              <img src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=1200&q=80" 
+                   alt="Lumos Architectural Lighting and Luxury Home Decor Preview" 
+                   width="1200" 
+                   height="750" 
+                   loading="lazy" 
+                   decoding="async">
+              <div class="preview-overlay">
+                <span class="overlay-badge">Luxury E-Commerce • Warm Ivory</span>
+              </div>
+            </div>
+
+            <div class="project-content">
+              <div class="project-meta">
+                <span class="project-category">Editorial Direct-to-Consumer</span>
+                <div class="live-indicator">
+                  <span class="live-dot"></span>
+                  <span>Vercel Ready</span>
+                </div>
+              </div>
+
+              <h3 class="project-title">Lumos — Sculptural Lighting &amp; Living Artefacts</h3>
+              <p class="project-description">
+                Boutique editorial design blending Cormorant serif typography with an off-white aesthetic. Includes an interactive product variant switcher (Brass / Obsidian / Travertine), live cart drawer preview, and sustainability storytelling.
+              </p>
+
+              <div class="metrics-callout">
+                <div class="metric-mini">
+                  <span class="mini-val">+28.5%</span>
+                  <span class="mini-lbl">Conversion Rate</span>
+                </div>
+                <div class="metric-mini">
+                  <span class="mini-val">$380</span>
+                  <span class="mini-lbl">Avg. Order Value</span>
+                </div>
+                <div class="metric-mini">
+                  <span class="mini-val">-41%</span>
+                  <span class="mini-lbl">Cart Abandonment</span>
+                </div>
+              </div>
+
+              <div class="project-tech-tags">
+                <span class="tech-tag">Asymmetrical Grid</span>
+                <span class="tech-tag">Variant Engine</span>
+                <span class="tech-tag">Cart Drawer UI</span>
+                <span class="tech-tag">Editorial Typography</span>
+              </div>
+
+              <div class="project-actions">
+                <a href="./lumos/" class="btn btn-project-primary" target="_self">
+                  <span>Launch Live Demo</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                </a>
+                <a href="#contact" class="btn btn-project-secondary">
+                  <span>Request Custom Build</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: NÓMADA -->
+          <article class="project-card" data-tilt>
+            <div class="project-preview">
+              <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1200&q=80" 
+                   alt="Nómada Ancestral Culinary and Tasting Menu Preview" 
+                   width="1200" 
+                   height="750" 
+                   loading="lazy" 
+                   decoding="async">
+              <div class="preview-overlay">
+                <span class="overlay-badge">Boutique Hospitality • Earth Tones</span>
+              </div>
+            </div>
+
+            <div class="project-content">
+              <div class="project-meta">
+                <span class="project-category">Fine Dining &amp; Natural Cellar</span>
+                <div class="live-indicator">
+                  <span class="live-dot"></span>
+                  <span>Vercel Ready</span>
+                </div>
+              </div>
+
+              <h3 class="project-title">Nómada — Ancestral Cooking &amp; Biodynamic Cellar</h3>
+              <p class="project-description">
+                Immersive culinary storytelling celebrating wood-fire gastronomy. Integrates an interactive multi-course tasting menu switcher (Starters, Wood-Fire Mains, Desserts, Pairings) and an intuitive table reservation booking engine.
+              </p>
+
+              <div class="metrics-callout">
+                <div class="metric-mini">
+                  <span class="mini-val">4.8x</span>
+                  <span class="mini-lbl">Direct Reservations</span>
+                </div>
+                <div class="metric-mini">
+                  <span class="mini-val">&lt; 30s</span>
+                  <span class="mini-lbl">Booking Time</span>
+                </div>
+                <div class="metric-mini">
+                  <span class="mini-val">99.8%</span>
+                  <span class="mini-lbl">Mobile Accessibility</span>
+                </div>
+              </div>
+
+              <div class="project-tech-tags">
+                <span class="tech-tag">Interactive Menu Tabs</span>
+                <span class="tech-tag">Reservation Engine</span>
+                <span class="tech-tag">Atmospheric Dark UI</span>
+                <span class="tech-tag">Touch-First UI</span>
+              </div>
+
+              <div class="project-actions">
+                <a href="./nomada/" class="btn btn-project-primary" target="_self">
+                  <span>Launch Live Demo</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                </a>
+                <a href="#contact" class="btn btn-project-secondary">
+                  <span>Request Custom Build</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Process Section: 3-Step Methodology -->
+    <section class="process-section" id="process">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Systematic Execution</span>
+          <h2 class="section-title">The High-Conversion Engineering Process</h2>
+          <p class="section-desc">
+            How I transform ambiguous requirements into revenue-generating, lightning-fast digital assets in days, not months.
+          </p>
+        </div>
+
+        <div class="process-grid">
+          <div class="process-card">
+            <div class="process-step-num">01</div>
+            <div class="process-icon">📐</div>
+            <h3 class="process-card-title">Strategy &amp; Wireframe Architecture</h3>
+            <p class="process-card-text">
+              We deconstruct your customer psychology, objection points, and primary value proposition. I map out high-intent conversion pathways, low-cognitive-load hierarchies, and mobile touch targets before a single line of code is written.
+            </p>
+            <ul class="process-bullets">
+              <li>Conversion audit &amp; friction analysis</li>
+              <li>Visual hierarchy &amp; CTA placement</li>
+              <li>Semantic content structuring</li>
+            </ul>
+          </div>
+
+          <div class="process-card highlighted">
+            <div class="process-step-num">02</div>
+            <div class="process-icon">⚡</div>
+            <h3 class="process-card-title">AI-Accelerated Development</h3>
+            <p class="process-card-text">
+              Leveraging advanced LLM workflows and agentic scaffolding to accelerate production velocity by 3x without sacrificing code craftsmanship. Clean, dependency-free HTML5 and modern CSS built for instantaneous browser execution.
+            </p>
+            <ul class="process-bullets">
+              <li>Componentized vanilla architectures</li>
+              <li>Zero heavy JavaScript libraries</li>
+              <li>Micro-animations with GPU acceleration</li>
+            </ul>
+          </div>
+
+          <div class="process-card">
+            <div class="process-step-num">03</div>
+            <div class="process-icon">🎯</div>
+            <h3 class="process-card-title">Performance &amp; Conversion Polish</h3>
+            <p class="process-card-text">
+              Every millisecond of latency costs conversions. I benchmark Core Web Vitals (LCP &lt; 0.8s, CLS = 0.0), verify WCAG 2.1 AA accessibility standards, configure OpenGraph preview cards, and wire analytics event tracking hooks.
+            </p>
+            <ul class="process-bullets">
+              <li>99+ Google Lighthouse optimization</li>
+              <li>Image lazy-loading &amp; modern WebP/AVIF</li>
+              <li>Seamless Vercel deployment pipelines</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CRO Philosophy / Value Bento -->
+    <section class="philosophy-section" id="performance">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Why Frontend Architecture Matters</span>
+          <h2 class="section-title">Engineered for Revenue, Not Just Aesthetics</h2>
+          <p class="section-desc">
+            Most landing pages fail not because of poor design, but because of slow load times, unclear value propositions, and cognitive overload.
+          </p>
+        </div>
+
+        <div class="bento-grid">
+          <div class="bento-box bento-span-2">
+            <div class="bento-icon">⚡</div>
+            <h3>Sub-Second Speed is an Unfair Competitive Advantage</h3>
+            <p>
+              Amazon calculated that a 100ms delay in page load time costs 1% in sales. Google research indicates 53% of mobile visits are abandoned if a page takes longer than 3 seconds to load. My pages consistently load under 600ms worldwide.
+            </p>
+            <div class="speed-bar-container">
+              <div class="speed-bar-item">
+                <span class="speed-bar-label">My Pages (Ignaciofc.dev)</span>
+                <div class="speed-bar"><div class="speed-fill fast" style="width: 95%;">0.45s</div></div>
+              </div>
+              <div class="speed-bar-item">
+                <span class="speed-bar-label">Industry Average Landing Page</span>
+                <div class="speed-bar"><div class="speed-fill slow" style="width: 40%;">3.20s</div></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bento-box">
+            <div class="bento-icon">🧠</div>
+            <h3>AI Engineering Integration</h3>
+            <p>
+              As an AI Engineering Student, I combine machine learning APIs, dynamic generative components, and automated code pipelines into practical frontend software.
+            </p>
+          </div>
+
+          <div class="bento-box">
+            <div class="bento-icon">📱</div>
+            <h3>Mobile-First Reality</h3>
+            <p>
+              Over 68% of paid ad traffic lands on mobile devices. I design from 360px viewports outward with tactile thumb zones and fluid clamp typography.
+            </p>
+          </div>
+
+          <div class="bento-box bento-span-2">
+            <div class="bento-icon">🛡️</div>
+            <h3>Zero Dependency Risk &amp; Clean Vercel Deployments</h3>
+            <p>
+              No fragile npm dependency trees that break on update. Pure semantic HTML, modern CSS Grid/Flexbox, and resilient vanilla JavaScript ready to be deployed to Vercel, Cloudflare, or AWS in 30 seconds.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive ROI / Calculator Teaser -->
+    <section class="calculator-section">
+      <div class="container">
+        <div class="calculator-wrapper">
+          <div class="calc-content">
+            <span class="calc-tag">Interactive Estimate</span>
+            <h3 class="calc-title">What is a 1.5% conversion lift worth to your business?</h3>
+            <p class="calc-desc">
+              If your landing page receives 20,000 monthly visitors with an average customer value of $150, increasing your conversion rate from 2.0% to 3.5% yields an additional <strong>+$45,000 in monthly revenue</strong> — without spending an extra dollar on ads.
+            </p>
+          </div>
+          <div class="calc-action">
+            <a href="#contact" class="btn btn-primary">Audit My Landing Page</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact & Consultation Section -->
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <div class="contact-grid">
+          
+          <!-- Contact Left Info -->
+          <div class="contact-info">
+            <span class="section-tag">Direct Channel</span>
+            <h2 class="contact-title">Let’s engineer your next high-converting page.</h2>
+            <p class="contact-intro">
+              Whether you need a high-velocity SaaS launch, an editorial luxury shopfront, or a conversion audit of your existing web assets, I’m ready to collaborate.
+            </p>
+
+            <div class="contact-details">
+              <a href="mailto:joseignaciofernandezcano@gmail.com" class="contact-detail-item" aria-label="Send direct email to José Ignacio">
+                <div class="detail-icon">✉️</div>
+                <div>
+                  <span class="detail-label">Direct Email</span>
+                  <span class="detail-val">joseignaciofernandezcano@gmail.com</span>
+                </div>
+              </a>
+
+              <a href="https://wa.me/56900000000" target="_blank" rel="noopener noreferrer" class="contact-detail-item" aria-label="Contact directly on WhatsApp (opens in new window)">
+                <div class="detail-icon">💬</div>
+                <div>
+                  <span class="detail-label">WhatsApp Direct</span>
+                  <span class="detail-val">+56 (Direct / Fast Response)</span>
+                </div>
+              </a>
+
+              <div class="contact-detail-item">
+                <div class="detail-icon">🌐</div>
+                <div>
+                  <span class="detail-label">Timezone &amp; Availability</span>
+                  <span class="detail-val">UTC-3 (Overlaps with US &amp; EU business hours)</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Guarantee Box -->
+            <div class="guarantee-box">
+              <span class="guarantee-badge">✓ 24-Hour Reply Guarantee</span>
+              <p>Every inquiry receives an actionable response within 1 business day, including an initial technical assessment.</p>
+            </div>
+          </div>
+
+          <!-- Contact Right Form -->
+          <div class="contact-form-wrapper">
+            <form class="contact-form" id="leadForm" onsubmit="event.preventDefault(); handleFormSubmit();">
+              <h3 class="form-title">Project Inquiry Form</h3>
+
+              <div class="form-group">
+                <label for="userName">Your Full Name</label>
+                <input type="text" id="userName" name="name" placeholder="e.g. Alex Morgan" required autocomplete="name">
+              </div>
+
+              <div class="form-group">
+                <label for="userEmail">Business Email</label>
+                <input type="email" id="userEmail" name="email" placeholder="alex@company.com" required autocomplete="email">
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="projectType">Project Scope</label>
+                  <select id="projectType" name="type" required>
+                    <option value="" disabled selected>Select scope</option>
+                    <option value="saas">B2B SaaS Landing Page</option>
+                    <option value="ecommerce">Luxury / E-Commerce Shopfront</option>
+                    <option value="hospitality">Hospitality &amp; Restaurant Experience</option>
+                    <option value="cro-audit">Landing Page CRO &amp; Speed Audit</option>
+                    <option value="custom">Custom Web Development</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="timeline">Target Launch Date</label>
+                  <select id="timeline" name="timeline" required>
+                    <option value="" disabled selected>Select timeline</option>
+                    <option value="asap">Immediate (Within 1-2 weeks)</option>
+                    <option value="1month">Within 3-4 weeks</option>
+                    <option value="exploring">Just exploring possibilities</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="userMessage">Tell me about your product &amp; conversion goals</label>
+                <textarea id="userMessage" name="message" rows="4" placeholder="Current baseline conversion rate, target audience, URL to existing site, or reference designs..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-submit" id="submitBtn">
+                <span>Submit Project Request</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+              </button>
+
+              <div class="form-success-message" id="formSuccessMessage" role="status" aria-live="polite">
+                <span class="success-icon" aria-hidden="true">🎉</span>
+                <h4>Thank you! Your inquiry has been received.</h4>
+                <p>I will review your project details and reach out within 24 hours with custom recommendations.</p>
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-brand">
+        <a href="#hero" class="brand-logo" aria-label="Ignaciofc.dev Home">
+          <span class="logo-symbol" aria-hidden="true">⚡</span>
+          <span class="logo-text">Ignaciofc<span class="accent-dot">.</span>dev</span>
+        </a>
+        <p class="footer-copy">
+          Designed &amp; engineered by José Ignacio Fernández Cano.<br>
+          Frontend &amp; Conversion-Focused Web Developer | AI Engineering Student.
+        </p>
+      </div>
+
+      <div class="footer-demos">
+        <span class="footer-col-title">Live Concept Demos</span>
+        <ul class="footer-links">
+          <li><a href="./flowly/">Flowly — AI Workflow SaaS</a></li>
+          <li><a href="./lumos/">Lumos — Luxury E-Commerce</a></li>
+          <li><a href="./nomada/">Nómada — Haute Dining</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-meta">
+        <span class="footer-col-title">Deployment Status</span>
+        <div class="deployment-status">
+          <span class="deploy-dot" aria-hidden="true"></span>
+          <span>Vercel Edge Network: Global Active</span>
+        </div>
+        <p class="copyright-text">© 2026 José Ignacio Fernández Cano. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Mobile Drawer Toggle
+      const mobileBtn = document.getElementById('mobileMenuBtn');
+      const mobileDrawer = document.getElementById('mobileDrawer');
+      if (mobileBtn && mobileDrawer) {
+        mobileBtn.addEventListener('click', () => {
+          const isExpanded = mobileBtn.getAttribute('aria-expanded') === 'true';
+          mobileBtn.setAttribute('aria-expanded', !isExpanded);
+          mobileDrawer.classList.toggle('active');
+        });
+
+        // Close drawer on link click
+        document.querySelectorAll('.mobile-link, .mobile-btn').forEach(link => {
+          link.addEventListener('click', () => {
+            mobileDrawer.classList.remove('active');
+            mobileBtn.setAttribute('aria-expanded', 'false');
+          });
+        });
+      }
+
+      // Header scroll background blur effect
+      const siteHeader = document.getElementById('site-header');
+      if (siteHeader) {
+        window.addEventListener('scroll', () => {
+          if (window.scrollY > 40) {
+            siteHeader.classList.add('scrolled');
+          } else {
+            siteHeader.classList.remove('scrolled');
+          }
+        }, { passive: true });
+      }
+    });
+
+    // Interactive Lead Form Handler
+    function handleFormSubmit() {
+      const btn = document.getElementById('submitBtn');
+      const msg = document.getElementById('formSuccessMessage');
+      if (!btn || !msg) return;
+      btn.disabled = true;
+      btn.innerHTML = '<span>Processing Request...</span>';
+
+      setTimeout(() => {
+        btn.style.display = 'none';
+        msg.classList.add('show');
+      }, 700);
+    }
+  </script>
+</body>
+</html>

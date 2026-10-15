@@ -1,0 +1,860 @@
+/* ==========================================================================
+   NÓMADA - BOUTIQUE RESTAURANT & HOSPITALITY STYLESHEET
+   Deep Umber / Terre-Cuite / Ember Ochre & Cinzel Classic Serif
+   ========================================================================== */
+
+:root {
+  /* Warm Earth & Ember Palette */
+  --no-bg-dark: #0d0b0a;
+  --no-bg-surface: #171412;
+  --no-bg-elevated: #221e1a;
+  --no-bg-card: rgba(28, 23, 20, 0.7);
+
+  --no-border: rgba(255, 255, 255, 0.08);
+  --no-border-warm: rgba(200, 90, 50, 0.35);
+
+  --no-text-cream: #f5efe6;
+  --no-text-muted: #a89f91;
+  --no-text-dim: #8c8275;
+
+  --no-terracotta: #c85a32;
+  --no-terracotta-hover: #b34a24;
+  --no-ember: #e67e22;
+  --no-gold: #d4a373;
+
+  /* Typography */
+  --no-font-serif: 'Cinzel', Georgia, serif;
+  --no-font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  /* Layout */
+  --no-max-width: 1200px;
+  --no-radius-sm: 4px;
+  --no-radius-md: 10px;
+  --no-transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--no-font-sans);
+  background-color: var(--no-bg-dark);
+  color: var(--no-text-cream);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+body.nomada-body {
+  position: relative;
+  background-color: var(--no-bg-dark);
+  overflow-x: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--no-max-width);
+  margin-inline: auto;
+  padding-inline: clamp(1.25rem, 4vw, 2.5rem);
+}
+
+/* --- Fixed Top Subtle Portfolio Return Bar --- */
+.portfolio-back-bar {
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  background: rgba(13, 11, 10, 0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--no-border);
+  padding: 0.5rem clamp(1rem, 3vw, 2.5rem);
+}
+
+.banner-inner {
+  max-width: var(--no-max-width);
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: var(--no-gold);
+  text-decoration: none;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  transition: var(--no-transition);
+}
+
+.back-link:hover {
+  color: #fff;
+  transform: translateX(-2px);
+}
+
+.banner-badge {
+  font-size: 0.72rem;
+  color: var(--no-text-muted);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* --- Restaurant Header --- */
+.nomada-header {
+  padding-block: 1.25rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nomada-nav-left {
+  display: none;
+  align-items: center;
+  gap: 1.75rem;
+}
+
+@media (min-width: 800px) {
+  .nomada-nav-left {
+    display: flex;
+  }
+}
+
+.nav-item {
+  color: var(--no-text-muted);
+  text-decoration: none;
+  font-size: 0.84rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: var(--no-transition);
+}
+
+.nav-item:hover {
+  color: var(--no-gold);
+}
+
+.nomada-brand {
+  text-decoration: none;
+  color: var(--no-text-cream);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.brand-glyph {
+  font-size: 0.9rem;
+  color: var(--no-terracotta);
+  margin-bottom: 0.1rem;
+}
+
+.brand-name {
+  font-family: var(--no-font-serif);
+  font-size: clamp(1.4rem, 2.5vw, 1.85rem);
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  line-height: 1;
+}
+
+.brand-sub {
+  font-size: 0.62rem;
+  letter-spacing: 0.35em;
+  color: var(--no-gold);
+  margin-top: 0.25rem;
+  font-weight: 600;
+}
+
+.nomada-nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.service-hours {
+  font-size: 0.82rem;
+  color: var(--no-text-dim);
+  letter-spacing: 0.05em;
+}
+
+@media (max-width: 899px) {
+  .desktop-only {
+    display: none;
+  }
+}
+
+.btn-book-header {
+  background: var(--no-terracotta);
+  color: #fff;
+  text-decoration: none;
+  padding: 0.55rem 1.15rem;
+  border-radius: var(--no-radius-sm);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: var(--no-transition);
+}
+
+.btn-book-header:hover {
+  background: var(--no-terracotta-hover);
+  transform: translateY(-1px);
+}
+
+/* --- Hero Section --- */
+.nomada-hero {
+  position: relative;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  padding-block: clamp(4rem, 8vw, 7rem);
+}
+
+.hero-media-wrapper {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.hero-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.4) contrast(1.15);
+  transform: scale(1.02);
+}
+
+.hero-atmospheric-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(13, 11, 10, 0.4) 0%, rgba(13, 11, 10, 0.85) 75%, var(--no-bg-dark) 100%);
+}
+
+.hero-caption-container {
+  position: relative;
+  z-index: 1;
+  max-width: 820px;
+}
+
+.michelin-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(200, 90, 50, 0.2);
+  border: 1px solid rgba(200, 90, 50, 0.4);
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  color: #ffb799;
+  margin-bottom: 1.5rem;
+}
+
+.star-icon {
+  color: #f59e0b;
+}
+
+.nomada-title {
+  font-family: var(--no-font-serif);
+  font-size: clamp(2.4rem, 5.5vw, 4.4rem);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  color: var(--no-text-cream);
+}
+
+.nomada-lead {
+  font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+  color: #d1c7b8;
+  line-height: 1.7;
+  margin-bottom: 2.5rem;
+  max-width: 680px;
+}
+
+.hero-cta-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 3.5rem;
+}
+
+.btn-nomada-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: var(--no-terracotta);
+  color: #fff;
+  text-decoration: none;
+  padding: 0.95rem 1.85rem;
+  border-radius: var(--no-radius-sm);
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: var(--no-transition);
+  box-shadow: 0 4px 20px rgba(200, 90, 50, 0.4);
+}
+
+.btn-nomada-primary:hover {
+  background: var(--no-terracotta-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(200, 90, 50, 0.55);
+}
+
+.btn-nomada-outline {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--no-text-cream);
+  text-decoration: none;
+  padding: 0.95rem 1.75rem;
+  border-radius: var(--no-radius-sm);
+  font-size: 0.88rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  transition: var(--no-transition);
+}
+
+.btn-nomada-outline:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+/* Service Strip */
+.service-pill-strip {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.25rem 1.75rem;
+  background: rgba(23, 20, 18, 0.85);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--no-border);
+  border-radius: var(--no-radius-sm);
+}
+
+.service-pill-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.pill-kicker {
+  font-size: 0.68rem;
+  color: var(--no-gold);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.service-pill-item strong {
+  font-size: 0.92rem;
+  color: var(--no-text-cream);
+}
+
+.pill-divider {
+  width: 1px;
+  height: 30px;
+  background: var(--no-border);
+}
+
+/* --- Menu Section & Interactive Tabs --- */
+.menu-section {
+  padding-block: clamp(3.5rem, 7vw, 6.5rem);
+}
+
+.nomada-section-header {
+  text-align: center;
+  max-width: 720px;
+  margin-inline: auto;
+  margin-bottom: 3rem;
+}
+
+.nomada-kicker {
+  display: block;
+  font-size: 0.76rem;
+  letter-spacing: 0.22em;
+  color: var(--no-terracotta);
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.nomada-section-title {
+  font-family: var(--no-font-serif);
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin-bottom: 1rem;
+}
+
+.nomada-section-desc {
+  font-size: 1.05rem;
+  color: var(--no-text-muted);
+  line-height: 1.7;
+}
+
+.menu-tab-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-top: 2rem;
+}
+
+.menu-tab-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  background: var(--no-bg-surface);
+  border: 1px solid var(--no-border);
+  color: var(--no-text-muted);
+  padding: 0.65rem 1.25rem;
+  border-radius: var(--no-radius-sm);
+  font-family: var(--no-font-sans);
+  font-size: 0.84rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: var(--no-transition);
+}
+
+.menu-tab-btn:hover {
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.menu-tab-btn.active {
+  background: var(--no-terracotta);
+  border-color: var(--no-terracotta);
+  color: #fff;
+}
+
+/* Dishes Grid */
+.menu-panel {
+  display: none;
+}
+
+.menu-panel.active {
+  display: block;
+  animation: fadeInDish 0.35s ease;
+}
+
+@keyframes fadeInDish {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.dish-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+.dish-card {
+  background: var(--no-bg-surface);
+  border: 1px solid var(--no-border);
+  padding: 1.75rem;
+  border-radius: var(--no-radius-sm);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: var(--no-transition);
+}
+
+.dish-card:hover {
+  border-color: var(--no-border-warm);
+  transform: translateY(-2px);
+}
+
+.dish-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 0.6rem;
+}
+
+.dish-name {
+  font-family: var(--no-font-serif);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--no-text-cream);
+}
+
+.dish-price {
+  font-family: var(--no-font-serif);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--no-gold);
+}
+
+.dish-desc {
+  font-size: 0.92rem;
+  color: var(--no-text-muted);
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+}
+
+.dish-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--no-border);
+  padding: 0.2rem 0.55rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  color: #d1c7b8;
+  border-radius: 2px;
+}
+
+/* --- Chef Philosophy Section --- */
+.philosophy-section {
+  padding-block: clamp(3.5rem, 7vw, 6rem);
+  background: var(--no-bg-surface);
+  border-block: 1px solid var(--no-border);
+}
+
+.philosophy-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(2.5rem, 5vw, 4.5rem);
+  align-items: center;
+}
+
+@media (min-width: 900px) {
+  .philosophy-grid {
+    grid-template-columns: 1.1fr 1fr;
+  }
+}
+
+.philosophy-img-wrap {
+  position: relative;
+  border-radius: var(--no-radius-sm);
+  overflow: hidden;
+  border: 1px solid var(--no-border);
+}
+
+.philosophy-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hearth-stat-box {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  background: rgba(13, 11, 10, 0.9);
+  border: 1px solid var(--no-border-warm);
+  padding: 1rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.hearth-temp {
+  font-family: var(--no-font-serif);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--no-terracotta);
+}
+
+.hearth-lbl {
+  font-size: 0.72rem;
+  color: var(--no-text-muted);
+  text-transform: uppercase;
+}
+
+.philosophy-p {
+  font-size: 1.05rem;
+  color: var(--no-text-muted);
+  line-height: 1.75;
+  margin-bottom: 1.25rem;
+}
+
+.chef-signature {
+  margin-top: 2rem;
+  border-top: 1px solid var(--no-border);
+  padding-top: 1.25rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.chef-name {
+  font-family: var(--no-font-serif);
+  font-size: 1.2rem;
+  letter-spacing: 0.05em;
+  color: var(--no-text-cream);
+}
+
+.chef-role {
+  font-size: 0.8rem;
+  color: var(--no-gold);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* --- Table Reservation Widget --- */
+.reservation-section {
+  padding-block: clamp(3.5rem, 7vw, 6.5rem);
+}
+
+.reservation-card-wrapper {
+  background: var(--no-bg-surface);
+  border: 1px solid var(--no-border);
+  border-radius: var(--no-radius-md);
+  padding: clamp(2rem, 5vw, 4rem);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(2.5rem, 5vw, 4.5rem);
+}
+
+@media (min-width: 900px) {
+  .reservation-card-wrapper {
+    grid-template-columns: 1fr 1.3fr;
+  }
+}
+
+.res-title {
+  font-family: var(--no-font-serif);
+  font-size: clamp(1.8rem, 3.2vw, 2.6rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.res-desc {
+  font-size: 0.98rem;
+  color: var(--no-text-muted);
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.res-perks {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.res-perk-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.88rem;
+  color: #d1c7b8;
+}
+
+.perk-bullet {
+  color: var(--no-terracotta);
+  font-weight: bold;
+}
+
+/* Booking Form Elements */
+.booking-widget form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.widget-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+@media (min-width: 600px) {
+  .widget-row {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.form-group-nomada {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.form-group-nomada label {
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--no-gold);
+  font-weight: 600;
+}
+
+.form-group-nomada input,
+.form-group-nomada select {
+  background: var(--no-bg-dark);
+  border: 1px solid var(--no-border);
+  padding: 0.8rem 1rem;
+  color: var(--no-text-cream);
+  font-family: inherit;
+  font-size: 0.92rem;
+  border-radius: var(--no-radius-sm);
+  outline: none;
+  transition: var(--no-transition);
+}
+
+.form-group-nomada input:focus,
+.form-group-nomada select:focus {
+  border-color: var(--no-terracotta);
+}
+
+.btn-submit-booking {
+  width: 100%;
+  margin-top: 0.5rem;
+  background: var(--no-terracotta);
+  color: #fff;
+  border: none;
+  padding: 1.1rem;
+  border-radius: var(--no-radius-sm);
+  font-family: var(--no-font-sans);
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  transition: var(--no-transition);
+}
+
+.btn-submit-booking:hover {
+  background: var(--no-terracotta-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(200, 90, 50, 0.45);
+}
+
+.booking-success-box {
+  display: none;
+  background: rgba(200, 90, 50, 0.12);
+  border: 1px solid var(--no-terracotta);
+  padding: 1.5rem;
+  border-radius: var(--no-radius-sm);
+  text-align: center;
+}
+
+.booking-success-box.active {
+  display: block;
+  animation: fadeInDish 0.4s ease;
+}
+
+.success-glyph {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.booking-success-box h4 {
+  font-family: var(--no-font-serif);
+  font-size: 1.25rem;
+  color: var(--no-text-cream);
+  margin-bottom: 0.4rem;
+}
+
+.booking-success-box p {
+  font-size: 0.92rem;
+  color: #d1c7b8;
+  line-height: 1.6;
+}
+
+/* --- Restaurant Footer --- */
+.nomada-footer {
+  border-top: 1px solid var(--no-border);
+  padding-block: 4.5rem 2.5rem;
+  background: #080706;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.footer-logo {
+  font-size: 1.6rem;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.footer-motto {
+  font-size: 0.88rem;
+  color: var(--no-text-muted);
+  line-height: 1.7;
+}
+
+.col-head {
+  display: block;
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--no-gold);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.footer-col p {
+  font-size: 0.88rem;
+  color: var(--no-text-muted);
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+
+.footer-col a {
+  display: block;
+  color: var(--no-text-muted);
+  text-decoration: none;
+  font-size: 0.88rem;
+  margin-bottom: 0.5rem;
+  transition: var(--no-transition);
+}
+
+.footer-col a:hover {
+  color: var(--no-terracotta);
+}
+
+.footer-sub {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.78rem;
+  color: var(--no-text-dim);
+}
+
+@media (min-width: 700px) {
+  .footer-sub {
+    flex-direction: row;
+  }
+}
+
+.sub-back-link {
+  color: var(--no-gold);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.sub-back-link:hover {
+  color: #fff;
+}

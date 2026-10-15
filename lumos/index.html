@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LUMOS — Sculptural Luminaires &amp; Contemporary Objects</title>
+  <meta name="description" content="Editorial luxury lighting atelier. Handcrafted sculptural luminaires forged from solid unlacquered brass, mouth-blown opal glass, and Italian travertine.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✨</text></svg>">
+</head>
+<body class="lumos-body">
+
+  <!-- Fixed Top Subtle Portfolio Return Bar -->
+  <aside class="portfolio-back-bar" role="navigation" aria-label="Portfolio return link">
+    <div class="banner-inner">
+      <a href="../index.html" class="back-link">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+        <span>← Back to Ignacio's Portfolio</span>
+      </a>
+      <span class="banner-badge">Demo 02: Luxury Editorial E-Commerce</span>
+    </div>
+  </aside>
+
+  <!-- Editorial Announcement Bar -->
+  <div class="editorial-topbar">
+    <p>Edition IV: Archival Luminaires Now Available • Complimentary White-Glove Courier Worldwide</p>
+  </div>
+
+  <!-- Atelier Header -->
+  <header class="atelier-header" id="atelierHeader">
+    <div class="container header-grid">
+      <nav class="nav-left" aria-label="Catalog Navigation">
+        <a href="#collection" class="nav-anchor">Collection</a>
+        <a href="#craft" class="nav-anchor">Materials</a>
+        <a href="#lookbook" class="nav-anchor">Lookbook</a>
+      </nav>
+
+      <a href="#" class="brand-monogram">
+        <span class="monogram-text">LUMOS</span>
+        <span class="monogram-sub">ATELIER D'ART</span>
+      </a>
+
+      <div class="nav-right">
+        <a href="#featured" class="nav-anchor desktop-only">Inquire</a>
+        <button class="cart-trigger" id="cartTrigger" aria-label="View Shopping Bag">
+          <span class="bag-label">Bag</span>
+          <span class="bag-count" id="cartCount">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section: Immersive Product Showcase -->
+    <section class="hero-editorial" id="featured">
+      <div class="container hero-layout">
+        
+        <!-- Left Hero Column: Narrative & Conversion Callout -->
+        <div class="hero-text-block">
+          <span class="collection-season">PERMANENT COLLECTION • NO. 04</span>
+          <h1 class="hero-product-title">The Solis Table Luminaire</h1>
+          <p class="hero-aesthetic-desc">
+            An exploration of weight, warmth, and radial illumination. Turned solid unlacquered brass base paired with a double-etched, mouth-blown acid opal glass orb. Emits an amber temperature of 2200K reminiscent of sunset dusk.
+          </p>
+
+          <div class="hero-pricing-box">
+            <span class="current-price">$485 <small class="currency-code">USD</small></span>
+            <span class="stock-status">
+              <span class="status-pulse-dot" aria-hidden="true"></span> In Stock • Ships within 48h
+            </span>
+          </div>
+
+          <!-- Quick Buy / Add to Bag Action -->
+          <div class="hero-actions">
+            <button class="btn-bag-primary" id="heroQuickBuy" onclick="addToBag('The Solis Table Luminaire', 485)">
+              <span>Add to Shopping Bag</span>
+              <span class="btn-divider" aria-hidden="true">|</span>
+              <span>$485</span>
+            </button>
+            <a href="#collection" class="btn-editorial-text">View Dimensions &amp; Technical Spec ↓</a>
+          </div>
+
+          <div class="hero-commitments">
+            <div class="commit-item">
+              <span class="commit-icon" aria-hidden="true">✦</span>
+              <span>Solid Unlacquered Brass</span>
+            </div>
+            <div class="commit-item">
+              <span class="commit-icon" aria-hidden="true">✦</span>
+              <span>10-Year Craft Warranty</span>
+            </div>
+            <div class="commit-item">
+              <span class="commit-icon" aria-hidden="true">✦</span>
+              <span>Zero-Plastic Curation</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Hero Column: Large Visual with Variant Selector -->
+        <div class="hero-visual-block">
+          <div class="product-stage">
+            <img id="mainProductImg" 
+                 src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=1200&q=85" 
+                 alt="The Solis Table Luminaire in Hand-Finished Brass" 
+                 width="1200" 
+                 height="1350" 
+                 loading="eager" 
+                 fetchpriority="high" 
+                 decoding="async">
+            
+            <div class="stage-tag">
+              <span id="finishDisplay">Brushed Raw Brass Finish</span>
+            </div>
+          </div>
+
+          <!-- Interactive Finish Switcher -->
+          <div class="variant-selector-card">
+            <div class="variant-info">
+              <span class="variant-label">Select Archival Material Finish:</span>
+              <strong id="activeFinishLabel">Brushed Raw Brass</strong>
+            </div>
+
+            <div class="swatches-row" role="radiogroup" aria-label="Luminaire Finish Finishes">
+              <button class="swatch-btn active" 
+                      data-finish="Brushed Raw Brass"
+                      data-img="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=1200&q=85"
+                      style="background: #d4af37;" 
+                      title="Brushed Raw Brass" 
+                      aria-label="Brushed Raw Brass"></button>
+
+              <button class="swatch-btn" 
+                      data-finish="Matte Obsidian Patina"
+                      data-img="https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&w=1200&q=85"
+                      style="background: #1c1c1e;" 
+                      title="Matte Obsidian Patina" 
+                      aria-label="Matte Obsidian Patina"></button>
+
+              <button class="swatch-btn" 
+                      data-finish="Honed Roman Travertine"
+                      data-img="https://images.unsplash.com/photo-1540932239986-30128078f3c5?auto=format&fit=crop&w=1200&q=85"
+                      style="background: #e3d9c6;" 
+                      title="Honed Roman Travertine" 
+                      aria-label="Honed Roman Travertine"></button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Asymmetrical Curated Lookbook & Collection Grid -->
+    <section class="collection-section" id="collection">
+      <div class="container">
+        <div class="editorial-section-header">
+          <span class="section-kicker">CURATED OBJECTS</span>
+          <h2 class="section-serif-title">Luminaires for Thoughtful Interiors</h2>
+          <p class="section-subtext">Each piece is individually numbered and accompanied by an artisan certificate of provenance.</p>
+        </div>
+
+        <div class="asymmetric-grid">
+          
+          <!-- Product Card 1: Large Vertical Accent -->
+          <article class="lumos-card card-tall">
+            <div class="card-image-wrap">
+              <img src="https://images.unsplash.com/photo-1540932239986-30128078f3c5?auto=format&fit=crop&w=900&q=80" 
+                   alt="The Kanso Floor Monolith" 
+                   width="900" 
+                   height="1237" 
+                   loading="lazy" 
+                   decoding="async">
+              <button class="quick-add-btn" onclick="addToBag('The Kanso Floor Monolith', 890)">+ Quick Add</button>
+            </div>
+            <div class="card-details">
+              <div class="card-title-row">
+                <h3 class="card-name">The Kanso Floor Monolith</h3>
+                <span class="card-price">$890</span>
+              </div>
+              <p class="card-materials">Carved Roman Travertine &amp; Smoked Cast Glass</p>
+            </div>
+          </article>
+
+          <!-- Product Card 2: Standard Editorial -->
+          <article class="lumos-card">
+            <div class="card-image-wrap">
+              <img src="https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&w=900&q=80" 
+                   alt="The Dune Chandelier" 
+                   width="900" 
+                   height="855" 
+                   loading="lazy" 
+                   decoding="async">
+              <button class="quick-add-btn" onclick="addToBag('The Dune Chandelier', 1420)">+ Quick Add</button>
+            </div>
+            <div class="card-details">
+              <div class="card-title-row">
+                <h3 class="card-name">The Dune Radial Chandelier</h3>
+                <span class="card-price">$1,420</span>
+              </div>
+              <p class="card-materials">Hand-Spun Raw Bronze &amp; Opal Diffusers</p>
+            </div>
+          </article>
+
+          <!-- Product Card 3: Standard Editorial -->
+          <article class="lumos-card">
+            <div class="card-image-wrap">
+              <img src="https://images.unsplash.com/photo-1534349762230-e0cadf78f5da?auto=format&fit=crop&w=900&q=80" 
+                   alt="The Aethel Brass Sconce" 
+                   width="900" 
+                   height="855" 
+                   loading="lazy" 
+                   decoding="async">
+              <button class="quick-add-btn" onclick="addToBag('The Aethel Brass Sconce', 340)">+ Quick Add</button>
+            </div>
+            <div class="card-details">
+              <div class="card-title-row">
+                <h3 class="card-name">The Aethel Flush Sconce</h3>
+                <span class="card-price">$340</span>
+              </div>
+              <p class="card-materials">Polished Warm Nickel with Knurled Rotary Switch</p>
+            </div>
+          </article>
+
+          <!-- Product Card 4: Wide Feature Block -->
+          <article class="lumos-card card-wide">
+            <div class="card-image-wrap">
+              <img src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=1200&q=80" 
+                   alt="The Vesper Pendant Trio" 
+                   width="1200" 
+                   height="675" 
+                   loading="lazy" 
+                   decoding="async">
+              <button class="quick-add-btn" onclick="addToBag('The Vesper Pendant Trio', 960)">+ Quick Add</button>
+            </div>
+            <div class="card-details">
+              <div class="card-title-row">
+                <h3 class="card-name">The Vesper Linear Pendant System</h3>
+                <span class="card-price">$960</span>
+              </div>
+              <p class="card-materials">Custom Architectural Suspension in Antique Patina</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Material Integrity & Sustainability Section -->
+    <section class="craft-section" id="craft">
+      <div class="container craft-grid">
+        <div class="craft-editorial-lead">
+          <span class="section-kicker">MATERIAL HONESTY</span>
+          <h2 class="section-serif-title">Honoring raw geological elements and artisanal longevity.</h2>
+          <p class="craft-body">
+            We reject ephemeral plastic consumerism and mass-injection molds. Every Lumos component is selected for its tactile resonance and capacity to age gracefully over decades, cultivating an organic patina that mirrors the character of your home.
+          </p>
+        </div>
+
+        <div class="craft-pillars">
+          <div class="pillar-box">
+            <span class="pillar-num">01</span>
+            <h4 class="pillar-title">Solid Unlacquered Brass</h4>
+            <p class="pillar-desc">
+              Milled from dense architectural-grade billets. Free of synthetic clear coats, allowing natural oxidation to develop a deep, personalized luster.
+            </p>
+          </div>
+
+          <div class="pillar-box">
+            <span class="pillar-num">02</span>
+            <h4 class="pillar-title">Mouth-Blown Opal Glass</h4>
+            <p class="pillar-desc">
+              Formed by Master Glassblowers in Veneto, Italy. Triple-cased opal glass provides warm, glare-free optical diffusion at all dimming levels.
+            </p>
+          </div>
+
+          <div class="pillar-box">
+            <span class="pillar-num">03</span>
+            <h4 class="pillar-title">Tivoli Roman Travertine</h4>
+            <p class="pillar-desc">
+              Quarried sustainably from historical Roman formations. Hand-honed to a velvety tactile finish where no two stone striations are identical.
+            </p>
+          </div>
+
+          <div class="pillar-box">
+            <span class="pillar-num">04</span>
+            <h4 class="pillar-title">100% Recyclable Packaging</h4>
+            <p class="pillar-desc">
+              Cushioned entirely in molded unbleached pulp and organic linen bindings. Zero styrofoam, zero petroleum plastics, carbon-neutral delivery.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Press & Architecture Acclaims -->
+    <section class="press-section">
+      <div class="container">
+        <div class="press-quote-wrap">
+          <blockquote class="press-quote">
+            “Lumos crafts luminaires that blur the boundary between functional lighting and museum-grade sculpture. The Solis is already an instant modern classic.”
+          </blockquote>
+          <cite class="press-author">— Architectural Digest Interiors Review</cite>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter & Private Drop Access -->
+    <section class="newsletter-section">
+      <div class="container">
+        <div class="newsletter-card">
+          <span class="section-kicker">PRIVATE ACCESS</span>
+          <h3 class="newsletter-title">Receive invitations to limited edition releases</h3>
+          <p class="newsletter-desc">Small-batch studio drops sell out within hours. Subscribers receive 24-hour advance acquisition windows.</p>
+          
+          <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing to Lumos Private Access.');">
+            <input type="email" placeholder="Enter your email address" required aria-label="Email address for private access">
+            <button type="submit" class="btn-newsletter">Request Invitation</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Interactive Slide-in Cart Toast -->
+  <div class="cart-toast" id="cartToast" aria-live="polite">
+    <div class="toast-content">
+      <span class="toast-check">✓</span>
+      <div>
+        <p class="toast-title" id="toastItemName">Item added to your bag</p>
+        <span class="toast-sub">Complimentary carbon-neutral express courier applied</span>
+      </div>
+    </div>
+    <a href="#featured" class="toast-checkout-link">Checkout Now →</a>
+  </div>
+
+  <!-- Atelier Footer -->
+  <footer class="atelier-footer">
+    <div class="container footer-layout">
+      <div class="f-brand-side">
+        <span class="monogram-text">LUMOS</span>
+        <p class="f-brand-desc">
+          Sculptural illumination and living objects designed for architectural permanence.
+        </p>
+      </div>
+
+      <div class="f-links-grid">
+        <div class="f-column">
+          <span class="f-head">Atelier</span>
+          <a href="#collection">Permanent Collection</a>
+          <a href="#craft">Material Ethics</a>
+          <a href="#featured">Bespoke Architectural Inquiries</a>
+          <a href="#craft">Trade &amp; Hospitality Program</a>
+        </div>
+        <div class="f-column">
+          <span class="f-head">Care &amp; Delivery</span>
+          <a href="#">White-Glove Courier</a>
+          <a href="#">Patina Care Manual</a>
+          <a href="#">10-Year Craft Warranty</a>
+          <a href="#">Returns &amp; Exchanges</a>
+        </div>
+        <div class="f-column">
+          <span class="f-head">Project Meta</span>
+          <a href="../index.html">Designed by Ignaciofc.dev</a>
+          <a href="../index.html">Hire José Ignacio Fernández Cano</a>
+          <a href="../index.html">← Return to Developer Portfolio</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-sub-bar">
+      <span>© 2026 LUMOS ATELIER. Concept e-commerce experience engineered by José Ignacio Fernández Cano.</span>
+      <a href="../index.html" class="back-home-link">← Portfolio Overview</a>
+    </div>
+  </footer>
+
+  <!-- Vanilla JS: Variant Switcher & Cart Interactions -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      let bagTotalCount = 0;
+      const cartCountEl = document.getElementById('cartCount');
+      const toast = document.getElementById('cartToast');
+      const toastName = document.getElementById('toastItemName');
+
+      // Add to Bag Logic
+      window.addToBag = function(title, price) {
+        bagTotalCount += 1;
+        if (cartCountEl) cartCountEl.textContent = bagTotalCount;
+
+        if (toast && toastName) {
+          toastName.textContent = `"${title}" added to bag ($${price})`;
+          toast.classList.add('active');
+
+          setTimeout(() => {
+            toast.classList.remove('active');
+          }, 3600);
+        }
+      };
+
+      // Material Variant Switcher
+      const swatches = document.querySelectorAll('.swatch-btn');
+      const mainImg = document.getElementById('mainProductImg');
+      const finishDisplay = document.getElementById('finishDisplay');
+      const activeFinishLabel = document.getElementById('activeFinishLabel');
+
+      swatches.forEach(btn => {
+        btn.addEventListener('click', () => {
+          swatches.forEach(s => s.classList.remove('active'));
+          btn.classList.add('active');
+
+          const finishName = btn.getAttribute('data-finish');
+          const imgUrl = btn.getAttribute('data-img');
+
+          if (mainImg) {
+            mainImg.style.opacity = '0.4';
+            setTimeout(() => {
+              mainImg.src = imgUrl;
+              mainImg.style.opacity = '1';
+            }, 180);
+          }
+
+          if (finishDisplay) finishDisplay.textContent = finishName + ' Finish';
+          if (activeFinishLabel) activeFinishLabel.textContent = finishName;
+        });
+      });
+    });
+  </script>
+</body>
+</html>

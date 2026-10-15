@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flowly — Autonomous AI Workflow Automation for High-Growth Teams</title>
+  <meta name="description" content="Orchestrate autonomous AI agents, streamline multi-step API pipelines, and reduce engineering cycle times by 68%. B2B SaaS workflow automation engine.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+</head>
+<body class="flowly-body">
+
+  <!-- Subtle Top Banner Linking Back to Portfolio -->
+  <aside class="portfolio-back-bar" role="navigation" aria-label="Portfolio return link">
+    <div class="banner-inner">
+      <a href="../index.html" class="back-link">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+        <span>← Back to Ignacio's Portfolio</span>
+      </a>
+      <span class="banner-badge">Demo 01: High-Conversion B2B SaaS</span>
+    </div>
+  </aside>
+
+  <!-- Navigation Header -->
+  <header class="app-header">
+    <div class="container nav-container">
+      <a href="#" class="brand-brand">
+        <div class="brand-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+        </div>
+        <span class="brand-name">Flowly<span class="brand-ai">.ai</span></span>
+      </a>
+
+      <nav class="main-nav" aria-label="Flowly Navigation">
+        <a href="#features" class="nav-item">Platform</a>
+        <a href="#pipeline" class="nav-item">Autonomous Agents</a>
+        <a href="#pricing" class="nav-item">Pricing</a>
+        <a href="#testimonials" class="nav-item">Enterprise</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="#pricing" class="btn-ghost">Log In</a>
+        <a href="#pricing" class="btn-flowly-primary">Start Free Trial</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="hero-radial-glow" aria-hidden="true"></div>
+      
+      <div class="container hero-content-center">
+        <!-- Animated Announcement Badge -->
+        <div class="announcement-badge">
+          <span class="badge-spark">NEW</span>
+          <span class="badge-copy">Flowly Autonomous Engine 3.2 is live with multi-agent consensus</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+
+        <h1 class="flowly-hero-title">
+          Orchestrate complex workflows with <br>
+          <span class="gradient-headline">Autonomous AI Agents.</span>
+        </h1>
+
+        <p class="flowly-hero-subtitle">
+          Connect your APIs, databases, and customer channels into self-healing, deterministic agent pipelines. Cut engineering maintenance cycles by 68% without writing brittle glue code.
+        </p>
+
+        <!-- Dual CTA Group -->
+        <div class="hero-actions-container">
+          <a href="#pricing" class="btn-flowly-cta">
+            <span>Deploy Free Agent Pipeline</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </a>
+          <a href="#pipeline" class="btn-flowly-outline">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+            <span>Watch 2-Min Interactive Demo</span>
+          </a>
+        </div>
+
+        <div class="hero-reassurance">
+          <span>✓ 14-day free trial</span>
+          <span class="dot-sep">•</span>
+          <span>✓ No credit card required</span>
+          <span class="dot-sep">•</span>
+          <span>✓ SOC2 Type II Certified</span>
+        </div>
+
+        <!-- Interactive Hero Product Mockup Preview -->
+        <div class="hero-dashboard-preview">
+          <div class="mockup-chrome">
+            <div class="chrome-dots">
+              <span class="dot dot-red"></span>
+              <span class="dot dot-yellow"></span>
+              <span class="dot dot-green"></span>
+            </div>
+            <div class="chrome-tab">workflow_agent_core.pipeline.ts — Flowly Engine</div>
+            <div class="chrome-status">
+              <span class="live-ring"></span> Active Nodes: 4 / 4
+            </div>
+          </div>
+
+          <div class="dashboard-body">
+            <div class="pipeline-grid">
+              
+              <!-- Pipeline Node 1 -->
+              <div class="pipeline-node node-success">
+                <div class="node-header">
+                  <span class="node-type">TRIGGER</span>
+                  <span class="node-status">12ms</span>
+                </div>
+                <div class="node-title">Webhook: Stripe Invoice Failed</div>
+                <div class="node-meta">Payload verified &amp; schema sanitized</div>
+              </div>
+
+              <div class="pipeline-connector">
+                <span class="connector-line"></span>
+                <span class="connector-arrow">→</span>
+              </div>
+
+              <!-- Pipeline Node 2 -->
+              <div class="pipeline-node node-active">
+                <div class="node-header">
+                  <span class="node-type agent-tag">AI AGENT #1</span>
+                  <span class="node-status pulse-text">Reasoning</span>
+                </div>
+                <div class="node-title">Customer Risk &amp; LTV Synthesizer</div>
+                <div class="node-meta">Model: Claude 3.5 Sonnet / Temp: 0.1</div>
+              </div>
+
+              <div class="pipeline-connector">
+                <span class="connector-line"></span>
+                <span class="connector-arrow">→</span>
+              </div>
+
+              <!-- Pipeline Node 3 -->
+              <div class="pipeline-node node-active">
+                <div class="node-header">
+                  <span class="node-type agent-tag">AI AGENT #2</span>
+                  <span class="node-status pulse-text">Generating</span>
+                </div>
+                <div class="node-title">Dynamic Dunning Offer Generator</div>
+                <div class="node-meta">Personalized retention terms calculated</div>
+              </div>
+
+              <div class="pipeline-connector">
+                <span class="connector-line"></span>
+                <span class="connector-arrow">→</span>
+              </div>
+
+              <!-- Pipeline Node 4 -->
+              <div class="pipeline-node node-success">
+                <div class="node-header">
+                  <span class="node-type">DISPATCH</span>
+                  <span class="node-status">Delivered</span>
+                </div>
+                <div class="node-title">Resend API &amp; Slack Alert</div>
+                <div class="node-meta">Dispatched to VP of Revenue &amp; User</div>
+              </div>
+
+            </div>
+
+            <!-- Dashboard Floating Stats Ribbon -->
+            <div class="floating-metrics-bar">
+              <div class="f-metric">
+                <span class="f-num">99.98%</span>
+                <span class="f-lbl">Autonomous Accuracy</span>
+              </div>
+              <div class="f-metric">
+                <span class="f-num">142ms</span>
+                <span class="f-lbl">Mean Agent Latency</span>
+              </div>
+              <div class="f-metric">
+                <span class="f-num">$42,300</span>
+                <span class="f-lbl">Dev Hours Saved/Mo</span>
+              </div>
+              <div class="f-metric">
+                <span class="f-num">0</span>
+                <span class="f-lbl">Human Interventions Needed</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Social Proof Logos -->
+    <section class="social-proof-strip">
+      <div class="container">
+        <p class="social-proof-heading">TRUSTED BY ENGINEERING &amp; PRODUCT TEAMS AT FORWARD-THINKING TECH COMPANIES</p>
+        <div class="logos-row">
+          <span class="fake-logo">STRIPE</span>
+          <span class="fake-logo">RETOOL</span>
+          <span class="fake-logo">RAMP</span>
+          <span class="fake-logo">LINEAR</span>
+          <span class="fake-logo">VERCEL</span>
+          <span class="fake-logo">BREX</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bento-Box Features Grid -->
+    <section class="features-section" id="features">
+      <div class="container">
+        <div class="section-title-wrap">
+          <span class="pill-label">Bento Architecture</span>
+          <h2 class="subhead-title">Engineered to replace fragile script maintenance</h2>
+          <p class="subhead-desc">Everything engineering leads need to deploy high-confidence agentic automation with zero server overhead.</p>
+        </div>
+
+        <div class="bento-box-grid">
+          
+          <!-- Bento Item 1: Large Box -->
+          <div class="bento-cell bento-hero-cell">
+            <div class="bento-badge">Core Engine</div>
+            <h3 class="bento-heading">Deterministic Multi-Agent Consensus</h3>
+            <p class="bento-text">
+              Eliminate hallucinations in critical operational paths. Flowly triggers parallel verification runs across multiple foundation models before committing mutations to production databases.
+            </p>
+            <div class="bento-visual visual-code">
+              <code>
+                <span class="c-keyword">await</span> flowly.<span class="c-func">orchestrate</span>({<br>
+                &nbsp;&nbsp;agents: [<span class="c-str">'validator'</span>, <span class="c-str">'fraud_guard'</span>, <span class="c-str">'ledger_writer'</span>],<br>
+                &nbsp;&nbsp;consensusThreshold: <span class="c-num">0.98</span>,<br>
+                &nbsp;&nbsp;fallbackStrategy: <span class="c-str">'human_in_the_loop'</span><br>
+                });
+              </code>
+            </div>
+          </div>
+
+          <!-- Bento Item 2: Medium Box -->
+          <div class="bento-cell">
+            <div class="bento-badge">Real-Time Telemetry</div>
+            <h3 class="bento-heading">Sub-Millisecond Event Streaming</h3>
+            <p class="bento-text">
+              Trace every agent execution step, token payload, and latency outlier in real-time with OpenTelemetry-compliant logs.
+            </p>
+            <div class="metric-graph-mock">
+              <div class="graph-bar" style="height: 45%;"></div>
+              <div class="graph-bar" style="height: 60%;"></div>
+              <div class="graph-bar" style="height: 35%;"></div>
+              <div class="graph-bar" style="height: 80%;"></div>
+              <div class="graph-bar" style="height: 95%;"></div>
+              <div class="graph-bar active-bar" style="height: 100%;"></div>
+            </div>
+          </div>
+
+          <!-- Bento Item 3: Medium Box -->
+          <div class="bento-cell">
+            <div class="bento-badge">Self-Healing</div>
+            <h3 class="bento-heading">Automatic Schema Migration &amp; Repair</h3>
+            <p class="bento-text">
+              When 3rd party APIs change their JSON payloads, Flowly’s schema supervisor re-maps fields dynamically without throwing runtime 500 exceptions.
+            </p>
+            <div class="shield-indicator">
+              <span class="shield-icon">🛡️</span>
+              <span class="shield-text">99.99% Execution Reliability SLA</span>
+            </div>
+          </div>
+
+          <!-- Bento Item 4: Large Horizontal Box -->
+          <div class="bento-cell bento-full-width">
+            <div class="cell-flex">
+              <div>
+                <div class="bento-badge">Enterprise Ready</div>
+                <h3 class="bento-heading">Private VPC Deployment &amp; Zero Data Retention</h3>
+                <p class="bento-text">
+                  Run Flowly inside your own AWS, GCP, or Azure VPC. Your proprietary training data and API credentials never leave your security perimeter.
+                </p>
+              </div>
+              <div class="security-pills">
+                <span class="sec-pill">SOC2 Type II</span>
+                <span class="sec-pill">HIPAA Eligible</span>
+                <span class="sec-pill">GDPR Ready</span>
+                <span class="sec-pill">End-to-End Encrypted</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Pricing Section with Toggle -->
+    <section class="pricing-section" id="pricing">
+      <div class="container">
+        <div class="section-title-wrap">
+          <span class="pill-label">Transparent Pricing</span>
+          <h2 class="subhead-title">Predictable plans that scale with your automation volume</h2>
+          <p class="subhead-desc">Start building immediately with a 14-day free trial. No surprise execution fees.</p>
+
+          <!-- Pricing Toggle Switch -->
+          <div class="billing-toggle-container">
+            <span class="toggle-label" id="monthlyLabel">Monthly</span>
+            <button class="toggle-button" id="billingToggle" aria-pressed="true" aria-label="Toggle annual or monthly billing">
+              <span class="toggle-knob"></span>
+            </button>
+            <span class="toggle-label active" id="annualLabel">
+              Annual Billing 
+              <span class="discount-badge">Save 20%</span>
+            </span>
+          </div>
+        </div>
+
+        <div class="pricing-cards-grid">
+          
+          <!-- Tier 1: Starter -->
+          <div class="pricing-card">
+            <div class="card-tier-name">Developer</div>
+            <p class="tier-desc">Ideal for small engineering teams automating baseline internal processes.</p>
+            <div class="price-display">
+              <span class="currency">$</span>
+              <span class="amount" data-monthly="49" data-annual="39">39</span>
+              <span class="period">/ month</span>
+            </div>
+            <span class="billed-note" data-monthly="Billed monthly" data-annual="Billed annually ($468/yr)">Billed annually ($468/yr)</span>
+
+            <ul class="tier-features">
+              <li>✓ Up to 10 Concurrent AI Agents</li>
+              <li>✓ 50,000 Step Executions / month</li>
+              <li>✓ Community &amp; Slack Support</li>
+              <li>✓ Standard Webhook Triggers</li>
+              <li>✓ 7-Day Log Retention</li>
+            </ul>
+
+            <a href="#hero" class="btn-tier btn-tier-ghost">Start Free 14-Day Trial</a>
+          </div>
+
+          <!-- Tier 2: Pro (Highlighted) -->
+          <div class="pricing-card featured-card">
+            <div class="popular-ribbon">MOST POPULAR • HIGH CONVERSION</div>
+            <div class="card-tier-name">Growth &amp; Scale</div>
+            <p class="tier-desc">Designed for high-growth tech startups needing high throughput and multi-agent consensus.</p>
+            <div class="price-display">
+              <span class="currency">$</span>
+              <span class="amount" data-monthly="149" data-annual="119">119</span>
+              <span class="period">/ month</span>
+            </div>
+            <span class="billed-note" data-monthly="Billed monthly" data-annual="Billed annually ($1,428/yr)">Billed annually ($1,428/yr)</span>
+
+            <ul class="tier-features">
+              <li>✓ <strong>Unlimited</strong> AI Autonomous Agents</li>
+              <li>✓ 500,000 Step Executions / month</li>
+              <li>✓ Multi-Agent Consensus Verification</li>
+              <li>✓ 1-Minute Webhook Retry Logic</li>
+              <li>✓ 90-Day Telemetry Logs &amp; Analytics</li>
+              <li>✓ Dedicated Priority Support (1hr SLA)</li>
+            </ul>
+
+            <a href="#hero" class="btn-tier btn-tier-highlighted">Start Free 14-Day Trial</a>
+          </div>
+
+          <!-- Tier 3: Enterprise -->
+          <div class="pricing-card">
+            <div class="card-tier-name">Enterprise Custom</div>
+            <p class="tier-desc">For large organizations requiring bespoke compliance, private VPCs, and customized SLAs.</p>
+            <div class="price-display">
+              <span class="amount-custom">Custom</span>
+            </div>
+            <span class="billed-note">Custom terms &amp; invoicing</span>
+
+            <ul class="tier-features">
+              <li>✓ Dedicated Private VPC &amp; On-Premises</li>
+              <li>✓ Custom Millions of Step Executions</li>
+              <li>✓ Custom AI Model Fine-Tuning Hooks</li>
+              <li>✓ Dedicated Solutions Architect</li>
+              <li>✓ 99.99% Financial Uptime Guarantee</li>
+              <li>✓ 24/7/365 Phone &amp; PagerDuty Escalation</li>
+            </ul>
+
+            <a href="#hero" class="btn-tier btn-tier-ghost">Book Technical Audit</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Final High-Conversion CTA Banner -->
+    <section class="final-cta-section">
+      <div class="container">
+        <div class="final-cta-card">
+          <h2 class="final-cta-title">Ready to automate your engineering bottleneck?</h2>
+          <p class="final-cta-sub">
+            Join 1,200+ engineering teams saving thousands of hours monthly. Set up your first autonomous agent pipeline in under 5 minutes.
+          </p>
+          <div class="final-cta-actions">
+            <a href="#pricing" class="btn-flowly-cta large-btn">Start 14-Day Free Trial</a>
+            <a href="#pricing" class="btn-flowly-outline large-btn">Request Architecture Walkthrough</a>
+          </div>
+          <p class="final-guarantee">No credit card required. Cancel anytime with 1 click.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Flowly Footer -->
+  <footer class="flowly-footer">
+    <div class="container footer-content">
+      <div class="footer-left">
+        <div class="brand-brand">
+          <div class="brand-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+          </div>
+          <span class="brand-name">Flowly<span class="brand-ai">.ai</span></span>
+        </div>
+        <p class="footer-desc-sm">Autonomous agent infrastructure for modern software engineering.</p>
+      </div>
+
+      <div class="footer-cols">
+        <div class="f-col">
+          <span class="f-col-header">Product</span>
+          <a href="#features">Autonomous Agents</a>
+          <a href="#features">Pipeline Studio</a>
+          <a href="#pricing">Pricing Plans</a>
+          <a href="#features">Enterprise VPC</a>
+        </div>
+        <div class="f-col">
+          <span class="f-col-header">Developers</span>
+          <a href="#features">Documentation</a>
+          <a href="#features">TypeScript SDK</a>
+          <a href="#features">REST API Reference</a>
+          <a href="#features">System Status</a>
+        </div>
+        <div class="f-col">
+          <span class="f-col-header">Company</span>
+          <a href="../index.html">Designed by Ignaciofc.dev</a>
+          <a href="../index.html">About Developer</a>
+          <a href="../index.html">Hire for Frontend / CRO</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="container footer-bottom-bar">
+      <span>© 2026 Flowly AI Inc. All rights reserved. Concept piece engineered by José Ignacio Fernández Cano.</span>
+      <a href="../index.html" class="return-link">← Return to Portfolio</a>
+    </div>
+  </footer>
+
+  <!-- Vanilla JS for Interactive Pricing Toggle -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const toggleBtn = document.getElementById('billingToggle');
+      const monthlyLabel = document.getElementById('monthlyLabel');
+      const annualLabel = document.getElementById('annualLabel');
+      const priceAmounts = document.querySelectorAll('.amount');
+      const billedNotes = document.querySelectorAll('.billed-note[data-monthly]');
+
+      let isAnnual = true; // Default to Annual for CRO higher perceived value & savings
+
+      function updatePricing() {
+        if (!toggleBtn) return;
+        if (isAnnual) {
+          toggleBtn.classList.remove('monthly-active');
+          toggleBtn.setAttribute('aria-pressed', 'true');
+          annualLabel.classList.add('active');
+          monthlyLabel.classList.remove('active');
+
+          priceAmounts.forEach(el => {
+            el.textContent = el.getAttribute('data-annual');
+          });
+
+          billedNotes.forEach(el => {
+            el.textContent = el.getAttribute('data-annual');
+          });
+        } else {
+          toggleBtn.classList.add('monthly-active');
+          toggleBtn.setAttribute('aria-pressed', 'false');
+          monthlyLabel.classList.add('active');
+          annualLabel.classList.remove('active');
+
+          priceAmounts.forEach(el => {
+            el.textContent = el.getAttribute('data-monthly');
+          });
+
+          billedNotes.forEach(el => {
+            el.textContent = el.getAttribute('data-monthly');
+          });
+        }
+      }
+
+      if (toggleBtn) {
+        toggleBtn.addEventListener('click', () => {
+          isAnnual = !isAnnual;
+          updatePricing();
+        });
+      }
+
+      if (monthlyLabel) {
+        monthlyLabel.addEventListener('click', () => {
+          isAnnual = false;
+          updatePricing();
+        });
+      }
+
+      if (annualLabel) {
+        annualLabel.addEventListener('click', () => {
+          isAnnual = true;
+          updatePricing();
+        });
+      }
+    });
+  </script>
+</body>
+</html>

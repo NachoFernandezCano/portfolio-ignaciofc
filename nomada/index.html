@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NÓMADA — Ancestral Wood Fire &amp; Biodynamic Cellar</title>
+  <meta name="description" content="Boutique culinary experience celebrating ancestral open-fire gastronomy, hyper-local foraging, and biodynamic natural wines. Table reservations & seasonal tasting menu.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔥</text></svg>">
+</head>
+<body class="nomada-body">
+
+  <!-- Fixed Top Subtle Portfolio Return Bar -->
+  <aside class="portfolio-back-bar" role="navigation" aria-label="Portfolio return link">
+    <div class="banner-inner">
+      <a href="../index.html" class="back-link">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+        <span>← Back to Ignacio's Portfolio</span>
+      </a>
+      <span class="banner-badge">Demo 03: Boutique Hospitality &amp; Culinary Experience</span>
+    </div>
+  </aside>
+
+  <!-- Restaurant Header -->
+  <header class="nomada-header" id="nomadaHeader">
+    <div class="container header-container">
+      <nav class="nomada-nav-left" aria-label="Restaurant Sections">
+        <a href="#menu" class="nav-item">Tasting Menu</a>
+        <a href="#philosophy" class="nav-item">Philosophy</a>
+        <a href="#cellar" class="nav-item">Cellar</a>
+      </nav>
+
+      <a href="#" class="nomada-brand" aria-label="Nómada Restaurant Home">
+        <span class="brand-glyph" aria-hidden="true">✦</span>
+        <span class="brand-name">NÓMADA</span>
+        <span class="brand-sub">FUEGO &amp; VINO</span>
+      </a>
+
+      <div class="nomada-nav-right">
+        <span class="service-hours desktop-only">Dinner 19:00 — 23:30</span>
+        <a href="#reservation" class="btn-book-header">Reserve Table</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section: Immersive Gastronomic Visual -->
+    <section class="nomada-hero">
+      <div class="hero-media-wrapper">
+        <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1920&q=85" 
+             alt="Ancestral Wood-Fire Gastronomy at Nómada" 
+             class="hero-bg-img" 
+             width="1920" 
+             height="1080" 
+             loading="eager" 
+             fetchpriority="high" 
+             decoding="async">
+        <div class="hero-atmospheric-overlay"></div>
+      </div>
+
+      <div class="container hero-caption-container">
+        <div class="michelin-pill">
+          <span class="star-icon">★</span>
+          <span>Seasonal Gastronomy • Native Oak Ember Cooking</span>
+        </div>
+
+        <h1 class="nomada-title">
+          Ancestral Wood Fire &amp; Biodynamic Cellar.
+        </h1>
+
+        <p class="nomada-lead">
+          A sensory homage to wild foraging, primitive ember roasting, and rare low-intervention natural wines. Intimate 28-seat dining room surrounding an open-hearth stone kitchen.
+        </p>
+
+        <div class="hero-cta-wrapper">
+          <a href="#reservation" class="btn-nomada-primary">
+            <span>Reserve Table for Tonight</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+          <a href="#menu" class="btn-nomada-outline">
+            <span>Explore 7-Course Menu</span>
+          </a>
+        </div>
+
+        <!-- Operating Hours Strip -->
+        <div class="service-pill-strip">
+          <div class="service-pill-item">
+            <span class="pill-kicker">SEATING</span>
+            <strong>Wednesday — Sunday</strong>
+          </div>
+          <div class="pill-divider"></div>
+          <div class="service-pill-item">
+            <span class="pill-kicker">LOCATION</span>
+            <strong>Historic Quarter • Bellavista</strong>
+          </div>
+          <div class="pill-divider"></div>
+          <div class="service-pill-item">
+            <span class="pill-kicker">TASTING MENU</span>
+            <strong>$135 / Guest</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Tasting Menu Tabs -->
+    <section class="menu-section" id="menu">
+      <div class="container">
+        <div class="nomada-section-header">
+          <span class="nomada-kicker">CUISINE DU TERROIR</span>
+          <h2 class="nomada-section-title">The Autumn Ember Tasting Menu</h2>
+          <p class="nomada-section-desc">
+            Menus evolve weekly dictated by what our regenerative coastal farmers harvest and ocean divers bring to shore at sunrise.
+          </p>
+
+          <!-- Interactive Menu Category Switcher -->
+          <div class="menu-tab-nav" role="tablist" aria-label="Menu Course Categories">
+            <button class="menu-tab-btn active" id="tab-starters" data-target="starters" role="tab" aria-selected="true" aria-controls="starters">
+              I. Starters &amp; Raw Bar
+            </button>
+            <button class="menu-tab-btn" id="tab-mains" data-target="mains" role="tab" aria-selected="false" aria-controls="mains">
+              II. Wood-Fire Hearth
+            </button>
+            <button class="menu-tab-btn" id="tab-desserts" data-target="desserts" role="tab" aria-selected="false" aria-controls="desserts">
+              III. Smoked Desserts
+            </button>
+            <button class="menu-tab-btn" id="tab-pairings" data-target="pairings" role="tab" aria-selected="false" aria-controls="pairings">
+              IV. Cellar Pairings
+            </button>
+          </div>
+        </div>
+
+        <!-- Menu Panels Container -->
+        <div class="menu-panels-container">
+          
+          <!-- Category 1: Starters -->
+          <div class="menu-panel active" id="starters" role="tabpanel" aria-labelledby="tab-starters">
+            <div class="dish-grid">
+              
+              <article class="dish-card">
+                <div class="dish-header">
+                  <h3 class="dish-name">Ember-Charred King Scallops</h3>
+                  <span class="dish-price">$26</span>
+                </div>
+                <p class="dish-desc">
+                  Pacific hand-dived scallops kissed with live quebracho coals, fermented sea buckthorn beurre blanc, and pickled beach coriander.
+                </p>
+                <div class="dish-tags">
+                  <span class="tag">Wild Pacific</span>
+                  <span class="tag">Wood Ember</span>
+                </div>
+              </article>
+
+              <article class="dish-card">
+                <div class="dish-header">
+                  <h3 class="dish-name">Cured Dry-Aged Wagyu Tartare</h3>
+                  <span class="dish-price">$28</span>
+                </div>
+                <p class="dish-desc">
+                  60-day dry aged picanha hand-cut over toasted sourdough marrow, smoked egg yolk emulsion, and preserved caperberry brine.
+                </p>
+                <div class="dish-tags">
+                  <span class="tag">Pasture-Raised</span>
+                  <span class="tag">Artisan Sourdough</span>
+                </div>
+              </article>
+
+              <article class="dish-card">
+                <div class="dish-header">
+                  <h3 class="dish-name">Charred Heirloom Pumpkin Tartlet</h3>
+                  <span class="dish-price">$22</span>
+                </div>
+                <p class="dish-desc">
+                  Burnt kabocha silk in toasted flaxseed crust, raw sheep’s milk curd, crystallized rosemary, and wild pine honey.
+                </p>
+                <div class="dish-tags">
+                  <span class="tag">Regenerative Farm</span>
+                  <span class="tag">Vegetarian</span>
+                </div>
+              </article>
+
+              <article class="dish-card">
+                <div class="dish-header">
+                  <h3 class="dish-name">Crudo of Wild Yellowtail Kingfish</h3>
+                  <span class="dish-price">$25</span>
+                </div>
+                <p class="dish-desc">
+                  Thinly sliced line-caught kingfish, smoked dashi reduction, pressed finger lime caviar, and charred leek oil.
+                </p>
+                <div class="dish-tags">
+                  <span class="tag">Zero-Waste Catch</span>
+                  <span class="tag">Raw Bar</span>
+                </div>
+              </article>
+
+            </div>
+          </div>
+
+          <!-- Category 2: Mains -->
+          <div class="menu-panel" id="mains" role="tabpanel" aria-labelledby="tab-mains">
+            <div class="dish-grid">
+              
+              <article class="dish-card">
+                <div class="dish-header">
+                  <h3 class="dish-name">Whole Smoked Turbot on the Bone</h3>
+                  <span class="dish-price">$54</span>
+                </div>
+                <p class="dish-desc">
+                  Slow-roasted over wild applewood branches, brown butter garum emulsion, crispy caper leaves, and charcoal roasted shallots.
+                </p>
+                <div class="dish-tags">
+                  <span class="tag">For 2 to Share</span>
+                  <span class="tag">Applewood Roast</span>
+                </div>
+              </article>
+
+              <article class="dish-card">
+                <div class="dish-header">
+                  <h3 class="dish-name">Slow-Braised Patagonian Lamb Shoulder</h3>
+                  <span class="dish-price">$48</span>
+                </div>
+                <p class="dish-desc">
+                  14-hour open ember pot braise, roasted parsnip mousseline, native merkén glaze, and pickled ramps.
+                </p>
+                <div class="dish-tags">
+                  <span class="tag">Signature Course</span>
+                  <span class="tag">Free-Range</span>
+                </div>
+              </article>
+
+              <article class="dish-card">
+                <div class="dish-header">
+                  <h3 class="dish-name">Roasted Heritage Duck Breast</h3>
+                  <span class="dish-price">$46</span>
+                </div>
+                <p class="dish-desc">
+                  Aged in beeswax for 21 days, glazed with fermented elderberry, charred winter chicory, and crispy crackling jus.
+                </p>
+                <div class="dish-tags">
+                  <span class="tag">Beeswax Aged</span>
+                  <span class="tag">Local Apiary</span>
+                </div>
+              </article>
+
+              <article class="dish-card">
+                <div class="dish-header">
+                  <h3 class="dish-name">Ember-Roasted Maitake Mushroom Steak</h3>
+                  <span class="dish-price">$38</span>
+                </div>
+                <p class="dish-desc">
+                  Wild forest maitake lacquered in black garlic tamari, smoked hazelnut butter, and creamed celeriac velouté.
+                </p>
+                <div class="dish-tags">
+                  <span class="tag">Forest Foraged</span>
+                  <span class="tag">Vegan</span>
+                </div>
+              </article>
+
+            </div>
+          </div>
+
+          <!-- Category 3: Desserts -->
+          <div class="menu-panel" id="desserts" role="tabpanel" aria-labelledby="tab-desserts">
+            <div class="dish-grid">
+              
+              <article class="dish-card">
+                <div class="dish-header">
+                  <h3 class="dish-name">Smoked Birch Milk &amp; Honey Gelato</h3>
+                  <span class="dish-price">$18</span>
+                </div>
+                <p class="dish-desc">
+                  Infused with aromatic birchwood smoke, toasted buckwheat honeycomb, and cold-pressed olive oil flake salt.
+                </p>
+                <div class="dish-tags">
+                  <span class="tag">Raw Farm Milk</span>
+                  <span class="tag">Cold Infusion</span>
+                </div>
+              </article>
+
+              <article class="dish-card">
+                <div class="dish-header">
+                  <h3 class="dish-name">70% Marañón Chocolate Ganache</h3>
+                  <span class="dish-price">$20</span>
+                </div>
+                <p class="dish-desc">
+                  Wild Amazonian cacao, toasted hazelnut praline, roasted fig leaf cream, and charred sourdough crisps.
+                </p>
+                <div class="dish-tags">
+                  <span class="tag">Single-Origin Cacao</span>
+                  <span class="tag">Decadent</span>
+                </div>
+              </article>
+
+            </div>
+          </div>
+
+          <!-- Category 4: Cellar Pairings -->
+          <div class="menu-panel" id="pairings" role="tabpanel" aria-labelledby="tab-pairings">
+            <div class="dish-grid">
+              
+              <article class="dish-card">
+                <div class="dish-header">
+                  <h3 class="dish-name">Complete 7-Course Biodynamic Flight</h3>
+                  <span class="dish-price">$95</span>
+                </div>
+                <p class="dish-desc">
+                  Seven glass pours curated by Head Sommelier. Low-intervention ancestral amphora vintages, skin-contact orange wines, and un-sulfured pinots.
+                </p>
+                <div class="dish-tags">
+                  <span class="tag">7 Pours</span>
+                  <span class="tag">Native Terroir</span>
+                </div>
+              </article>
+
+              <article class="dish-card">
+                <div class="dish-header">
+                  <h3 class="dish-name">Wild Botanical Temperance Flight</h3>
+                  <span class="dish-price">$65</span>
+                </div>
+                <p class="dish-desc">
+                  House-fermented sodas, cold-extracted native leaf teas, smoked fruit shrubs, and sparkling pine needle kefir.
+                </p>
+                <div class="dish-tags">
+                  <span class="tag">Non-Alcoholic</span>
+                  <span class="tag">Zero Sugar</span>
+                </div>
+              </article>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Chef's Philosophy & Hearth Story -->
+    <section class="philosophy-section" id="philosophy">
+      <div class="container philosophy-grid">
+        <div class="philosophy-img-wrap">
+          <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1000&q=80" 
+               alt="Chef Preparing Wood-Fire Dishes at the Hearth" 
+               width="1000" 
+               height="667" 
+               loading="lazy" 
+               decoding="async">
+          <div class="hearth-stat-box">
+            <span class="hearth-temp">650°C</span>
+            <span class="hearth-lbl">Open Fire Hearth Temperature</span>
+          </div>
+        </div>
+
+        <div class="philosophy-text-block">
+          <span class="nomada-kicker">THE ETHOS</span>
+          <h2 class="nomada-section-title">Primitive technique, uncompromising precision.</h2>
+          <p class="philosophy-p">
+            “At Nómada, we surrendered electric induction stoves and industrial water baths in favor of the raw, unpredictable intensity of glowing native coals. Fire is not merely our heat source; it is our most expressive ingredient.”
+          </p>
+          <p class="philosophy-p">
+            We partner exclusively with regenerative farmers whose soil microbiology we inspect ourselves. Every vegetable is harvested within 40 kilometers, preserving the volatile aromatic oils that evaporate within hours of picking.
+          </p>
+          <div class="chef-signature">
+            <span class="chef-name">Matías Albarracín</span>
+            <span class="chef-role">Chef &amp; Co-Founder</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Table Reservation Engine Section -->
+    <section class="reservation-section" id="reservation">
+      <div class="container">
+        <div class="reservation-card-wrapper">
+          
+          <div class="reservation-intro">
+            <span class="nomada-kicker">JOIN OUR TABLE</span>
+            <h2 class="res-title">Reserve an Intimate Dining Experience</h2>
+            <p class="res-desc">
+              Due to our limited 28-seat capacity and single-evening seatings, reservations are released 30 days in advance.
+            </p>
+            <div class="res-perks">
+              <div class="res-perk-item">
+                <span class="perk-bullet">✓</span>
+                <span>Immediate digital confirmation</span>
+              </div>
+              <div class="res-perk-item">
+                <span class="perk-bullet">✓</span>
+                <span>Dietary preferences accommodated with advance notice</span>
+              </div>
+              <div class="res-perk-item">
+                <span class="perk-bullet">✓</span>
+                <span>Complimentary cellar welcome toast</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive Booking Form Widget -->
+          <div class="booking-widget">
+            <form id="reservationForm" onsubmit="event.preventDefault(); handleBookingSubmit();">
+              
+              <!-- Step 1: Guests & Seating Area -->
+              <div class="widget-row">
+                <div class="form-group-nomada">
+                  <label for="partySize">Party Size</label>
+                  <select id="partySize" required>
+                    <option value="2">2 Guests (Intimate Table)</option>
+                    <option value="4" selected>4 Guests (Dining Room)</option>
+                    <option value="6">6 Guests (Hearth Round)</option>
+                    <option value="8">8 Guests (Chef's Long Table)</option>
+                  </select>
+                </div>
+
+                <div class="form-group-nomada">
+                  <label for="seatingArea">Seating Preference</label>
+                  <select id="seatingArea" required>
+                    <option value="hearth">Hearth Kitchen Counter (Front Row)</option>
+                    <option value="dining" selected>Main Candlelit Dining Room</option>
+                    <option value="cellar">Private Wine Cellar Alcove</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Step 2: Date & Service Seating -->
+              <div class="widget-row">
+                <div class="form-group-nomada">
+                  <label for="resDate">Dining Date</label>
+                  <input type="date" id="resDate" required value="2026-10-18">
+                </div>
+
+                <div class="form-group-nomada">
+                  <label for="resTime">Service Time Slot</label>
+                  <select id="resTime" required>
+                    <option value="19:00">19:00 (Sunset Seating)</option>
+                    <option value="19:45" selected>19:45 (Prime Seating)</option>
+                    <option value="20:30">20:30 (Prime Seating)</option>
+                    <option value="21:15">21:15 (Late Hearth Seating)</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Step 3: Guest Details -->
+              <div class="form-group-nomada">
+                <label for="resGuestName">Full Name</label>
+                <input type="text" id="resGuestName" placeholder="e.g. Julian Thorne" required>
+              </div>
+
+              <div class="widget-row">
+                <div class="form-group-nomada">
+                  <label for="resEmail">Contact Email</label>
+                  <input type="email" id="resEmail" placeholder="julian@luxurygroup.com" required>
+                </div>
+                <div class="form-group-nomada">
+                  <label for="resPhone">Mobile Phone</label>
+                  <input type="tel" id="resPhone" placeholder="+1 (555) 019-2834" required>
+                </div>
+              </div>
+
+              <div class="form-group-nomada">
+                <label for="resNotes">Dietary Restrictions or Occasion (Optional)</label>
+                <input type="text" id="resNotes" placeholder="e.g. Pescatarian, celebration, gluten allergy...">
+              </div>
+
+              <button type="submit" class="btn-submit-booking" id="bookSubmitBtn">
+                <span>Confirm Instant Table Reservation</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+
+              <!-- Success Notification State -->
+              <div class="booking-success-box" id="bookingSuccess" role="status" aria-live="polite">
+                <span class="success-glyph" aria-hidden="true">🔥</span>
+                <h4>Table Confirmed at Nómada</h4>
+                <p id="successSummary">We have reserved your table for 4 guests on October 18 at 19:45. A formal digital invitation has been sent to your inbox.</p>
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Restaurant Footer -->
+  <footer class="nomada-footer">
+    <div class="container footer-grid">
+      <div class="footer-col-main">
+        <span class="brand-name footer-logo">NÓMADA</span>
+        <p class="footer-motto">
+          Ancestral Wood Fire &amp; Biodynamic Cellar.<br>
+          Reservations open Wednesdays through Sundays.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <span class="col-head">Address &amp; Contact</span>
+        <p>Avenida Bellavista 0422<br>Santiago, Historic Quarter</p>
+        <p>Direct Concierge: +56 9 8234 9102</p>
+        <p>reservations@nomada-fuego.com</p>
+      </div>
+
+      <div class="footer-col">
+        <span class="col-head">Concept Demo Details</span>
+        <a href="../index.html">Designed by Ignaciofc.dev</a>
+        <a href="../index.html">Frontend &amp; CRO Engineering</a>
+        <a href="../index.html">Return to Master Portfolio</a>
+      </div>
+    </div>
+
+    <div class="container footer-sub">
+      <span>© 2026 NÓMADA RESTAURANT GROUP. Production Concept Piece by José Ignacio Fernández Cano.</span>
+      <a href="../index.html" class="sub-back-link">← Portfolio Overview</a>
+    </div>
+  </footer>
+
+  <!-- Vanilla JS: Menu Tab Switching & Booking Handler -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Tab Switching Logic
+      const tabButtons = document.querySelectorAll('.menu-tab-btn');
+      const tabPanels = document.querySelectorAll('.menu-panel');
+
+      tabButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          tabButtons.forEach(b => {
+            b.classList.remove('active');
+            b.setAttribute('aria-selected', 'false');
+          });
+          tabPanels.forEach(p => p.classList.remove('active'));
+
+          btn.classList.add('active');
+          btn.setAttribute('aria-selected', 'true');
+
+          const targetId = btn.getAttribute('data-target');
+          const activePanel = document.getElementById(targetId);
+          if (activePanel) {
+            activePanel.classList.add('active');
+          }
+        });
+      });
+    });
+
+    // Booking Submission Handler
+    function handleBookingSubmit() {
+      const btn = document.getElementById('bookSubmitBtn');
+      const successBox = document.getElementById('bookingSuccess');
+      const party = document.getElementById('partySize') ? document.getElementById('partySize').value : '2';
+      const date = document.getElementById('resDate') ? document.getElementById('resDate').value : '';
+      const time = document.getElementById('resTime') ? document.getElementById('resTime').value : '19:45';
+      const summary = document.getElementById('successSummary');
+
+      if (!btn || !successBox) return;
+
+      btn.disabled = true;
+      btn.innerHTML = '<span>Securing Table in Cellar...</span>';
+
+      setTimeout(() => {
+        btn.style.display = 'none';
+        if (summary) {
+          summary.textContent = `Table confirmed for ${party} guests on ${date} at ${time}. An official confirmation and sommelier welcome note have been sent to your email.`;
+        }
+        successBox.classList.add('active');
+      }, 700);
+    }
+  </script>
+</body>
+</html>
