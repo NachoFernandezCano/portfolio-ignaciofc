@@ -3,633 +3,537 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>José Ignacio Fernández Cano | Frontend & Conversion-Focused Web Developer</title>
-  <meta name="description" content="High-performance landing pages engineered to convert visitors into revenue. Frontend Developer & AI Engineering Student specializing in Core Web Vitals, CRO, and modern web architecture.">
+  <title>José Ignacio Fernández Cano — Design Engineer & AI Systems</title>
+  <meta name="description" content="Independent Design Engineer & AI Engineering Student based in Argentina. Crafting quiet, high-velocity digital experiences and bespoke web interfaces.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./style.css">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✦</text></svg>">
 </head>
 <body>
 
-  <!-- Ambient Glow Effects -->
-  <div class="ambient-glow glow-top" aria-hidden="true"></div>
-  <div class="ambient-glow glow-bottom" aria-hidden="true"></div>
+  <!-- Subtle Subtle Header Lighting -->
+  <div class="ambient-glow" aria-hidden="true"></div>
 
   <!-- Header / Navigation -->
   <header class="site-header" id="site-header">
     <div class="container header-container">
       <a href="#" class="brand-logo" aria-label="José Ignacio - Home">
-        <span class="logo-symbol">⚡</span>
+        <span class="logo-mark">✦</span>
         <span class="logo-text">Ignaciofc<span class="accent-dot">.</span>dev</span>
       </a>
 
-      <div class="availability-badge" aria-label="Project Availability Status">
-        <span class="status-pulse"></span>
-        <span class="badge-text">Available for Q2/Q3 Projects</span>
+      <div class="nav-cluster">
+        <!-- Interactive Language Switcher -->
+        <div class="lang-switcher" role="group" aria-label="Language Selector">
+          <button type="button" class="lang-btn active" id="lang-en" data-lang="en" aria-pressed="true">EN</button>
+          <span class="lang-divider">/</span>
+          <button type="button" class="lang-btn" id="lang-es" data-lang="es" aria-pressed="false">ES</button>
+        </div>
+
+        <nav class="desktop-nav" aria-label="Primary Navigation">
+          <a href="#work" class="nav-link" data-i18n="nav.work">Selected Work</a>
+          <a href="#philosophy" class="nav-link" data-i18n="nav.philosophy">Philosophy</a>
+          <a href="#about" class="nav-link" data-i18n="nav.about">About</a>
+          <a href="#contact" class="nav-btn" data-i18n="nav.contact">Get in Touch</a>
+        </nav>
+
+        <button class="mobile-menu-toggle" id="mobileMenuBtn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileDrawer">
+          <span></span>
+          <span></span>
+        </button>
       </div>
-
-      <nav class="desktop-nav" aria-label="Primary Navigation">
-        <a href="#work" class="nav-link">Selected Work</a>
-        <a href="#process" class="nav-link">Methodology</a>
-        <a href="#performance" class="nav-link">CRO Philosophy</a>
-        <a href="#contact" class="nav-btn">Start a Project</a>
-      </nav>
-
-      <button class="mobile-menu-toggle" id="mobileMenuBtn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileDrawer">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
     </div>
 
-    <!-- Mobile Navigation Drawer -->
+    <!-- Mobile Drawer -->
     <div class="mobile-drawer" id="mobileDrawer">
       <nav class="mobile-nav">
-        <a href="#work" class="mobile-link">Selected Work</a>
-        <a href="#process" class="mobile-link">Methodology</a>
-        <a href="#performance" class="mobile-link">CRO Philosophy</a>
-        <a href="#contact" class="mobile-btn">Start a Project</a>
+        <a href="#work" class="mobile-link" data-i18n="nav.work">Selected Work</a>
+        <a href="#philosophy" class="mobile-link" data-i18n="nav.philosophy">Philosophy</a>
+        <a href="#about" class="mobile-link" data-i18n="nav.about">About</a>
+        <a href="#contact" class="mobile-btn" data-i18n="nav.contact">Get in Touch</a>
       </nav>
     </div>
   </header>
 
-  <main>
-    <!-- Hero Section -->
+  <main id="main-content">
+    <!-- Hero Section: Editorial & Restrained -->
     <section class="hero-section" id="hero">
       <div class="container hero-container">
-        <div class="hero-tagline-wrapper">
-          <span class="tag-pill">Frontend Engineer &amp; CRO Specialist • AI Engineering Student</span>
+        <div class="status-indicator">
+          <span class="status-dot"></span>
+          <span class="status-text" data-i18n="hero.status">Available for Select Projects & Collaborations</span>
         </div>
 
-        <h1 class="hero-title">
-          I design &amp; develop high-performance landing pages that turn visitors into 
-          <span class="gradient-text">paying customers.</span>
+        <h1 class="hero-headline" data-i18n="hero.title">
+          Crafting quiet, high-velocity digital experiences and bespoke web interfaces.
         </h1>
 
-        <p class="hero-lead">
-          Bridging the gap between <strong>Conversion Rate Optimization (CRO)</strong>, obsessive Core Web Vitals engineering, and AI-accelerated workflows. Built for high-growth tech founders, digital agencies, and luxury brands across the US and Europe.
+        <p class="hero-subtext" data-i18n="hero.sub">
+          José Ignacio Fernández Cano — Independent Design Engineer &amp; AI Engineering Student based in Argentina. Bridging rigorous interface craft, computational speed, and modern web architectures.
         </p>
 
-        <div class="hero-cta-group">
-          <a href="#work" class="btn btn-primary">
-            <span>Explore Concept Demos</span>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
-          <a href="#contact" class="btn btn-secondary">
-            <span>Book 15-Min Intro Call</span>
-          </a>
-        </div>
-
-        <!-- Metrics Strip / Social Proof -->
-        <div class="metrics-strip">
-          <div class="metric-card">
-            <span class="metric-value">+34.8%</span>
-            <span class="metric-label">Avg. Conversion Rate Lift</span>
-          </div>
-          <div class="metric-divider"></div>
-          <div class="metric-card">
-            <span class="metric-value">&lt; 0.6s</span>
-            <span class="metric-label">Largest Contentful Paint</span>
-          </div>
-          <div class="metric-divider"></div>
-          <div class="metric-card">
-            <span class="metric-value">100 / 100</span>
-            <span class="metric-label">Google Lighthouse Score</span>
-          </div>
-          <div class="metric-divider"></div>
-          <div class="metric-card">
-            <span class="metric-value">0%</span>
-            <span class="metric-label">Unnecessary Framework Bloat</span>
-          </div>
+        <div class="hero-actions">
+          <a href="#work" class="btn btn-primary" data-i18n="hero.cta_work">View Selected Work</a>
+          <a href="#contact" class="btn btn-secondary" data-i18n="hero.cta_contact">Start a Conversation</a>
         </div>
       </div>
     </section>
 
-    <!-- Selected Work / Concept Demos Section -->
+    <!-- Selected Work Showcase -->
     <section class="work-section" id="work">
       <div class="container">
-        <div class="section-header">
-          <span class="section-tag">Proof of Capability</span>
-          <h2 class="section-title">Selected Concept Demos</h2>
-          <p class="section-desc">
-            Three distinct, production-ready landing pages built without heavy runtime frameworks. Engineered with fluid typography, responsive layout dynamics, and targeted micro-interactions tailored for high conversion.
+        <div class="section-meta">
+          <span class="meta-label" data-i18n="work.label">01 / Index</span>
+          <h2 class="section-title" data-i18n="work.title">Selected Work</h2>
+          <p class="section-lead" data-i18n="work.lead">
+            Three distinct interactive artifacts built without heavy frameworks. Explored across SaaS automation, editorial retail, and sensory hospitality.
           </p>
         </div>
 
-        <div class="projects-grid">
-
-          <!-- Project 1: FLOWLY -->
-          <article class="project-card" data-tilt>
-            <div class="project-preview">
-              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80" 
-                   alt="Flowly B2B SaaS Dashboard and AI Workflow Platform Preview" 
-                   width="1200" 
-                   height="750" 
-                   loading="lazy" 
-                   decoding="async">
-              <div class="preview-overlay">
-                <span class="overlay-badge">B2B SaaS • Dark Mode</span>
-              </div>
+        <div class="projects-stack">
+          <!-- Project 01: Flowly -->
+          <article class="project-item">
+            <div class="project-media">
+              <a href="./flowly/" target="_blank" rel="noopener noreferrer" class="media-link" aria-label="Open Flowly preview">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80" 
+                     alt="Flowly autonomous workflow interface preview" 
+                     width="1200" height="750" loading="lazy" decoding="async">
+              </a>
             </div>
-
-            <div class="project-content">
-              <div class="project-meta">
-                <span class="project-category">AI Automation • Enterprise SaaS</span>
-                <div class="live-indicator">
-                  <span class="live-dot"></span>
-                  <span>Vercel Ready</span>
-                </div>
+            <div class="project-info">
+              <div class="project-header">
+                <span class="project-num">01</span>
+                <span class="project-tag" data-i18n="flowly.tag">SaaS / Systems Architecture</span>
               </div>
-
-              <h3 class="project-title">Flowly — Autonomous AI Workflow Automation</h3>
-              <p class="project-description">
-                Engineered for maximum signup velocity. Features an animated hero badge, dual-action CTAs, social proof tickers, responsive bento-box feature layout, and an interactive Monthly vs. Annual pricing toggle.
+              <h3 class="project-name">Flowly</h3>
+              <p class="project-summary" data-i18n="flowly.desc">
+                An autonomous workflow orchestration platform. Designed with dark slate tones, interactive agent pipeline state machines, responsive bento grids, and an intuitive dual-cadence billing engine.
               </p>
-
-              <div class="metrics-callout">
-                <div class="metric-mini">
-                  <span class="mini-val">+34.2%</span>
-                  <span class="mini-lbl">Trial Signups</span>
-                </div>
-                <div class="metric-mini">
-                  <span class="mini-val">0.42s</span>
-                  <span class="mini-lbl">LCP Load Time</span>
-                </div>
-                <div class="metric-mini">
-                  <span class="mini-val">0.00</span>
-                  <span class="mini-lbl">Cumulative Layout Shift</span>
-                </div>
+              <div class="project-meta-pills">
+                <span>Deterministic Pipelines</span>
+                <span>Bento Layout</span>
+                <span>Vanilla JS</span>
               </div>
-
-              <div class="project-tech-tags">
-                <span class="tech-tag">HTML5 Semantic</span>
-                <span class="tech-tag">CSS Bento Grid</span>
-                <span class="tech-tag">Dynamic Pricing Toggle</span>
-                <span class="tech-tag">Vanilla JS</span>
-              </div>
-
-              <div class="project-actions">
-                <a href="./flowly/" class="btn btn-project-primary" target="_self">
-                  <span>Launch Live Demo</span>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                </a>
-                <a href="#contact" class="btn btn-project-secondary">
-                  <span>Request Custom Build</span>
+              <div class="project-cta-group">
+                <a href="./flowly/" class="btn-project-link">
+                  <span data-i18n="project.view">Open Prototype</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
                 </a>
               </div>
             </div>
           </article>
 
-          <!-- Project 2: LUMOS -->
-          <article class="project-card" data-tilt>
-            <div class="project-preview">
-              <img src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=1200&q=80" 
-                   alt="Lumos Architectural Lighting and Luxury Home Decor Preview" 
-                   width="1200" 
-                   height="750" 
-                   loading="lazy" 
-                   decoding="async">
-              <div class="preview-overlay">
-                <span class="overlay-badge">Luxury E-Commerce • Warm Ivory</span>
-              </div>
+          <!-- Project 02: Lumos -->
+          <article class="project-item">
+            <div class="project-media">
+              <a href="./lumos/" target="_blank" rel="noopener noreferrer" class="media-link" aria-label="Open Lumos preview">
+                <img src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=1200&q=80" 
+                     alt="Lumos architectural lighting collection preview" 
+                     width="1200" height="750" loading="lazy" decoding="async">
+              </a>
             </div>
-
-            <div class="project-content">
-              <div class="project-meta">
-                <span class="project-category">Editorial Direct-to-Consumer</span>
-                <div class="live-indicator">
-                  <span class="live-dot"></span>
-                  <span>Vercel Ready</span>
-                </div>
+            <div class="project-info">
+              <div class="project-header">
+                <span class="project-num">02</span>
+                <span class="project-tag" data-i18n="lumos.tag">Editorial E-Commerce / Lighting</span>
               </div>
-
-              <h3 class="project-title">Lumos — Sculptural Lighting &amp; Living Artefacts</h3>
-              <p class="project-description">
-                Boutique editorial design blending Cormorant serif typography with an off-white aesthetic. Includes an interactive product variant switcher (Brass / Obsidian / Travertine), live cart drawer preview, and sustainability storytelling.
+              <h3 class="project-name">Lumos</h3>
+              <p class="project-summary" data-i18n="lumos.desc">
+                An atelier catalog celebrating sculptural luminaires. Combines warm ivory palettes, Cormorant serif typography, an interactive travertine and brass material switcher, and minimal cart state dynamics.
               </p>
-
-              <div class="metrics-callout">
-                <div class="metric-mini">
-                  <span class="mini-val">+28.5%</span>
-                  <span class="mini-lbl">Conversion Rate</span>
-                </div>
-                <div class="metric-mini">
-                  <span class="mini-val">$380</span>
-                  <span class="mini-lbl">Avg. Order Value</span>
-                </div>
-                <div class="metric-mini">
-                  <span class="mini-val">-41%</span>
-                  <span class="mini-lbl">Cart Abandonment</span>
-                </div>
+              <div class="project-meta-pills">
+                <span>Material Variant Engine</span>
+                <span>Asymmetrical Grid</span>
+                <span>Editorial Type</span>
               </div>
-
-              <div class="project-tech-tags">
-                <span class="tech-tag">Asymmetrical Grid</span>
-                <span class="tech-tag">Variant Engine</span>
-                <span class="tech-tag">Cart Drawer UI</span>
-                <span class="tech-tag">Editorial Typography</span>
-              </div>
-
-              <div class="project-actions">
-                <a href="./lumos/" class="btn btn-project-primary" target="_self">
-                  <span>Launch Live Demo</span>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                </a>
-                <a href="#contact" class="btn btn-project-secondary">
-                  <span>Request Custom Build</span>
+              <div class="project-cta-group">
+                <a href="./lumos/" class="btn-project-link">
+                  <span data-i18n="project.view">Open Prototype</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
                 </a>
               </div>
             </div>
           </article>
 
-          <!-- Project 3: NÓMADA -->
-          <article class="project-card" data-tilt>
-            <div class="project-preview">
-              <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1200&q=80" 
-                   alt="Nómada Ancestral Culinary and Tasting Menu Preview" 
-                   width="1200" 
-                   height="750" 
-                   loading="lazy" 
-                   decoding="async">
-              <div class="preview-overlay">
-                <span class="overlay-badge">Boutique Hospitality • Earth Tones</span>
-              </div>
+          <!-- Project 03: Nómada -->
+          <article class="project-item">
+            <div class="project-media">
+              <a href="./nomada/" target="_blank" rel="noopener noreferrer" class="media-link" aria-label="Open Nómada preview">
+                <img src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?auto=format&fit=crop&w=1200&q=80" 
+                     alt="Nómada wood-fire culinary tasting menu preview" 
+                     width="1200" height="750" loading="lazy" decoding="async">
+              </a>
             </div>
-
-            <div class="project-content">
-              <div class="project-meta">
-                <span class="project-category">Fine Dining &amp; Natural Cellar</span>
-                <div class="live-indicator">
-                  <span class="live-dot"></span>
-                  <span>Vercel Ready</span>
-                </div>
+            <div class="project-info">
+              <div class="project-header">
+                <span class="project-num">03</span>
+                <span class="project-tag" data-i18n="nomada.tag">Hospitality / Culinary Experience</span>
               </div>
-
-              <h3 class="project-title">Nómada — Ancestral Cooking &amp; Biodynamic Cellar</h3>
-              <p class="project-description">
-                Immersive culinary storytelling celebrating wood-fire gastronomy. Integrates an interactive multi-course tasting menu switcher (Starters, Wood-Fire Mains, Desserts, Pairings) and an intuitive table reservation booking engine.
+              <h3 class="project-name">Nómada</h3>
+              <p class="project-summary" data-i18n="nomada.desc">
+                Atmospheric digital experience for ancestral hearth cuisine. Features an interactive 4-stage seasonal tasting menu (Starters, Fire, Sweets, Cellar) and an integrated intimate table booking module.
               </p>
-
-              <div class="metrics-callout">
-                <div class="metric-mini">
-                  <span class="mini-val">4.8x</span>
-                  <span class="mini-lbl">Direct Reservations</span>
-                </div>
-                <div class="metric-mini">
-                  <span class="mini-val">&lt; 30s</span>
-                  <span class="mini-lbl">Booking Time</span>
-                </div>
-                <div class="metric-mini">
-                  <span class="mini-val">99.8%</span>
-                  <span class="mini-lbl">Mobile Accessibility</span>
-                </div>
+              <div class="project-meta-pills">
+                <span>W3C Tablist Pattern</span>
+                <span>Reservation Engine</span>
+                <span>Sensory Earth Palette</span>
               </div>
-
-              <div class="project-tech-tags">
-                <span class="tech-tag">Interactive Menu Tabs</span>
-                <span class="tech-tag">Reservation Engine</span>
-                <span class="tech-tag">Atmospheric Dark UI</span>
-                <span class="tech-tag">Touch-First UI</span>
-              </div>
-
-              <div class="project-actions">
-                <a href="./nomada/" class="btn btn-project-primary" target="_self">
-                  <span>Launch Live Demo</span>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                </a>
-                <a href="#contact" class="btn btn-project-secondary">
-                  <span>Request Custom Build</span>
+              <div class="project-cta-group">
+                <a href="./nomada/" class="btn-project-link">
+                  <span data-i18n="project.view">Open Prototype</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
                 </a>
               </div>
             </div>
           </article>
-
         </div>
       </div>
     </section>
 
-    <!-- Process Section: 3-Step Methodology -->
-    <section class="process-section" id="process">
+    <!-- Technical Philosophy Section: 3 Clean Pillars -->
+    <section class="philosophy-section" id="philosophy">
       <div class="container">
-        <div class="section-header">
-          <span class="section-tag">Systematic Execution</span>
-          <h2 class="section-title">The High-Conversion Engineering Process</h2>
-          <p class="section-desc">
-            How I transform ambiguous requirements into revenue-generating, lightning-fast digital assets in days, not months.
+        <div class="section-meta">
+          <span class="meta-label" data-i18n="philosophy.label">02 / Methodology</span>
+          <h2 class="section-title" data-i18n="philosophy.title">Technical Philosophy</h2>
+          <p class="section-lead" data-i18n="philosophy.lead">
+            How I approach building software for the modern web: focused on intentional restraint, sub-second execution, and resilience.
           </p>
         </div>
 
-        <div class="process-grid">
-          <div class="process-card">
-            <div class="process-step-num">01</div>
-            <div class="process-icon">📐</div>
-            <h3 class="process-card-title">Strategy &amp; Wireframe Architecture</h3>
-            <p class="process-card-text">
-              We deconstruct your customer psychology, objection points, and primary value proposition. I map out high-intent conversion pathways, low-cognitive-load hierarchies, and mobile touch targets before a single line of code is written.
+        <div class="philosophy-grid">
+          <div class="philosophy-card">
+            <span class="card-num">01</span>
+            <h3 class="card-title" data-i18n="pillar1.title">Precision Typography & Fluid Layouts</h3>
+            <p class="card-body" data-i18n="pillar1.desc">
+              Interfaces should feel calm and effortless. I leverage fluid clamp scaling, proportional scale modularity, and tight typographic hierarchies so content feels balanced on an iPhone or a 32-inch studio display.
             </p>
-            <ul class="process-bullets">
-              <li>Conversion audit &amp; friction analysis</li>
-              <li>Visual hierarchy &amp; CTA placement</li>
-              <li>Semantic content structuring</li>
-            </ul>
           </div>
 
-          <div class="process-card highlighted">
-            <div class="process-step-num">02</div>
-            <div class="process-icon">⚡</div>
-            <h3 class="process-card-title">AI-Accelerated Development</h3>
-            <p class="process-card-text">
-              Leveraging advanced LLM workflows and agentic scaffolding to accelerate production velocity by 3x without sacrificing code craftsmanship. Clean, dependency-free HTML5 and modern CSS built for instantaneous browser execution.
+          <div class="philosophy-card">
+            <span class="card-num">02</span>
+            <h3 class="card-title" data-i18n="pillar2.title">Zero-Dependency Vanilla Architecture</h3>
+            <p class="card-body" data-i18n="pillar2.desc">
+              Avoiding bloated runtime layers whenever possible. Clean HTML5 semantics, modern CSS Grid/Flexbox, and resilient vanilla JavaScript ensure instant initial paint times, zero supply-chain risk, and 100/100 Lighthouse performance.
             </p>
-            <ul class="process-bullets">
-              <li>Componentized vanilla architectures</li>
-              <li>Zero heavy JavaScript libraries</li>
-              <li>Micro-animations with GPU acceleration</li>
-            </ul>
           </div>
 
-          <div class="process-card">
-            <div class="process-step-num">03</div>
-            <div class="process-icon">🎯</div>
-            <h3 class="process-card-title">Performance &amp; Conversion Polish</h3>
-            <p class="process-card-text">
-              Every millisecond of latency costs conversions. I benchmark Core Web Vitals (LCP &lt; 0.8s, CLS = 0.0), verify WCAG 2.1 AA accessibility standards, configure OpenGraph preview cards, and wire analytics event tracking hooks.
+          <div class="philosophy-card">
+            <span class="card-num">03</span>
+            <h3 class="card-title" data-i18n="pillar3.title">Applied AI & LLM Systems</h3>
+            <p class="card-body" data-i18n="pillar3.desc">
+              As an AI Engineering Student, I actively research how foundation models integrate into user-facing software. Designing intelligent pipelines, stateful deterministic agent interactions, and context-aware interfaces.
             </p>
-            <ul class="process-bullets">
-              <li>99+ Google Lighthouse optimization</li>
-              <li>Image lazy-loading &amp; modern WebP/AVIF</li>
-              <li>Seamless Vercel deployment pipelines</li>
-            </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- CRO Philosophy / Value Bento -->
-    <section class="philosophy-section" id="performance">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag">Why Frontend Architecture Matters</span>
-          <h2 class="section-title">Engineered for Revenue, Not Just Aesthetics</h2>
-          <p class="section-desc">
-            Most landing pages fail not because of poor design, but because of slow load times, unclear value propositions, and cognitive overload.
+    <!-- About Section -->
+    <section class="about-section" id="about">
+      <div class="container about-container">
+        <div class="section-meta">
+          <span class="meta-label" data-i18n="about.label">03 / Profile</span>
+          <h2 class="section-title" data-i18n="about.title">About</h2>
+        </div>
+
+        <div class="about-content">
+          <p class="about-lead" data-i18n="about.p1">
+            I am José Ignacio Fernández Cano, an independent design engineer and AI Engineering Student based in Tucumán, Argentina.
+          </p>
+          <p class="about-text" data-i18n="about.p2">
+            My work sits at the intersection of product design craftsmanship and technical systems engineering. I believe the best web products are quiet, resilient, load instantly, and respect the user's attention.
+          </p>
+          <p class="about-text" data-i18n="about.p3">
+            Currently collaborating with forward-thinking founders, independent brands, and digital studios worldwide who care deeply about detail and execution velocity.
           </p>
         </div>
-
-        <div class="bento-grid">
-          <div class="bento-box bento-span-2">
-            <div class="bento-icon">⚡</div>
-            <h3>Sub-Second Speed is an Unfair Competitive Advantage</h3>
-            <p>
-              Amazon calculated that a 100ms delay in page load time costs 1% in sales. Google research indicates 53% of mobile visits are abandoned if a page takes longer than 3 seconds to load. My pages consistently load under 600ms worldwide.
-            </p>
-            <div class="speed-bar-container">
-              <div class="speed-bar-item">
-                <span class="speed-bar-label">My Pages (Ignaciofc.dev)</span>
-                <div class="speed-bar"><div class="speed-fill fast" style="width: 95%;">0.45s</div></div>
-              </div>
-              <div class="speed-bar-item">
-                <span class="speed-bar-label">Industry Average Landing Page</span>
-                <div class="speed-bar"><div class="speed-fill slow" style="width: 40%;">3.20s</div></div>
-              </div>
-            </div>
-          </div>
-
-          <div class="bento-box">
-            <div class="bento-icon">🧠</div>
-            <h3>AI Engineering Integration</h3>
-            <p>
-              As an AI Engineering Student, I combine machine learning APIs, dynamic generative components, and automated code pipelines into practical frontend software.
-            </p>
-          </div>
-
-          <div class="bento-box">
-            <div class="bento-icon">📱</div>
-            <h3>Mobile-First Reality</h3>
-            <p>
-              Over 68% of paid ad traffic lands on mobile devices. I design from 360px viewports outward with tactile thumb zones and fluid clamp typography.
-            </p>
-          </div>
-
-          <div class="bento-box bento-span-2">
-            <div class="bento-icon">🛡️</div>
-            <h3>Zero Dependency Risk &amp; Clean Vercel Deployments</h3>
-            <p>
-              No fragile npm dependency trees that break on update. Pure semantic HTML, modern CSS Grid/Flexbox, and resilient vanilla JavaScript ready to be deployed to Vercel, Cloudflare, or AWS in 30 seconds.
-            </p>
-          </div>
-        </div>
       </div>
     </section>
 
-    <!-- Interactive ROI / Calculator Teaser -->
-    <section class="calculator-section">
-      <div class="container">
-        <div class="calculator-wrapper">
-          <div class="calc-content">
-            <span class="calc-tag">Interactive Estimate</span>
-            <h3 class="calc-title">What is a 1.5% conversion lift worth to your business?</h3>
-            <p class="calc-desc">
-              If your landing page receives 20,000 monthly visitors with an average customer value of $150, increasing your conversion rate from 2.0% to 3.5% yields an additional <strong>+$45,000 in monthly revenue</strong> — without spending an extra dollar on ads.
-            </p>
-          </div>
-          <div class="calc-action">
-            <a href="#contact" class="btn btn-primary">Audit My Landing Page</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact & Consultation Section -->
+    <!-- Contact Section -->
     <section class="contact-section" id="contact">
-      <div class="container">
-        <div class="contact-grid">
-          
-          <!-- Contact Left Info -->
-          <div class="contact-info">
-            <span class="section-tag">Direct Channel</span>
-            <h2 class="contact-title">Let’s engineer your next high-converting page.</h2>
-            <p class="contact-intro">
-              Whether you need a high-velocity SaaS launch, an editorial luxury shopfront, or a conversion audit of your existing web assets, I’m ready to collaborate.
-            </p>
+      <div class="container contact-container">
+        <div class="contact-header">
+          <span class="meta-label" data-i18n="contact.label">04 / Dialogue</span>
+          <h2 class="contact-headline" data-i18n="contact.title">Let’s build something thoughtful.</h2>
+          <p class="contact-subtext" data-i18n="contact.sub">
+            Available for select design engineering engagements, contract roles, and bespoke interface builds.
+          </p>
+        </div>
 
-            <div class="contact-details">
-              <a href="mailto:joseignaciofernandezcano@gmail.com" class="contact-detail-item" aria-label="Send direct email to José Ignacio">
-                <div class="detail-icon">✉️</div>
-                <div>
-                  <span class="detail-label">Direct Email</span>
-                  <span class="detail-val">joseignaciofernandezcano@gmail.com</span>
-                </div>
-              </a>
+        <div class="contact-layout">
+          <!-- Direct Channels -->
+          <div class="contact-channels">
+            <div class="channel-group">
+              <span class="channel-label" data-i18n="contact.email_label">Email</span>
+              <a href="mailto:joseignaciofernandezcano@gmail.com" class="channel-link">joseignaciofernandezcano@gmail.com</a>
+            </div>
 
-              <a href="https://wa.me/56900000000" target="_blank" rel="noopener noreferrer" class="contact-detail-item" aria-label="Contact directly on WhatsApp (opens in new window)">
-                <div class="detail-icon">💬</div>
-                <div>
-                  <span class="detail-label">WhatsApp Direct</span>
-                  <span class="detail-val">+56 (Direct / Fast Response)</span>
-                </div>
-              </a>
+            <div class="channel-group">
+              <span class="channel-label" data-i18n="contact.wa_label">Direct WhatsApp</span>
+              <a href="https://wa.me/5493814465183" target="_blank" rel="noopener noreferrer" class="channel-link">+54 9 381 446-5183</a>
+            </div>
 
-              <div class="contact-detail-item">
-                <div class="detail-icon">🌐</div>
-                <div>
-                  <span class="detail-label">Timezone &amp; Availability</span>
-                  <span class="detail-val">UTC-3 (Overlaps with US &amp; EU business hours)</span>
-                </div>
+            <div class="channel-group">
+              <span class="channel-label" data-i18n="contact.network_label">Network & Code</span>
+              <div class="social-links">
+                <a href="https://github.com/ignaciofc" target="_blank" rel="noopener noreferrer" class="social-link">GitHub ↗</a>
+                <a href="https://linkedin.com/in/ignaciofc" target="_blank" rel="noopener noreferrer" class="social-link">LinkedIn ↗</a>
               </div>
             </div>
 
-            <!-- Guarantee Box -->
-            <div class="guarantee-box">
-              <span class="guarantee-badge">✓ 24-Hour Reply Guarantee</span>
-              <p>Every inquiry receives an actionable response within 1 business day, including an initial technical assessment.</p>
+            <div class="channel-group">
+              <span class="channel-label" data-i18n="contact.loc_label">Location</span>
+              <span class="channel-plain" data-i18n="contact.loc_val">Argentina (UTC-3) • Working with clients in US, Europe & LATAM</span>
             </div>
           </div>
 
-          <!-- Contact Right Form -->
-          <div class="contact-form-wrapper">
-            <form class="contact-form" id="leadForm" onsubmit="event.preventDefault(); handleFormSubmit();">
-              <h3 class="form-title">Project Inquiry Form</h3>
-
-              <div class="form-group">
-                <label for="userName">Your Full Name</label>
-                <input type="text" id="userName" name="name" placeholder="e.g. Alex Morgan" required autocomplete="name">
+          <!-- Minimal Inquiry Form -->
+          <div class="contact-form-pane">
+            <form class="clean-form" id="contactForm" onsubmit="event.preventDefault(); handleCleanSubmit();">
+              <div class="input-field">
+                <label for="formName" data-i18n="form.name">Name</label>
+                <input type="text" id="formName" name="name" required placeholder="Alex Morgan" autocomplete="name">
               </div>
 
-              <div class="form-group">
-                <label for="userEmail">Business Email</label>
-                <input type="email" id="userEmail" name="email" placeholder="alex@company.com" required autocomplete="email">
+              <div class="input-field">
+                <label for="formEmail" data-i18n="form.email">Email Address</label>
+                <input type="email" id="formEmail" name="email" required placeholder="alex@studio.com" autocomplete="email">
               </div>
 
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="projectType">Project Scope</label>
-                  <select id="projectType" name="type" required>
-                    <option value="" disabled selected>Select scope</option>
-                    <option value="saas">B2B SaaS Landing Page</option>
-                    <option value="ecommerce">Luxury / E-Commerce Shopfront</option>
-                    <option value="hospitality">Hospitality &amp; Restaurant Experience</option>
-                    <option value="cro-audit">Landing Page CRO &amp; Speed Audit</option>
-                    <option value="custom">Custom Web Development</option>
-                  </select>
-                </div>
-
-                <div class="form-group">
-                  <label for="timeline">Target Launch Date</label>
-                  <select id="timeline" name="timeline" required>
-                    <option value="" disabled selected>Select timeline</option>
-                    <option value="asap">Immediate (Within 1-2 weeks)</option>
-                    <option value="1month">Within 3-4 weeks</option>
-                    <option value="exploring">Just exploring possibilities</option>
-                  </select>
-                </div>
+              <div class="input-field">
+                <label for="formMessage" data-i18n="form.message">Project Context</label>
+                <textarea id="formMessage" name="message" rows="4" required placeholder="Brief outline of what you are building, timeline, or scope..."></textarea>
               </div>
 
-              <div class="form-group">
-                <label for="userMessage">Tell me about your product &amp; conversion goals</label>
-                <textarea id="userMessage" name="message" rows="4" placeholder="Current baseline conversion rate, target audience, URL to existing site, or reference designs..." required></textarea>
-              </div>
-
-              <button type="submit" class="btn btn-submit" id="submitBtn">
-                <span>Submit Project Request</span>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+              <button type="submit" class="btn btn-primary btn-block" id="formSubmitBtn" data-i18n="form.submit">
+                Send Message
               </button>
 
-              <div class="form-success-message" id="formSuccessMessage" role="status" aria-live="polite">
-                <span class="success-icon" aria-hidden="true">🎉</span>
-                <h4>Thank you! Your inquiry has been received.</h4>
-                <p>I will review your project details and reach out within 24 hours with custom recommendations.</p>
+              <div class="form-acknowledgement" id="formAck" role="status" aria-live="polite">
+                <span data-i18n="form.success">Thank you. Your message has been received. I will respond promptly.</span>
               </div>
             </form>
           </div>
-
         </div>
       </div>
     </section>
   </main>
 
-  <!-- Site Footer -->
+  <!-- Clean Studio Footer -->
   <footer class="site-footer">
-    <div class="container footer-container">
-      <div class="footer-brand">
-        <a href="#hero" class="brand-logo" aria-label="Ignaciofc.dev Home">
-          <span class="logo-symbol" aria-hidden="true">⚡</span>
-          <span class="logo-text">Ignaciofc<span class="accent-dot">.</span>dev</span>
-        </a>
-        <p class="footer-copy">
-          Designed &amp; engineered by José Ignacio Fernández Cano.<br>
-          Frontend &amp; Conversion-Focused Web Developer | AI Engineering Student.
-        </p>
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <span class="footer-monogram">✦ Ignaciofc.dev</span>
+        <span class="footer-note" data-i18n="footer.copy">Independent Design Engineering. Argentina.</span>
       </div>
 
-      <div class="footer-demos">
-        <span class="footer-col-title">Live Concept Demos</span>
-        <ul class="footer-links">
-          <li><a href="./flowly/">Flowly — AI Workflow SaaS</a></li>
-          <li><a href="./lumos/">Lumos — Luxury E-Commerce</a></li>
-          <li><a href="./nomada/">Nómada — Haute Dining</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-meta">
-        <span class="footer-col-title">Deployment Status</span>
-        <div class="deployment-status">
-          <span class="deploy-dot" aria-hidden="true"></span>
-          <span>Vercel Edge Network: Global Active</span>
-        </div>
-        <p class="copyright-text">© 2026 José Ignacio Fernández Cano. All rights reserved.</p>
+      <div class="footer-right">
+        <span class="footer-dim">© 2026 José Ignacio Fernández Cano</span>
+        <a href="#hero" class="back-to-top" aria-label="Back to top">↑ <span data-i18n="footer.top">Top</span></a>
       </div>
     </div>
   </footer>
 
+  <!-- Native Lightweight i18n & Interactions Script -->
   <script>
+    const translations = {
+      en: {
+        "nav.work": "Selected Work",
+        "nav.philosophy": "Philosophy",
+        "nav.about": "About",
+        "nav.contact": "Get in Touch",
+        "hero.status": "Available for Select Projects & Collaborations",
+        "hero.title": "Crafting quiet, high-velocity digital experiences and bespoke web interfaces.",
+        "hero.sub": "José Ignacio Fernández Cano — Independent Design Engineer & AI Engineering Student based in Argentina. Bridging rigorous interface craft, computational speed, and modern web architectures.",
+        "hero.cta_work": "View Selected Work",
+        "hero.cta_contact": "Start a Conversation",
+        "work.label": "01 / Index",
+        "work.title": "Selected Work",
+        "work.lead": "Three distinct interactive artifacts built without heavy frameworks. Explored across SaaS automation, editorial retail, and sensory hospitality.",
+        "flowly.tag": "SaaS / Systems Architecture",
+        "flowly.desc": "An autonomous workflow orchestration platform. Designed with dark slate tones, interactive agent pipeline state machines, responsive bento grids, and an intuitive dual-cadence billing engine.",
+        "lumos.tag": "Editorial E-Commerce / Lighting",
+        "lumos.desc": "An atelier catalog celebrating sculptural luminaires. Combines warm ivory palettes, Cormorant serif typography, an interactive travertine and brass material switcher, and minimal cart state dynamics.",
+        "nomada.tag": "Hospitality / Culinary Experience",
+        "nomada.desc": "Atmospheric digital experience for ancestral hearth cuisine. Features an interactive 4-stage seasonal tasting menu (Starters, Fire, Sweets, Cellar) and an integrated intimate table booking module.",
+        "project.view": "Open Prototype",
+        "philosophy.label": "02 / Methodology",
+        "philosophy.title": "Technical Philosophy",
+        "philosophy.lead": "How I approach building software for the modern web: focused on intentional restraint, sub-second execution, and resilience.",
+        "pillar1.title": "Precision Typography & Fluid Layouts",
+        "pillar1.desc": "Interfaces should feel calm and effortless. I leverage fluid clamp scaling, proportional scale modularity, and tight typographic hierarchies so content feels balanced on an iPhone or a 32-inch studio display.",
+        "pillar2.title": "Zero-Dependency Vanilla Architecture",
+        "pillar2.desc": "Avoiding bloated runtime layers whenever possible. Clean HTML5 semantics, modern CSS Grid/Flexbox, and resilient vanilla JavaScript ensure instant initial paint times, zero supply-chain risk, and 100/100 Lighthouse performance.",
+        "pillar3.title": "Applied AI & LLM Systems",
+        "pillar3.desc": "As an AI Engineering Student, I actively research how foundation models integrate into user-facing software. Designing intelligent pipelines, stateful deterministic agent interactions, and context-aware interfaces.",
+        "about.label": "03 / Profile",
+        "about.title": "About",
+        "about.p1": "I am José Ignacio Fernández Cano, an independent design engineer and AI Engineering Student based in Tucumán, Argentina.",
+        "about.p2": "My work sits at the intersection of product design craftsmanship and technical systems engineering. I believe the best web products are quiet, resilient, load instantly, and respect the user's attention.",
+        "about.p3": "Currently collaborating with forward-thinking founders, independent brands, and digital studios worldwide who care deeply about detail and execution velocity.",
+        "contact.label": "04 / Dialogue",
+        "contact.title": "Let’s build something thoughtful.",
+        "contact.sub": "Available for select design engineering engagements, contract roles, and bespoke interface builds.",
+        "contact.email_label": "Email",
+        "contact.wa_label": "Direct WhatsApp",
+        "contact.network_label": "Network & Code",
+        "contact.loc_label": "Location",
+        "contact.loc_val": "Argentina (UTC-3) • Working with clients in US, Europe & LATAM",
+        "form.name": "Name",
+        "form.email": "Email Address",
+        "form.message": "Project Context",
+        "form.submit": "Send Message",
+        "form.sending": "Transmitting...",
+        "form.success": "Thank you. Your message has been received. I will respond promptly.",
+        "footer.copy": "Independent Design Engineering. Argentina.",
+        "footer.top": "Top"
+      },
+      es: {
+        "nav.work": "Proyectos",
+        "nav.philosophy": "Filosofía",
+        "nav.about": "Perfil",
+        "nav.contact": "Contacto",
+        "hero.status": "Disponible para Proyectos y Colaboraciones Selectas",
+        "hero.title": "Diseño y desarrollo experiencias digitales de alta velocidad e interfaces web a medida.",
+        "hero.sub": "José Ignacio Fernández Cano — Ingeniero de diseño independiente y estudiante de Ingeniería en IA en Argentina. Integrando oficio de interfaz, velocidad de cómputo y arquitecturas web modernas.",
+        "hero.cta_work": "Explorar Proyectos",
+        "hero.cta_contact": "Iniciar Conversación",
+        "work.label": "01 / Catálogo",
+        "work.title": "Proyectos Seleccionados",
+        "work.lead": "Tres piezas interactivas construidas sin frameworks pesados. Exploradas en automatización SaaS, retail editorial y gastronomía sensorial.",
+        "flowly.tag": "Arquitectura de Sistemas / SaaS",
+        "flowly.desc": "Plataforma de orquestación de flujos de trabajo autónomos. Diseñada en tonos pizarra oscuros, máquinas de estado de agentes, grillas bento y motor de precios mensual/anual interactivo.",
+        "lumos.tag": "E-Commerce Editorial / Iluminación",
+        "lumos.desc": "Catálogo atelier para luminarias esculturales. Combina paletas ivory cálidas, tipografía serif Cormorant, selector de materiales de travertino y latón, y dinámica minimalista de carrito.",
+        "nomada.tag": "Hospitalidad / Experiencia Gastronómica",
+        "nomada.desc": "Experiencia digital atmosférica para cocina ancestral a las brasas. Cuenta con menú degustación interactivo de 4 pasos (Entradas, Fuego, Postres, Bodega) y widget de reserva de mesas.",
+        "project.view": "Abrir Prototipo",
+        "philosophy.label": "02 / Metodología",
+        "philosophy.title": "Filosofía Técnica",
+        "philosophy.lead": "Mi enfoque al construir software para la web moderna: sobriedad intencional, ejecución sub-segundo y resiliencia.",
+        "pillar1.title": "Tipografía de Precisión y Layouts Fluidos",
+        "pillar1.desc": "Las interfaces deben sentirse serenas y naturales. Aplico escalas fluidas con clamp, modularidad proporcional y jerarquía estricta para que el contenido se equilibre tanto en un iPhone como en un monitor de estudio.",
+        "pillar2.title": "Arquitectura Vanilla Libre de Dependencias",
+        "pillar2.desc": "Evito capas de runtime innecesarias. HTML5 semántico, CSS Grid/Flexbox moderno y JavaScript nativo garantizan tiempos de carga instantáneos, cero riesgos de dependencias y 100/100 en Lighthouse.",
+        "pillar3.title": "Sistemas de IA y LLM Aplicados",
+        "pillar3.desc": "Como estudiante de Ingeniería en IA, investigo activamente cómo integrar modelos fundacionales en productos web reales: diseñando pipelines inteligentes, agentes determinísticos e interfaces conscientes del contexto.",
+        "about.label": "03 / Perfil",
+        "about.title": "Sobre Mí",
+        "about.p1": "Soy José Ignacio Fernández Cano, ingeniero de diseño independiente y estudiante de Ingeniería en Inteligencia Artificial en Tucumán, Argentina.",
+        "about.p2": "Mi trabajo converge entre el diseño de producto digital y la ingeniería técnica de sistemas. Creo que los mejores productos son sobrios, resilientes, cargan al instante y respetan la atención del usuario.",
+        "about.p3": "Actualmente colaboro con fundadores visionarios, marcas independientes y estudios digitales en todo el mundo que valoran el detalle artesanal y la velocidad de ejecución.",
+        "contact.label": "04 / Diálogo",
+        "contact.title": "Construyamos algo con criterio.",
+        "contact.sub": "Disponible para proyectos de diseño e ingeniería frontend, contratos directos e interfaces a medida.",
+        "contact.email_label": "Email",
+        "contact.wa_label": "WhatsApp Directo",
+        "contact.network_label": "Redes y Código",
+        "contact.loc_label": "Ubicación",
+        "contact.loc_val": "Argentina (UTC-3) • Trabajo con clientes en EE.UU., Europa y LATAM",
+        "form.name": "Nombre",
+        "form.email": "Correo Electrónico",
+        "form.message": "Contexto del Proyecto",
+        "form.submit": "Enviar Mensaje",
+        "form.sending": "Enviando...",
+        "form.success": "Muchas gracias. Tu mensaje ha sido recibido. Te responderé a la brevedad.",
+        "footer.copy": "Ingeniería de Diseño Independiente. Argentina.",
+        "footer.top": "Inicio"
+      }
+    };
+
+    let currentLang = 'en';
+
+    function setLanguage(lang) {
+      if (!translations[lang]) return;
+      currentLang = lang;
+      localStorage.setItem('ignacio_lang', lang);
+      document.documentElement.lang = lang;
+
+      const elements = document.querySelectorAll('[data-i18n]');
+      elements.forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (translations[lang][key]) {
+          el.textContent = translations[lang][key];
+        }
+      });
+
+      // Update switcher active states
+      const enBtn = document.getElementById('lang-en');
+      const esBtn = document.getElementById('lang-es');
+      if (enBtn && esBtn) {
+        if (lang === 'en') {
+          enBtn.classList.add('active');
+          enBtn.setAttribute('aria-pressed', 'true');
+          esBtn.classList.remove('active');
+          esBtn.setAttribute('aria-pressed', 'false');
+        } else {
+          esBtn.classList.add('active');
+          esBtn.setAttribute('aria-pressed', 'true');
+          enBtn.classList.remove('active');
+          enBtn.setAttribute('aria-pressed', 'false');
+        }
+      }
+    }
+
     document.addEventListener('DOMContentLoaded', () => {
-      // Mobile Drawer Toggle
+      // Restore persisted language or default to EN
+      const stored = localStorage.getItem('ignacio_lang');
+      if (stored && (stored === 'en' || stored === 'es')) {
+        setLanguage(stored);
+      } else {
+        setLanguage('en');
+      }
+
+      // Switcher click handlers
+      const enBtn = document.getElementById('lang-en');
+      const esBtn = document.getElementById('lang-es');
+      if (enBtn) enBtn.addEventListener('click', () => setLanguage('en'));
+      if (esBtn) esBtn.addEventListener('click', () => setLanguage('es'));
+
+      // Mobile Menu Drawer
       const mobileBtn = document.getElementById('mobileMenuBtn');
       const mobileDrawer = document.getElementById('mobileDrawer');
       if (mobileBtn && mobileDrawer) {
         mobileBtn.addEventListener('click', () => {
-          const isExpanded = mobileBtn.getAttribute('aria-expanded') === 'true';
-          mobileBtn.setAttribute('aria-expanded', !isExpanded);
+          const isExp = mobileBtn.getAttribute('aria-expanded') === 'true';
+          mobileBtn.setAttribute('aria-expanded', !isExp);
           mobileDrawer.classList.toggle('active');
         });
 
-        // Close drawer on link click
-        document.querySelectorAll('.mobile-link, .mobile-btn').forEach(link => {
-          link.addEventListener('click', () => {
+        document.querySelectorAll('.mobile-link, .mobile-btn').forEach(item => {
+          item.addEventListener('click', () => {
             mobileDrawer.classList.remove('active');
             mobileBtn.setAttribute('aria-expanded', 'false');
           });
         });
       }
 
-      // Header scroll background blur effect
+      // Header Scroll Blur
       const siteHeader = document.getElementById('site-header');
       if (siteHeader) {
         window.addEventListener('scroll', () => {
-          if (window.scrollY > 40) {
-            siteHeader.classList.add('scrolled');
-          } else {
-            siteHeader.classList.remove('scrolled');
-          }
+          siteHeader.classList.toggle('scrolled', window.scrollY > 30);
         }, { passive: true });
       }
     });
 
-    // Interactive Lead Form Handler
-    function handleFormSubmit() {
-      const btn = document.getElementById('submitBtn');
-      const msg = document.getElementById('formSuccessMessage');
-      if (!btn || !msg) return;
+    // Form Handling
+    function handleCleanSubmit() {
+      const btn = document.getElementById('formSubmitBtn');
+      const ack = document.getElementById('formAck');
+      if (!btn || !ack) return;
+
       btn.disabled = true;
-      btn.innerHTML = '<span>Processing Request...</span>';
+      btn.textContent = translations[currentLang]['form.sending'] || 'Transmitting...';
 
       setTimeout(() => {
         btn.style.display = 'none';
-        msg.classList.add('show');
-      }, 700);
+        ack.classList.add('show');
+      }, 650);
     }
   </script>
 </body>
