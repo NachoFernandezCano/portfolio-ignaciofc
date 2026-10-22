@@ -1,10 +1,4 @@
-/* ==========================================================================
-   FLOWLY - B2B SAAS AI WORKFLOW AUTOMATION STYLESHEET
-   Dark Mode Modern Tech Stack (Zinc / Slate / Indigo & Violet)
-   ========================================================================== */
-
 :root {
-  /* Dark Mode Palette */
   --fl-bg-base: #090a0f;
   --fl-bg-surface: #0f121d;
   --fl-bg-elevated: #161b2b;
@@ -23,11 +17,9 @@
   --fl-accent-cyan: #06b6d4;
   --fl-accent-emerald: #10b981;
 
-  /* Typography */
   --fl-font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --fl-font-mono: 'JetBrains Mono', monospace;
 
-  /* Sizing & Radius */
   --fl-radius-sm: 6px;
   --fl-radius-md: 12px;
   --fl-radius-lg: 20px;
@@ -35,6 +27,11 @@
   --fl-max-width: 1200px;
 
   --fl-transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+:focus-visible {
+  outline: 2px solid var(--fl-accent-indigo);
+  outline-offset: 3px;
 }
 
 *, *::before, *::after {
@@ -828,7 +825,7 @@ body.flowly-body {
 
 .pricing-cards-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
   gap: 1.5rem;
   align-items: stretch;
 }

@@ -1,48 +1,39 @@
-/* ==========================================================================
-   IGNACIOFC.DEV — BOUTIQUE EDITORIAL DESIGN SYSTEM
-   Curated Editorial Palette:
-   1. Primary Ink: Japanese Deep Ink Slate (#0F172A)
-   2. Elevated Surfaces & Weighted Buttons: Slate Navy (#1E293B)
-   3. Interactive Accents, Badges & Micro-details: Warm Terracotta (#C85A32)
-   4. Base Canvas: Organic Bone/Ivory (#FBF9F5) with Pure White (#FFFFFF)
-   ========================================================================== */
-
 :root {
-  /* 4. Canvas & Surfaces */
+  /* Canvas & Surfaces */
   --bg-canvas: #FBF9F5;          /* Clean Organic Bone / Ivory */
   --bg-canvas-subtle: #F3EFEA;   /* Soft Ivory Stone tint */
   --surface-pure: #FFFFFF;       /* Pure White internal surface */
   --surface-elevated: #1E293B;   /* Slate Navy (#1E293B) for weighted surfaces */
 
-  /* 1. Japanese Deep Ink Slate (#0F172A) */
+  /* Japanese Deep Ink Slate (#0F172A) */
   --ink-primary: #0F172A;        /* Japanese Deep Ink Slate */
   --ink-heading: #0F172A;        /* Titles and headings */
   --ink-secondary: #334155;      /* Slate 700 body text */
   --ink-muted: #64748B;          /* Slate 500 metadata */
-  --ink-faint: #94A3B8;          /* Slate 400 subtle glyphs */
+  --ink-faint: #64748B;          /* Contrast-calibrated slate (passes WCAG AA) */
 
-  /* 2. Slate Navy (#1E293B) */
+  /* Slate Navy (#1E293B) */
   --slate-navy: #1E293B;
   --slate-navy-hover: #0F172A;
   --slate-navy-border: rgba(30, 41, 59, 0.15);
 
-  /* 3. Warm Terracotta (#C85A32) - Interactive accents, badges, micro-details */
-  --terracotta: #C85A32;
-  --terracotta-hover: #B54D28;
-  --terracotta-soft: rgba(200, 90, 50, 0.08);
-  --terracotta-border: rgba(200, 90, 50, 0.28);
-  --terracotta-glow: rgba(200, 90, 50, 0.18);
+  /* Warm Terracotta - WCAG AA calibrated (5.24:1 contrast on #FBF9F5) */
+  --terracotta: #A8431D;
+  --terracotta-hover: #8F3716;
+  --terracotta-soft: rgba(168, 67, 29, 0.08);
+  --terracotta-border: rgba(168, 67, 29, 0.28);
+  --terracotta-glow: rgba(168, 67, 29, 0.18);
 
   /* Subtle Japanese Ink Borders */
-  --border-subtle: rgba(15, 23, 42, 0.08);    /* #0F172A at 8% */
-  --border-card: rgba(15, 23, 42, 0.10);      /* #0F172A at 10% */
-  --border-hover: rgba(200, 90, 50, 0.35);    /* Terracotta accent hover */
-  --border-focus: rgba(200, 90, 50, 0.50);
+  --border-subtle: rgba(15, 23, 42, 0.08);
+  --border-card: rgba(15, 23, 42, 0.10);
+  --border-hover: rgba(168, 67, 29, 0.35);
+  --border-focus: rgba(168, 67, 29, 0.50);
 
-  /* Diffuse Multi-layered Shadows (Warm, organic) */
+  /* Diffuse Multi-layered Shadows */
   --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.04);
   --shadow-card: 0 4px 6px -1px rgba(15, 23, 42, 0.03), 0 2px 4px -2px rgba(15, 23, 42, 0.03), 0 12px 24px -4px rgba(15, 23, 42, 0.05);
-  --shadow-hover: 0 10px 20px -3px rgba(15, 23, 42, 0.06), 0 4px 6px -4px rgba(15, 23, 42, 0.04), 0 24px 36px -6px rgba(200, 90, 50, 0.08);
+  --shadow-hover: 0 10px 20px -3px rgba(15, 23, 42, 0.06), 0 4px 6px -4px rgba(15, 23, 42, 0.04), 0 24px 36px -6px rgba(168, 67, 29, 0.08);
   --shadow-pill: 0 2px 8px rgba(15, 23, 42, 0.04);
 
   /* Typographic Stacks */
@@ -65,7 +56,12 @@
   --transition-smooth: 260ms var(--ease-spring);
 }
 
-/* --- Base Reset & Box Sizing --- */
+:focus-visible {
+  outline: 2px solid var(--terracotta);
+  outline-offset: 3px;
+}
+
+/* Reset */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -83,10 +79,13 @@ html {
   text-rendering: optimizeLegibility;
 }
 
+html, body {
+  overflow-x: clip;
+}
+
 body {
   position: relative;
   min-height: 100vh;
-  overflow-x: hidden;
   background-color: var(--bg-canvas);
   color: var(--ink-primary);
   font-size: 1rem;
@@ -150,7 +149,7 @@ button, input, textarea {
   color: var(--terracotta);
 }
 
-/* --- Responsive Containers --- */
+/* Containers */
 .container {
   width: 100%;
   max-width: var(--container-max);
@@ -188,7 +187,7 @@ button, input, textarea {
   box-shadow: var(--shadow-hover);
 }
 
-/* --- Floating Capsule Header & Navigation --- */
+/* Navigation */
 .site-header {
   position: sticky;
   top: 0.75rem;
@@ -337,9 +336,10 @@ button, input, textarea {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   gap: 4.5px;
-  width: 38px;
-  height: 38px;
+  width: 44px;
+  height: 44px;
   background: transparent;
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-pill);
@@ -350,6 +350,9 @@ button, input, textarea {
 @media (min-width: 820px) {
   .mobile-toggle {
     display: none;
+  }
+  .mobile-drawer {
+    display: none !important;
   }
 }
 
@@ -416,7 +419,7 @@ button, input, textarea {
   background-color: var(--terracotta);
 }
 
-/* --- Hero Section: Editorial Boutique --- */
+/* Hero */
 .hero-section {
   padding: clamp(3.5rem, 8vw, 6.5rem) 0 clamp(3rem, 6vw, 5rem);
 }
@@ -510,9 +513,9 @@ button, input, textarea {
 }
 
 .btn-sm {
-  font-size: 0.82rem;
-  padding: 0.55rem 1.15rem;
-  min-height: 38px;
+  font-size: 0.85rem;
+  padding: 0.65rem 1.25rem;
+  min-height: 44px;
 }
 
 /* Terracotta Accent Button (#C85A32) */
@@ -634,7 +637,7 @@ button, input, textarea {
   color: var(--terracotta);
 }
 
-/* --- Section Headings (Japanese Deep Ink & Terracotta) --- */
+/* Section Headings */
 .section-heading {
   margin-bottom: 2.75rem;
   max-width: 720px;
@@ -665,7 +668,7 @@ button, input, textarea {
   color: var(--ink-secondary);
 }
 
-/* --- Work Showcase Section --- */
+/* Work Showcase */
 .work-section {
   padding: clamp(3.5rem, 7vw, 6rem) 0;
   border-top: 1px solid var(--border-subtle);
@@ -878,7 +881,7 @@ button, input, textarea {
   gap: 1rem;
 }
 
-/* --- Capabilities Section --- */
+/* Capabilities */
 .capabilities-section {
   padding: clamp(3.5rem, 7vw, 6rem) 0;
   border-top: 1px solid var(--border-subtle);
@@ -923,7 +926,7 @@ button, input, textarea {
   color: var(--ink-secondary);
 }
 
-/* --- About & Background Section --- */
+/* About */
 .about-section {
   padding: clamp(3.5rem, 7vw, 5.5rem) 0;
   border-top: 1px solid var(--border-subtle);
@@ -1008,7 +1011,7 @@ button, input, textarea {
   margin-bottom: 0;
 }
 
-/* --- Contact & Inquiries Section --- */
+/* Contact */
 .contact-section {
   padding: clamp(3.5rem, 7vw, 6rem) 0 5.5rem;
   border-top: 1px solid var(--border-subtle);
@@ -1175,7 +1178,7 @@ button, input, textarea {
   display: block;
 }
 
-/* --- Editorial Footer --- */
+/* Footer */
 .site-footer {
   border-top: 1px solid var(--border-subtle);
   padding: 2.25rem 0;

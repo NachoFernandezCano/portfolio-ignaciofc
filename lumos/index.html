@@ -123,22 +123,28 @@
               <strong id="activeFinishLabel">Brushed Raw Brass</strong>
             </div>
 
-            <div class="swatches-row" role="radiogroup" aria-label="Luminaire Finish Finishes">
-              <button class="swatch-btn active" 
+            <div class="swatches-row" role="radiogroup" aria-label="Luminaire Material Finish Options">
+              <button type="button" class="swatch-btn active" 
+                      role="radio"
+                      aria-checked="true"
                       data-finish="Brushed Raw Brass"
                       data-img="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=1200&q=85"
                       style="background: #d4af37;" 
                       title="Brushed Raw Brass" 
                       aria-label="Brushed Raw Brass"></button>
 
-              <button class="swatch-btn" 
+              <button type="button" class="swatch-btn" 
+                      role="radio"
+                      aria-checked="false"
                       data-finish="Matte Obsidian Patina"
                       data-img="https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&w=1200&q=85"
                       style="background: #1c1c1e;" 
                       title="Matte Obsidian Patina" 
                       aria-label="Matte Obsidian Patina"></button>
 
-              <button class="swatch-btn" 
+              <button type="button" class="swatch-btn" 
+                      role="radio"
+                      aria-checked="false"
                       data-finish="Honed Roman Travertine"
                       data-img="https://images.unsplash.com/photo-1540932239986-30128078f3c5?auto=format&fit=crop&w=1200&q=85"
                       style="background: #e3d9c6;" 
@@ -160,7 +166,7 @@
           <p class="section-subtext">Each piece is individually numbered and accompanied by an artisan certificate of provenance.</p>
         </div>
 
-        <div class="asymmetric-grid">
+        <div class="asymmetric-grid" id="lookbook">
           
           <!-- Product Card 1: Large Vertical Accent -->
           <article class="lumos-card card-tall">
@@ -260,7 +266,7 @@
         <div class="craft-pillars">
           <div class="pillar-box">
             <span class="pillar-num">01</span>
-            <h4 class="pillar-title">Solid Unlacquered Brass</h4>
+            <h3 class="pillar-title">Solid Unlacquered Brass</h3>
             <p class="pillar-desc">
               Milled from dense architectural-grade billets. Free of synthetic clear coats, allowing natural oxidation to develop a deep, personalized luster.
             </p>
@@ -268,7 +274,7 @@
 
           <div class="pillar-box">
             <span class="pillar-num">02</span>
-            <h4 class="pillar-title">Mouth-Blown Opal Glass</h4>
+            <h3 class="pillar-title">Mouth-Blown Opal Glass</h3>
             <p class="pillar-desc">
               Formed by Master Glassblowers in Veneto, Italy. Triple-cased opal glass provides warm, glare-free optical diffusion at all dimming levels.
             </p>
@@ -276,7 +282,7 @@
 
           <div class="pillar-box">
             <span class="pillar-num">03</span>
-            <h4 class="pillar-title">Tivoli Roman Travertine</h4>
+            <h3 class="pillar-title">Tivoli Roman Travertine</h3>
             <p class="pillar-desc">
               Quarried sustainably from historical Roman formations. Hand-honed to a velvety tactile finish where no two stone striations are identical.
             </p>
@@ -284,7 +290,7 @@
 
           <div class="pillar-box">
             <span class="pillar-num">04</span>
-            <h4 class="pillar-title">100% Recyclable Packaging</h4>
+            <h3 class="pillar-title">100% Recyclable Packaging</h3>
             <p class="pillar-desc">
               Cushioned entirely in molded unbleached pulp and organic linen bindings. Zero styrofoam, zero petroleum plastics, carbon-neutral delivery.
             </p>
@@ -313,7 +319,7 @@
           <h3 class="newsletter-title">Receive invitations to limited edition releases</h3>
           <p class="newsletter-desc">Small-batch studio drops sell out within hours. Subscribers receive 24-hour advance acquisition windows.</p>
           
-          <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing to Lumos Private Access.');">
+          <form class="newsletter-form">
             <input type="email" placeholder="Enter your email address" required aria-label="Email address for private access">
             <button type="submit" class="btn-newsletter">Request Invitation</button>
           </form>
@@ -374,30 +380,41 @@
     </div>
   </footer>
 
-  <!-- Vanilla JS: Variant Switcher & Cart Interactions -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       let bagTotalCount = 0;
+      let toastTimer = null;
       const cartCountEl = document.getElementById('cartCount');
+      const cartTrigger = document.getElementById('cartTrigger');
       const toast = document.getElementById('cartToast');
       const toastName = document.getElementById('toastItemName');
 
-      // Add to Bag Logic
+      function showToast(message) {
+        if (!toast || !toastName) return;
+        toastName.textContent = message;
+        toast.classList.add('active');
+        if (toastTimer) clearTimeout(toastTimer);
+        toastTimer = setTimeout(() => {
+          toast.classList.remove('active');
+        }, 3800);
+      }
+
       window.addToBag = function(title, price) {
         bagTotalCount += 1;
         if (cartCountEl) cartCountEl.textContent = bagTotalCount;
-
-        if (toast && toastName) {
-          toastName.textContent = `"${title}" added to bag ($${price})`;
-          toast.classList.add('active');
-
-          setTimeout(() => {
-            toast.classList.remove('active');
-          }, 3600);
-        }
+        showToast(`"${title}" added to bag ($${price})`);
       };
 
-      // Material Variant Switcher
+      if (cartTrigger) {
+        cartTrigger.addEventListener('click', () => {
+          if (bagTotalCount > 0) {
+            showToast(`Shopping Bag: ${bagTotalCount} item(s) selected`);
+          } else {
+            showToast('Your shopping bag is currently empty');
+          }
+        });
+      }
+
       const swatches = document.querySelectorAll('.swatch-btn');
       const mainImg = document.getElementById('mainProductImg');
       const finishDisplay = document.getElementById('finishDisplay');
@@ -405,8 +422,12 @@
 
       swatches.forEach(btn => {
         btn.addEventListener('click', () => {
-          swatches.forEach(s => s.classList.remove('active'));
+          swatches.forEach(s => {
+            s.classList.remove('active');
+            s.setAttribute('aria-checked', 'false');
+          });
           btn.classList.add('active');
+          btn.setAttribute('aria-checked', 'true');
 
           const finishName = btn.getAttribute('data-finish');
           const imgUrl = btn.getAttribute('data-img');
@@ -423,6 +444,15 @@
           if (activeFinishLabel) activeFinishLabel.textContent = finishName;
         });
       });
+
+      const newsletterForm = document.querySelector('.newsletter-form');
+      if (newsletterForm) {
+        newsletterForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          showToast('Invitation request received for Lumos Private Access.');
+          newsletterForm.reset();
+        });
+      }
     });
   </script>
 </body>

@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Flowly — Autonomous AI Workflow Automation for High-Growth Teams</title>
-  <meta name="description" content="Orchestrate autonomous AI agents, streamline multi-step API pipelines, and reduce engineering cycle times by 68%. B2B SaaS workflow automation engine.">
+  <title>Flowly — Event-Driven Workflow Automation &amp; Pipeline Engine</title>
+  <meta name="description" content="Orchestrate background jobs, resilient API pipelines, and event-driven task workers with visual state sync and zero glue code.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../flowly/style.css">
+  <link rel="stylesheet" href="./style.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
 </head>
 <body class="flowly-body">
@@ -36,9 +36,9 @@
 
       <nav class="main-nav" aria-label="Flowly Navigation">
         <a href="#features" class="nav-item">Platform</a>
-        <a href="#pipeline" class="nav-item">Autonomous Agents</a>
+        <a href="#pipeline" class="nav-item">Pipeline Demo</a>
         <a href="#pricing" class="nav-item">Pricing</a>
-        <a href="#testimonials" class="nav-item">Enterprise</a>
+        <a href="#enterprise" class="nav-item">Enterprise</a>
       </nav>
 
       <div class="nav-actions">
@@ -49,36 +49,33 @@
   </header>
 
   <main>
-    <!-- Hero Section -->
-    <section class="hero-section">
+    <section class="hero-section" id="hero">
       <div class="hero-radial-glow" aria-hidden="true"></div>
       
       <div class="container hero-content-center">
-        <!-- Animated Announcement Badge -->
         <div class="announcement-badge">
           <span class="badge-spark">NEW</span>
-          <span class="badge-copy">Flowly Autonomous Engine 3.2 is live with multi-agent consensus</span>
+          <span class="badge-copy">Flowly Engine 3.2 is live with multi-step deterministic pipelines</span>
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </div>
 
         <h1 class="flowly-hero-title">
-          Orchestrate complex workflows with <br>
-          <span class="gradient-headline">Autonomous AI Agents.</span>
+          Orchestrate resilient backend workflows with <br>
+          <span class="gradient-headline">Visual Pipeline Automation.</span>
         </h1>
 
         <p class="flowly-hero-subtitle">
-          Connect your APIs, databases, and customer channels into self-healing, deterministic agent pipelines. Cut engineering maintenance cycles by 68% without writing brittle glue code.
+          Connect your APIs, databases, and customer webhooks into self-healing, event-driven pipelines. Inspect execution state in real time without writing fragile glue code.
         </p>
 
-        <!-- Dual CTA Group -->
         <div class="hero-actions-container">
           <a href="#pricing" class="btn-flowly-cta">
-            <span>Deploy Free Agent Pipeline</span>
+            <span>Deploy Free Pipeline</span>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
           </a>
           <a href="#pipeline" class="btn-flowly-outline">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
-            <span>Watch 2-Min Interactive Demo</span>
+            <span>Inspect Live Pipeline</span>
           </a>
         </div>
 
@@ -90,8 +87,7 @@
           <span>✓ SOC2 Type II Certified</span>
         </div>
 
-        <!-- Interactive Hero Product Mockup Preview -->
-        <div class="hero-dashboard-preview">
+        <div class="hero-dashboard-preview" id="pipeline">
           <div class="mockup-chrome">
             <div class="chrome-dots">
               <span class="dot dot-red"></span>
@@ -264,7 +260,7 @@
           </div>
 
           <!-- Bento Item 4: Large Horizontal Box -->
-          <div class="bento-cell bento-full-width">
+          <div class="bento-cell bento-full-width" id="enterprise">
             <div class="cell-flex">
               <div>
                 <div class="bento-badge">Enterprise Ready</div>
@@ -309,9 +305,8 @@
 
         <div class="pricing-cards-grid">
           
-          <!-- Tier 1: Starter -->
           <div class="pricing-card">
-            <div class="card-tier-name">Developer</div>
+            <h3 class="card-tier-name">Developer</h3>
             <p class="tier-desc">Ideal for small engineering teams automating baseline internal processes.</p>
             <div class="price-display">
               <span class="currency">$</span>
@@ -321,7 +316,7 @@
             <span class="billed-note" data-monthly="Billed monthly" data-annual="Billed annually ($468/yr)">Billed annually ($468/yr)</span>
 
             <ul class="tier-features">
-              <li>✓ Up to 10 Concurrent AI Agents</li>
+              <li>✓ Up to 10 Concurrent Pipelines</li>
               <li>✓ 50,000 Step Executions / month</li>
               <li>✓ Community &amp; Slack Support</li>
               <li>✓ Standard Webhook Triggers</li>
@@ -331,11 +326,10 @@
             <a href="#hero" class="btn-tier btn-tier-ghost">Start Free 14-Day Trial</a>
           </div>
 
-          <!-- Tier 2: Pro (Highlighted) -->
           <div class="pricing-card featured-card">
-            <div class="popular-ribbon">MOST POPULAR • HIGH CONVERSION</div>
-            <div class="card-tier-name">Growth &amp; Scale</div>
-            <p class="tier-desc">Designed for high-growth tech startups needing high throughput and multi-agent consensus.</p>
+            <div class="popular-ribbon">RECOMMENDED</div>
+            <h3 class="card-tier-name">Growth &amp; Scale</h3>
+            <p class="tier-desc">Designed for engineering teams needing high throughput, automated retries, and telemetry.</p>
             <div class="price-display">
               <span class="currency">$</span>
               <span class="amount" data-monthly="149" data-annual="119">119</span>
@@ -344,9 +338,9 @@
             <span class="billed-note" data-monthly="Billed monthly" data-annual="Billed annually ($1,428/yr)">Billed annually ($1,428/yr)</span>
 
             <ul class="tier-features">
-              <li>✓ <strong>Unlimited</strong> AI Autonomous Agents</li>
+              <li>✓ <strong>Unlimited</strong> Pipeline Workflows</li>
               <li>✓ 500,000 Step Executions / month</li>
-              <li>✓ Multi-Agent Consensus Verification</li>
+              <li>✓ Multi-Step Consensus Verification</li>
               <li>✓ 1-Minute Webhook Retry Logic</li>
               <li>✓ 90-Day Telemetry Logs &amp; Analytics</li>
               <li>✓ Dedicated Priority Support (1hr SLA)</li>
@@ -355,10 +349,9 @@
             <a href="#hero" class="btn-tier btn-tier-highlighted">Start Free 14-Day Trial</a>
           </div>
 
-          <!-- Tier 3: Enterprise -->
           <div class="pricing-card">
-            <div class="card-tier-name">Enterprise Custom</div>
-            <p class="tier-desc">For large organizations requiring bespoke compliance, private VPCs, and customized SLAs.</p>
+            <h3 class="card-tier-name">Enterprise Custom</h3>
+            <p class="tier-desc">For organizations requiring bespoke compliance, private VPCs, and customized SLAs.</p>
             <div class="price-display">
               <span class="amount-custom">Custom</span>
             </div>
@@ -366,8 +359,8 @@
 
             <ul class="tier-features">
               <li>✓ Dedicated Private VPC &amp; On-Premises</li>
-              <li>✓ Custom Millions of Step Executions</li>
-              <li>✓ Custom AI Model Fine-Tuning Hooks</li>
+              <li>✓ High-Throughput Step Executions</li>
+              <li>✓ Custom AI Model Integration Hooks</li>
               <li>✓ Dedicated Solutions Architect</li>
               <li>✓ 99.99% Financial Uptime Guarantee</li>
               <li>✓ 24/7/365 Phone &amp; PagerDuty Escalation</li>
@@ -441,7 +434,6 @@
     </div>
   </footer>
 
-  <!-- Vanilla JS for Interactive Pricing Toggle -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const toggleBtn = document.getElementById('billingToggle');
@@ -450,37 +442,22 @@
       const priceAmounts = document.querySelectorAll('.amount');
       const billedNotes = document.querySelectorAll('.billed-note[data-monthly]');
 
-      let isAnnual = true; // Default to Annual for CRO higher perceived value & savings
+      let isAnnual = true;
 
       function updatePricing() {
         if (!toggleBtn) return;
-        if (isAnnual) {
-          toggleBtn.classList.remove('monthly-active');
-          toggleBtn.setAttribute('aria-pressed', 'true');
-          annualLabel.classList.add('active');
-          monthlyLabel.classList.remove('active');
+        const mode = isAnnual ? 'annual' : 'monthly';
+        toggleBtn.classList.toggle('monthly-active', !isAnnual);
+        toggleBtn.setAttribute('aria-pressed', String(isAnnual));
+        annualLabel.classList.toggle('active', isAnnual);
+        monthlyLabel.classList.toggle('active', !isAnnual);
 
-          priceAmounts.forEach(el => {
-            el.textContent = el.getAttribute('data-annual');
-          });
-
-          billedNotes.forEach(el => {
-            el.textContent = el.getAttribute('data-annual');
-          });
-        } else {
-          toggleBtn.classList.add('monthly-active');
-          toggleBtn.setAttribute('aria-pressed', 'false');
-          monthlyLabel.classList.add('active');
-          annualLabel.classList.remove('active');
-
-          priceAmounts.forEach(el => {
-            el.textContent = el.getAttribute('data-monthly');
-          });
-
-          billedNotes.forEach(el => {
-            el.textContent = el.getAttribute('data-monthly');
-          });
-        }
+        priceAmounts.forEach(el => {
+          el.textContent = el.getAttribute('data-' + mode);
+        });
+        billedNotes.forEach(el => {
+          el.textContent = el.getAttribute('data-' + mode);
+        });
       }
 
       if (toggleBtn) {

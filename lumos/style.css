@@ -1,10 +1,4 @@
-/* ==========================================================================
-   LUMOS - EDITORIAL LUXURY E-COMMERCE STYLESHEET
-   Warm Ivory / Sand Palette • Cormorant Garamond Serif & Modern Sans
-   ========================================================================== */
-
 :root {
-  /* Warm Ivory Atelier Palette */
   --lu-bg-ivory: #faf7f2;
   --lu-bg-paper: #f3ede2;
   --lu-bg-card: #ffffff;
@@ -15,20 +9,23 @@
   --lu-text-muted: #57534e;
   --lu-text-light: #78716c;
 
-  --lu-brass: #b48c48;
-  --lu-brass-dark: #8c6a2e;
+  --lu-brass: #8c6a2e;
+  --lu-brass-dark: #6e5221;
   --lu-obsidian: #292524;
   --lu-travertine: #e7dfd0;
   --lu-border: rgba(41, 37, 36, 0.12);
   --lu-border-soft: rgba(41, 37, 36, 0.06);
 
-  /* Typography */
   --lu-font-serif: 'Cormorant Garamond', Georgia, serif;
   --lu-font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 
-  /* Layout */
   --lu-max-width: 1260px;
   --lu-transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+:focus-visible {
+  outline: 2px solid var(--lu-brass-dark);
+  outline-offset: 3px;
 }
 
 *, *::before, *::after {
@@ -474,9 +471,12 @@ body.lumos-body {
   border-radius: 50%;
   border: 2px solid transparent;
   cursor: pointer;
-  outline: none;
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.swatch-btn:focus-visible {
+  box-shadow: 0 0 0 2px var(--lu-bg-ivory), 0 0 0 4px var(--lu-text-dark) !important;
 }
 
 .swatch-btn::before {
@@ -822,6 +822,18 @@ body.lumos-body {
   transform: translateY(120%);
   opacity: 0;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  max-width: calc(100vw - 2rem);
+}
+
+@media (max-width: 600px) {
+  .cart-toast {
+    left: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+    padding: 0.9rem 1.1rem;
+    gap: 1rem;
+    justify-content: space-between;
+  }
 }
 
 .cart-toast.active {
