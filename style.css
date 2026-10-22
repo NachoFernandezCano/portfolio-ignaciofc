@@ -1,54 +1,48 @@
 /* ==========================================================================
    IGNACIOFC.DEV — BOUTIQUE EDITORIAL DESIGN SYSTEM
-   Visual Philosophy: Copenhagen / London / SF Design Atelier
-   Palette: Warm Organic Bone (#FBF9F5), Rich Pure Surface (#FFFFFF),
-            Deep Ink Slate (#0F172A), Primary Deep Cobalt Navy (#1E3A8A),
-            Warm Terracotta Accent (#C85A32) used sparingly.
-   Mobile-First Strict Architecture & Editorial Typography.
+   Curated Editorial Palette:
+   1. Primary Ink: Japanese Deep Ink Slate (#0F172A)
+   2. Elevated Surfaces & Weighted Buttons: Slate Navy (#1E293B)
+   3. Interactive Accents, Badges & Micro-details: Warm Terracotta (#C85A32)
+   4. Base Canvas: Organic Bone/Ivory (#FBF9F5) with Pure White (#FFFFFF)
    ========================================================================== */
 
-/* --- Custom Properties & Theme Palette --- */
 :root {
-  /* Warm Organic Canvas & Surfaces */
-  --bg-canvas: #FBF9F5;          /* Warm organic bone */
-  --bg-canvas-subtle: #F2EDE6;   /* Secondary warm stone tint */
-  --surface-pure: #FFFFFF;       /* Pure white card elevation */
-  --surface-hover: #FAF7F2;
+  /* 4. Canvas & Surfaces */
+  --bg-canvas: #FBF9F5;          /* Clean Organic Bone / Ivory */
+  --bg-canvas-subtle: #F3EFEA;   /* Soft Ivory Stone tint */
+  --surface-pure: #FFFFFF;       /* Pure White internal surface */
+  --surface-elevated: #1E293B;   /* Slate Navy (#1E293B) for weighted surfaces */
 
-  /* Ink & Typography Palette */
-  --ink-primary: #0F172A;        /* Deep ink charcoal / slate 900 */
-  --ink-heading: #0F172A;        /* High-contrast ink */
-  --ink-secondary: #334155;      /* Slate 700 for clear legibility */
-  --ink-muted: #64748B;          /* Slate 500 */
-  --ink-faint: #94A3B8;          /* Slate 400 */
+  /* 1. Japanese Deep Ink Slate (#0F172A) */
+  --ink-primary: #0F172A;        /* Japanese Deep Ink Slate */
+  --ink-heading: #0F172A;        /* Titles and headings */
+  --ink-secondary: #334155;      /* Slate 700 body text */
+  --ink-muted: #64748B;          /* Slate 500 metadata */
+  --ink-faint: #94A3B8;          /* Slate 400 subtle glyphs */
 
-  /* Primary Accent: Deep Coastal / Cobalt Navy */
-  --navy-accent: #1E3A8A;        /* Rich classic deep navy */
-  --navy-accent-hover: #172554;  /* Navy 950 */
-  --navy-soft: rgba(30, 58, 138, 0.08);
-  --navy-border: rgba(30, 58, 138, 0.24);
-  --navy-glow: rgba(30, 58, 138, 0.16);
+  /* 2. Slate Navy (#1E293B) */
+  --slate-navy: #1E293B;
+  --slate-navy-hover: #0F172A;
+  --slate-navy-border: rgba(30, 41, 59, 0.15);
 
-  /* Deep Structure Navy */
-  --navy-deep: #0F172A;          /* Slate 900 */
-  --navy-deep-hover: #1E293B;
-
-  /* Secondary Accent: Warm Terracotta / Clay (Used sparingly) */
+  /* 3. Warm Terracotta (#C85A32) - Interactive accents, badges, micro-details */
   --terracotta: #C85A32;
   --terracotta-hover: #B54D28;
   --terracotta-soft: rgba(200, 90, 50, 0.08);
   --terracotta-border: rgba(200, 90, 50, 0.28);
+  --terracotta-glow: rgba(200, 90, 50, 0.18);
 
-  /* Subtle Borders & Shadows */
-  --border-light: rgba(15, 23, 42, 0.07);
-  --border-card: rgba(15, 23, 42, 0.09);
-  --border-hover: rgba(30, 58, 138, 0.35);
-  --border-focus: rgba(30, 58, 138, 0.5);
+  /* Subtle Japanese Ink Borders */
+  --border-subtle: rgba(15, 23, 42, 0.08);    /* #0F172A at 8% */
+  --border-card: rgba(15, 23, 42, 0.10);      /* #0F172A at 10% */
+  --border-hover: rgba(200, 90, 50, 0.35);    /* Terracotta accent hover */
+  --border-focus: rgba(200, 90, 50, 0.50);
 
-  /* Diffuse Multi-layered Shadows */
-  --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.04);
-  --shadow-card: 0 4px 6px -1px rgba(15, 23, 42, 0.03), 0 2px 4px -2px rgba(15, 23, 42, 0.03), 0 12px 24px -4px rgba(15, 23, 42, 0.04);
-  --shadow-hover: 0 10px 15px -3px rgba(30, 58, 138, 0.07), 0 4px 6px -4px rgba(15, 23, 42, 0.04), 0 20px 32px -6px rgba(15, 23, 42, 0.06);
+  /* Diffuse Multi-layered Shadows (Warm, organic) */
+  --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.04);
+  --shadow-card: 0 4px 6px -1px rgba(15, 23, 42, 0.03), 0 2px 4px -2px rgba(15, 23, 42, 0.03), 0 12px 24px -4px rgba(15, 23, 42, 0.05);
+  --shadow-hover: 0 10px 20px -3px rgba(15, 23, 42, 0.06), 0 4px 6px -4px rgba(15, 23, 42, 0.04), 0 24px 36px -6px rgba(200, 90, 50, 0.08);
   --shadow-pill: 0 2px 8px rgba(15, 23, 42, 0.04);
 
   /* Typographic Stacks */
@@ -134,29 +128,29 @@ button, input, textarea {
 }
 
 ::selection {
-  background: rgba(30, 58, 138, 0.16);
-  color: var(--navy-accent);
+  background: rgba(200, 90, 50, 0.18);
+  color: var(--ink-primary);
 }
 
 :focus-visible {
-  outline: 2px solid var(--navy-accent);
+  outline: 2px solid var(--terracotta);
   outline-offset: 3px;
 }
 
-/* Editorial Accents: Rich Navy Focus */
+/* Terracotta Editorial Accent */
 .editorial-accent {
   font-style: italic;
   font-family: var(--font-serif);
   font-weight: 500;
-  color: var(--navy-accent);
+  color: var(--terracotta);
   letter-spacing: -0.01em;
 }
 
 .terracotta-dot {
-  color: var(--navy-accent);
+  color: var(--terracotta);
 }
 
-/* --- Responsive Containers (Mobile-first) --- */
+/* --- Responsive Containers --- */
 .container {
   width: 100%;
   max-width: var(--container-max);
@@ -218,10 +212,10 @@ button, input, textarea {
   justify-content: space-between;
   height: 56px;
   padding: 0 0.85rem 0 1.25rem;
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(255, 255, 255, 0.94);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  border: 1px solid var(--border-light);
+  border: 1px solid var(--border-subtle);
   border-radius: var(--radius-pill);
   box-shadow: var(--shadow-pill);
 }
@@ -238,7 +232,7 @@ button, input, textarea {
 }
 
 .monogram-mark {
-  color: var(--navy-accent);
+  color: var(--terracotta);
   font-size: 0.85rem;
 }
 
@@ -259,7 +253,7 @@ button, input, textarea {
   display: inline-flex;
   align-items: center;
   background: var(--bg-canvas-subtle);
-  border: 1px solid var(--border-light);
+  border: 1px solid var(--border-subtle);
   border-radius: var(--radius-pill);
   padding: 2px 4px;
   font-family: var(--font-mono);
@@ -279,13 +273,13 @@ button, input, textarea {
 }
 
 .lang-btn:hover {
-  color: var(--navy-accent);
+  color: var(--terracotta);
 }
 
 .lang-btn.active {
-  background: var(--navy-accent);
-  color: #FFFFFF;
-  box-shadow: 0 1px 3px rgba(30, 58, 138, 0.2);
+  background: var(--surface-pure);
+  color: var(--terracotta);
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.08);
 }
 
 .lang-divider {
@@ -315,26 +309,27 @@ button, input, textarea {
 }
 
 .menu-link:hover {
-  color: var(--navy-accent);
+  color: var(--terracotta);
 }
 
+/* Weighted Button: Slate Navy (#1E293B) with Terracotta Hover */
 .btn-nav-commission {
   font-size: 0.84rem;
   font-weight: 600;
   color: var(--surface-pure);
-  background-color: var(--navy-accent);
+  background-color: var(--slate-navy);
   padding: 0.45rem 1.05rem;
   border-radius: var(--radius-pill);
-  border: 1px solid var(--navy-accent);
-  box-shadow: 0 2px 6px rgba(30, 58, 138, 0.2);
+  border: 1px solid var(--slate-navy);
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.15);
   transition: all var(--transition-fast);
 }
 
 .btn-nav-commission:hover {
-  background-color: var(--navy-accent-hover);
-  border-color: var(--navy-accent-hover);
+  background-color: var(--terracotta);
+  border-color: var(--terracotta);
   transform: translateY(-1px);
-  box-shadow: 0 4px 10px rgba(30, 58, 138, 0.3);
+  box-shadow: 0 4px 10px rgba(200, 90, 50, 0.25);
 }
 
 /* Mobile Toggle Hamburger */
@@ -346,7 +341,7 @@ button, input, textarea {
   width: 38px;
   height: 38px;
   background: transparent;
-  border: 1px solid var(--border-light);
+  border: 1px solid var(--border-subtle);
   border-radius: var(--radius-pill);
   cursor: pointer;
   padding: 0 9px;
@@ -381,7 +376,7 @@ button, input, textarea {
   background: rgba(255, 255, 255, 0.96);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid var(--border-light);
+  border: 1px solid var(--border-subtle);
   border-radius: var(--radius-lg);
   padding: 1.25rem;
   box-shadow: var(--shadow-card);
@@ -410,10 +405,15 @@ button, input, textarea {
   font-size: 0.9rem;
   font-weight: 600;
   color: var(--surface-pure);
-  background-color: var(--navy-accent);
+  background-color: var(--slate-navy);
   padding: 0.75rem 1rem;
   border-radius: var(--radius-pill);
   margin-top: 0.5rem;
+  transition: background-color var(--transition-fast);
+}
+
+.mobile-btn-cta:hover {
+  background-color: var(--terracotta);
 }
 
 /* --- Hero Section: Editorial Boutique --- */
@@ -425,7 +425,7 @@ button, input, textarea {
   max-width: 880px;
 }
 
-/* Hero Badge */
+/* Hero Badge: Terracota Accent & Deep Ink */
 .hero-badge-wrap {
   margin-bottom: 1.75rem;
 }
@@ -435,7 +435,7 @@ button, input, textarea {
   align-items: center;
   gap: 0.55rem;
   background: var(--surface-pure);
-  border: 1px solid var(--navy-border);
+  border: 1px solid var(--border-card);
   border-radius: var(--radius-pill);
   padding: 0.35rem 0.95rem;
   box-shadow: var(--shadow-sm);
@@ -444,18 +444,18 @@ button, input, textarea {
 .pulse-dot {
   width: 7px;
   height: 7px;
-  background-color: var(--navy-accent);
+  background-color: var(--terracotta);
   border-radius: 50%;
-  box-shadow: 0 0 0 3px var(--navy-soft);
-  animation: pulseNavy 2.5s infinite ease-in-out;
+  box-shadow: 0 0 0 3px var(--terracotta-soft);
+  animation: pulseClay 2.5s infinite ease-in-out;
 }
 
-@keyframes pulseNavy {
+@keyframes pulseClay {
   0%, 100% {
-    box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.2);
+    box-shadow: 0 0 0 3px rgba(200, 90, 50, 0.20);
   }
   50% {
-    box-shadow: 0 0 0 6px rgba(30, 58, 138, 0.05);
+    box-shadow: 0 0 0 6px rgba(200, 90, 50, 0.05);
   }
 }
 
@@ -463,11 +463,11 @@ button, input, textarea {
   font-family: var(--font-mono);
   font-size: 0.72rem;
   font-weight: 600;
-  color: var(--navy-accent);
+  color: var(--terracotta);
   letter-spacing: 0.08em;
 }
 
-/* Hero Headline */
+/* Hero Headline: Japanese Deep Ink Slate (#0F172A) */
 .hero-title {
   font-size: clamp(2.35rem, 6vw, 4.4rem);
   font-weight: 600;
@@ -493,7 +493,7 @@ button, input, textarea {
   margin-bottom: 3rem;
 }
 
-/* Boutique Buttons (Navy Dominance) */
+/* Boutique Buttons */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -515,44 +515,46 @@ button, input, textarea {
   min-height: 38px;
 }
 
+/* Terracotta Accent Button (#C85A32) */
 .btn-terracotta {
-  background-color: var(--navy-accent);
+  background-color: var(--terracotta);
   color: var(--surface-pure);
-  border: 1px solid var(--navy-accent);
-  box-shadow: 0 2px 10px rgba(30, 58, 138, 0.25);
+  border: 1px solid var(--terracotta);
+  box-shadow: 0 2px 10px rgba(200, 90, 50, 0.25);
 }
 
 .btn-terracotta:hover {
-  background-color: var(--navy-accent-hover);
-  border-color: var(--navy-accent-hover);
+  background-color: var(--terracotta-hover);
+  border-color: var(--terracotta-hover);
   transform: scale(1.01);
-  box-shadow: 0 4px 14px rgba(30, 58, 138, 0.35);
+  box-shadow: 0 4px 14px rgba(200, 90, 50, 0.35);
 }
 
+/* Slate Navy Button (#1E293B) */
 .btn-navy {
-  background-color: var(--navy-accent);
+  background-color: var(--slate-navy);
   color: var(--surface-pure);
-  border: 1px solid var(--navy-accent);
-  box-shadow: 0 2px 8px rgba(30, 58, 138, 0.2);
+  border: 1px solid var(--slate-navy);
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.15);
 }
 
 .btn-navy:hover {
-  background-color: var(--navy-accent-hover);
-  border-color: var(--navy-accent-hover);
+  background-color: var(--terracotta);
+  border-color: var(--terracotta);
   transform: scale(1.01);
-  box-shadow: 0 4px 12px rgba(30, 58, 138, 0.3);
+  box-shadow: 0 4px 12px rgba(200, 90, 50, 0.25);
 }
 
 .btn-navy-outline {
   background-color: var(--surface-pure);
-  color: var(--navy-accent);
-  border: 1px solid var(--navy-border);
+  color: var(--slate-navy);
+  border: 1px solid var(--border-card);
   box-shadow: var(--shadow-sm);
 }
 
 .btn-navy-outline:hover {
-  border-color: var(--navy-accent);
-  background-color: var(--navy-soft);
+  border-color: var(--slate-navy);
+  background-color: var(--bg-canvas-subtle);
   transform: scale(1.01);
 }
 
@@ -562,13 +564,13 @@ button, input, textarea {
   gap: 0.25rem;
   font-size: 0.85rem;
   font-weight: 600;
-  color: var(--navy-accent);
+  color: var(--ink-secondary);
   padding: 0.5rem 0.25rem;
   transition: color var(--transition-fast);
 }
 
 .btn-link-terracotta:hover {
-  color: var(--navy-accent-hover);
+  color: var(--terracotta);
 }
 
 .btn-block {
@@ -589,7 +591,7 @@ button, input, textarea {
   flex-direction: column;
   gap: 0.75rem;
   padding-top: 1.75rem;
-  border-top: 1px solid var(--border-light);
+  border-top: 1px solid var(--border-subtle);
 }
 
 @media (min-width: 640px) {
@@ -604,7 +606,7 @@ button, input, textarea {
   font-family: var(--font-mono);
   font-size: 0.72rem;
   font-weight: 600;
-  color: var(--navy-accent);
+  color: var(--ink-muted);
   letter-spacing: 0.08em;
   white-space: nowrap;
 }
@@ -628,11 +630,11 @@ button, input, textarea {
 }
 
 .stack-tag:hover {
-  border-color: var(--navy-accent);
-  color: var(--navy-accent);
+  border-color: var(--terracotta);
+  color: var(--terracotta);
 }
 
-/* --- Section Headings (Editorial & Minimalist) --- */
+/* --- Section Headings (Japanese Deep Ink & Terracotta) --- */
 .section-heading {
   margin-bottom: 2.75rem;
   max-width: 720px;
@@ -643,7 +645,7 @@ button, input, textarea {
   font-family: var(--font-mono);
   font-size: 0.72rem;
   font-weight: 600;
-  color: var(--navy-accent);
+  color: var(--terracotta);
   letter-spacing: 0.1em;
   text-transform: uppercase;
   margin-bottom: 0.65rem;
@@ -666,7 +668,7 @@ button, input, textarea {
 /* --- Work Showcase Section --- */
 .work-section {
   padding: clamp(3.5rem, 7vw, 6rem) 0;
-  border-top: 1px solid var(--border-light);
+  border-top: 1px solid var(--border-subtle);
 }
 
 .projects-stack {
@@ -681,7 +683,7 @@ button, input, textarea {
   }
 }
 
-/* Project Card Layout (Mobile-first stacked to 2-column) */
+/* Project Card Layout */
 .project-card {
   display: flex;
   flex-direction: column;
@@ -720,10 +722,10 @@ button, input, textarea {
   }
 }
 
-/* Browser Frame Mockup (Clean Editorial Tone) */
+/* Browser Frame Mockup */
 .browser-frame {
   display: block;
-  background: #FFFFFF;
+  background: var(--surface-pure);
   border: 1px solid rgba(15, 23, 42, 0.09);
   border-radius: var(--radius-md);
   overflow: hidden;
@@ -732,7 +734,7 @@ button, input, textarea {
 }
 
 .project-card:hover .browser-frame {
-  border-color: var(--navy-border);
+  border-color: var(--terracotta-border);
 }
 
 .browser-bar {
@@ -758,12 +760,12 @@ button, input, textarea {
 }
 
 .dot-terracotta {
-  background-color: var(--navy-accent);
-  opacity: 0.8;
+  background-color: var(--terracotta);
+  opacity: 0.85;
 }
 
 .dot-sand {
-  background-color: #3B82F6;
+  background-color: #D97706;
   opacity: 0.65;
 }
 
@@ -776,13 +778,13 @@ button, input, textarea {
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
-  background: #FFFFFF;
-  border: 1px solid rgba(15, 23, 42, 0.05);
+  background: var(--surface-pure);
+  border: 1px solid rgba(15, 23, 42, 0.06);
   padding: 2px 10px;
   border-radius: var(--radius-pill);
   font-family: var(--font-mono);
   font-size: 0.68rem;
-  color: var(--navy-accent);
+  color: var(--ink-secondary);
 }
 
 .browser-launch-glyph {
@@ -826,9 +828,9 @@ button, input, textarea {
   font-family: var(--font-mono);
   font-size: 0.72rem;
   font-weight: 600;
-  color: var(--navy-accent);
-  background: var(--navy-soft);
-  border: 1px solid var(--navy-border);
+  color: var(--terracotta);
+  background: var(--terracotta-soft);
+  border: 1px solid var(--terracotta-border);
   padding: 1px 7px;
   border-radius: var(--radius-xs);
 }
@@ -865,7 +867,7 @@ button, input, textarea {
   font-size: 0.72rem;
   color: var(--ink-secondary);
   background: var(--bg-canvas);
-  border: 1px solid var(--border-light);
+  border: 1px solid var(--border-subtle);
   padding: 0.3rem 0.7rem;
   border-radius: var(--radius-pill);
 }
@@ -879,7 +881,7 @@ button, input, textarea {
 /* --- Capabilities Section --- */
 .capabilities-section {
   padding: clamp(3.5rem, 7vw, 6rem) 0;
-  border-top: 1px solid var(--border-light);
+  border-top: 1px solid var(--border-subtle);
 }
 
 .capabilities-grid {
@@ -905,7 +907,7 @@ button, input, textarea {
   font-family: var(--font-mono);
   font-size: 0.75rem;
   font-weight: 600;
-  color: var(--navy-accent);
+  color: var(--terracotta);
   margin-bottom: 1.25rem;
 }
 
@@ -924,7 +926,7 @@ button, input, textarea {
 /* --- About & Background Section --- */
 .about-section {
   padding: clamp(3.5rem, 7vw, 5.5rem) 0;
-  border-top: 1px solid var(--border-light);
+  border-top: 1px solid var(--border-subtle);
 }
 
 .about-card {
@@ -962,21 +964,21 @@ button, input, textarea {
   flex-direction: column;
   gap: 0.15rem;
   background: var(--bg-canvas);
-  border: 1px solid var(--border-light);
+  border: 1px solid var(--border-subtle);
   border-radius: var(--radius-sm);
   padding: 0.65rem 0.95rem;
   transition: border-color var(--transition-fast);
 }
 
 .credential-item:hover {
-  border-color: var(--navy-border);
+  border-color: var(--terracotta-border);
 }
 
 .credential-label {
   font-family: var(--font-mono);
   font-size: 0.68rem;
   font-weight: 600;
-  color: var(--navy-accent);
+  color: var(--terracotta);
   letter-spacing: 0.08em;
 }
 
@@ -1009,7 +1011,7 @@ button, input, textarea {
 /* --- Contact & Inquiries Section --- */
 .contact-section {
   padding: clamp(3.5rem, 7vw, 6rem) 0 5.5rem;
-  border-top: 1px solid var(--border-light);
+  border-top: 1px solid var(--border-subtle);
 }
 
 .contact-grid {
@@ -1054,14 +1056,14 @@ button, input, textarea {
 }
 
 .channel-box:hover {
-  border-color: var(--navy-border);
+  border-color: var(--terracotta-border);
 }
 
 .channel-type {
   font-family: var(--font-mono);
   font-size: 0.68rem;
   font-weight: 600;
-  color: var(--navy-accent);
+  color: var(--terracotta);
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
@@ -1074,7 +1076,7 @@ button, input, textarea {
 }
 
 .channel-address:hover {
-  color: var(--navy-accent);
+  color: var(--terracotta);
 }
 
 .channel-links-row {
@@ -1088,18 +1090,18 @@ button, input, textarea {
   font-family: var(--font-mono);
   font-size: 0.8rem;
   font-weight: 500;
-  color: var(--navy-accent);
-  background: var(--navy-soft);
-  border: 1px solid var(--navy-border);
+  color: var(--slate-navy);
+  background: var(--bg-canvas);
+  border: 1px solid var(--border-subtle);
   padding: 0.35rem 0.85rem;
   border-radius: var(--radius-pill);
   transition: all var(--transition-fast);
 }
 
 .social-tag:hover {
-  border-color: var(--navy-accent);
-  background: var(--navy-accent);
-  color: #FFFFFF;
+  border-color: var(--terracotta);
+  background: var(--terracotta-soft);
+  color: var(--terracotta);
 }
 
 /* Boutique Form Styling */
@@ -1143,9 +1145,9 @@ button, input, textarea {
 .form-field input:focus,
 .form-field textarea:focus {
   outline: none;
-  background: #FFFFFF;
-  border-color: var(--navy-accent);
-  box-shadow: 0 0 0 3px var(--navy-soft);
+  background: var(--surface-pure);
+  border-color: var(--terracotta);
+  box-shadow: 0 0 0 3px var(--terracotta-soft);
 }
 
 .form-field input::placeholder,
@@ -1175,7 +1177,7 @@ button, input, textarea {
 
 /* --- Editorial Footer --- */
 .site-footer {
-  border-top: 1px solid var(--border-light);
+  border-top: 1px solid var(--border-subtle);
   padding: 2.25rem 0;
   background-color: var(--bg-canvas);
 }
@@ -1221,7 +1223,7 @@ button, input, textarea {
 }
 
 .footer-top-link:hover {
-  color: var(--navy-accent);
+  color: var(--terracotta);
 }
 
 /* Mobile minimum touch targets (44px) */
