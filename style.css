@@ -1,8 +1,9 @@
 /* ==========================================================================
    IGNACIOFC.DEV — BOUTIQUE EDITORIAL DESIGN SYSTEM
    Visual Philosophy: Copenhagen / London / SF Design Atelier
-   Palette: Warm Organic Bone (#FBF9F5), Deep Ink Slate (#0F172A), 
-            Artisanal Terracotta (#C85A32), Pure Surface (#FFFFFF).
+   Palette: Warm Organic Bone (#FBF9F5), Rich Pure Surface (#FFFFFF),
+            Deep Ink Slate (#0F172A), Primary Deep Cobalt Navy (#1E3A8A),
+            Warm Terracotta Accent (#C85A32) used sparingly.
    Mobile-First Strict Architecture & Editorial Typography.
    ========================================================================== */
 
@@ -10,39 +11,44 @@
 :root {
   /* Warm Organic Canvas & Surfaces */
   --bg-canvas: #FBF9F5;          /* Warm organic bone */
-  --bg-canvas-subtle: #F4EFEB;   /* Secondary warm tint */
+  --bg-canvas-subtle: #F2EDE6;   /* Secondary warm stone tint */
   --surface-pure: #FFFFFF;       /* Pure white card elevation */
-  --surface-hover: #FCFAF7;
+  --surface-hover: #FAF7F2;
 
   /* Ink & Typography Palette */
   --ink-primary: #0F172A;        /* Deep ink charcoal / slate 900 */
-  --ink-heading: #1E293B;        /* High-contrast ink slate 800 */
-  --ink-secondary: #475569;      /* Warm stone secondary slate 600 */
-  --ink-muted: #64748B;          /* Stone slate 500 */
-  --ink-faint: #94A3B8;          /* Delicate stone slate 400 */
+  --ink-heading: #0F172A;        /* High-contrast ink */
+  --ink-secondary: #334155;      /* Slate 700 for clear legibility */
+  --ink-muted: #64748B;          /* Slate 500 */
+  --ink-faint: #94A3B8;          /* Slate 400 */
 
-  /* Artisanal Accents */
-  --terracotta: #C85A32;         /* Burnt terracotta / warm artisanal clay */
+  /* Primary Accent: Deep Coastal / Cobalt Navy */
+  --navy-accent: #1E3A8A;        /* Rich classic deep navy */
+  --navy-accent-hover: #172554;  /* Navy 950 */
+  --navy-soft: rgba(30, 58, 138, 0.08);
+  --navy-border: rgba(30, 58, 138, 0.24);
+  --navy-glow: rgba(30, 58, 138, 0.16);
+
+  /* Deep Structure Navy */
+  --navy-deep: #0F172A;          /* Slate 900 */
+  --navy-deep-hover: #1E293B;
+
+  /* Secondary Accent: Warm Terracotta / Clay (Used sparingly) */
+  --terracotta: #C85A32;
   --terracotta-hover: #B54D28;
   --terracotta-soft: rgba(200, 90, 50, 0.08);
   --terracotta-border: rgba(200, 90, 50, 0.28);
-  --terracotta-glow: rgba(200, 90, 50, 0.18);
-
-  /* Secondary Navy / Structure */
-  --navy-deep: #0F172A;          /* Deep ink navy */
-  --navy-hover: #1E293B;
-  --emerald-live: #10B981;
 
   /* Subtle Borders & Shadows */
-  --border-light: rgba(15, 23, 42, 0.06);     /* Slate 900 / 6% */
-  --border-card: rgba(15, 23, 42, 0.08);      /* Slate 900 / 8% */
-  --border-focus: rgba(200, 90, 50, 0.45);
-  --border-hover: rgba(15, 23, 42, 0.16);
+  --border-light: rgba(15, 23, 42, 0.07);
+  --border-card: rgba(15, 23, 42, 0.09);
+  --border-hover: rgba(30, 58, 138, 0.35);
+  --border-focus: rgba(30, 58, 138, 0.5);
 
-  /* Diffuse Multi-layered Shadows (Warm, not muddy black) */
+  /* Diffuse Multi-layered Shadows */
   --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.04);
   --shadow-card: 0 4px 6px -1px rgba(15, 23, 42, 0.03), 0 2px 4px -2px rgba(15, 23, 42, 0.03), 0 12px 24px -4px rgba(15, 23, 42, 0.04);
-  --shadow-hover: 0 10px 15px -3px rgba(15, 23, 42, 0.05), 0 4px 6px -4px rgba(15, 23, 42, 0.04), 0 20px 32px -6px rgba(15, 23, 42, 0.06);
+  --shadow-hover: 0 10px 15px -3px rgba(30, 58, 138, 0.07), 0 4px 6px -4px rgba(15, 23, 42, 0.04), 0 20px 32px -6px rgba(15, 23, 42, 0.06);
   --shadow-pill: 0 2px 8px rgba(15, 23, 42, 0.04);
 
   /* Typographic Stacks */
@@ -128,26 +134,26 @@ button, input, textarea {
 }
 
 ::selection {
-  background: rgba(200, 90, 50, 0.18);
-  color: var(--ink-primary);
+  background: rgba(30, 58, 138, 0.16);
+  color: var(--navy-accent);
 }
 
 :focus-visible {
-  outline: 2px solid var(--terracotta);
+  outline: 2px solid var(--navy-accent);
   outline-offset: 3px;
 }
 
-/* Subtle Terracotta Editorial Details */
+/* Editorial Accents: Rich Navy Focus */
 .editorial-accent {
   font-style: italic;
   font-family: var(--font-serif);
   font-weight: 500;
-  color: var(--terracotta);
+  color: var(--navy-accent);
   letter-spacing: -0.01em;
 }
 
 .terracotta-dot {
-  color: var(--terracotta);
+  color: var(--navy-accent);
 }
 
 /* --- Responsive Containers (Mobile-first) --- */
@@ -212,7 +218,7 @@ button, input, textarea {
   justify-content: space-between;
   height: 56px;
   padding: 0 0.85rem 0 1.25rem;
-  background: rgba(255, 255, 255, 0.88);
+  background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border: 1px solid var(--border-light);
@@ -232,7 +238,7 @@ button, input, textarea {
 }
 
 .monogram-mark {
-  color: var(--terracotta);
+  color: var(--navy-accent);
   font-size: 0.85rem;
 }
 
@@ -273,13 +279,13 @@ button, input, textarea {
 }
 
 .lang-btn:hover {
-  color: var(--ink-primary);
+  color: var(--navy-accent);
 }
 
 .lang-btn.active {
-  background: var(--surface-pure);
-  color: var(--terracotta);
-  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.08);
+  background: var(--navy-accent);
+  color: #FFFFFF;
+  box-shadow: 0 1px 3px rgba(30, 58, 138, 0.2);
 }
 
 .lang-divider {
@@ -309,24 +315,26 @@ button, input, textarea {
 }
 
 .menu-link:hover {
-  color: var(--terracotta);
+  color: var(--navy-accent);
 }
 
 .btn-nav-commission {
   font-size: 0.84rem;
   font-weight: 600;
   color: var(--surface-pure);
-  background-color: var(--navy-deep);
-  padding: 0.45rem 1rem;
+  background-color: var(--navy-accent);
+  padding: 0.45rem 1.05rem;
   border-radius: var(--radius-pill);
-  border: 1px solid var(--navy-deep);
+  border: 1px solid var(--navy-accent);
+  box-shadow: 0 2px 6px rgba(30, 58, 138, 0.2);
   transition: all var(--transition-fast);
 }
 
 .btn-nav-commission:hover {
-  background-color: var(--terracotta);
-  border-color: var(--terracotta);
+  background-color: var(--navy-accent-hover);
+  border-color: var(--navy-accent-hover);
   transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(30, 58, 138, 0.3);
 }
 
 /* Mobile Toggle Hamburger */
@@ -402,7 +410,7 @@ button, input, textarea {
   font-size: 0.9rem;
   font-weight: 600;
   color: var(--surface-pure);
-  background-color: var(--terracotta);
+  background-color: var(--navy-accent);
   padding: 0.75rem 1rem;
   border-radius: var(--radius-pill);
   margin-top: 0.5rem;
@@ -427,7 +435,7 @@ button, input, textarea {
   align-items: center;
   gap: 0.55rem;
   background: var(--surface-pure);
-  border: 1px solid var(--border-card);
+  border: 1px solid var(--navy-border);
   border-radius: var(--radius-pill);
   padding: 0.35rem 0.95rem;
   box-shadow: var(--shadow-sm);
@@ -436,18 +444,18 @@ button, input, textarea {
 .pulse-dot {
   width: 7px;
   height: 7px;
-  background-color: var(--terracotta);
+  background-color: var(--navy-accent);
   border-radius: 50%;
-  box-shadow: 0 0 0 3px var(--terracotta-soft);
-  animation: pulseClay 2.5s infinite ease-in-out;
+  box-shadow: 0 0 0 3px var(--navy-soft);
+  animation: pulseNavy 2.5s infinite ease-in-out;
 }
 
-@keyframes pulseClay {
+@keyframes pulseNavy {
   0%, 100% {
-    box-shadow: 0 0 0 3px rgba(200, 90, 50, 0.15);
+    box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.2);
   }
   50% {
-    box-shadow: 0 0 0 6px rgba(200, 90, 50, 0.04);
+    box-shadow: 0 0 0 6px rgba(30, 58, 138, 0.05);
   }
 }
 
@@ -455,7 +463,7 @@ button, input, textarea {
   font-family: var(--font-mono);
   font-size: 0.72rem;
   font-weight: 600;
-  color: var(--ink-secondary);
+  color: var(--navy-accent);
   letter-spacing: 0.08em;
 }
 
@@ -485,7 +493,7 @@ button, input, textarea {
   margin-bottom: 3rem;
 }
 
-/* Boutique Buttons (Pill Luxury) */
+/* Boutique Buttons (Navy Dominance) */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -508,40 +516,43 @@ button, input, textarea {
 }
 
 .btn-terracotta {
-  background-color: var(--terracotta);
+  background-color: var(--navy-accent);
   color: var(--surface-pure);
-  border: 1px solid var(--terracotta);
-  box-shadow: 0 2px 10px rgba(200, 90, 50, 0.25);
+  border: 1px solid var(--navy-accent);
+  box-shadow: 0 2px 10px rgba(30, 58, 138, 0.25);
 }
 
 .btn-terracotta:hover {
-  background-color: var(--terracotta-hover);
-  border-color: var(--terracotta-hover);
+  background-color: var(--navy-accent-hover);
+  border-color: var(--navy-accent-hover);
   transform: scale(1.01);
-  box-shadow: 0 4px 14px rgba(200, 90, 50, 0.32);
+  box-shadow: 0 4px 14px rgba(30, 58, 138, 0.35);
 }
 
 .btn-navy {
-  background-color: var(--navy-deep);
+  background-color: var(--navy-accent);
   color: var(--surface-pure);
-  border: 1px solid var(--navy-deep);
+  border: 1px solid var(--navy-accent);
+  box-shadow: 0 2px 8px rgba(30, 58, 138, 0.2);
 }
 
 .btn-navy:hover {
-  background-color: var(--navy-hover);
+  background-color: var(--navy-accent-hover);
+  border-color: var(--navy-accent-hover);
   transform: scale(1.01);
+  box-shadow: 0 4px 12px rgba(30, 58, 138, 0.3);
 }
 
 .btn-navy-outline {
   background-color: var(--surface-pure);
-  color: var(--navy-deep);
-  border: 1px solid var(--border-card);
+  color: var(--navy-accent);
+  border: 1px solid var(--navy-border);
   box-shadow: var(--shadow-sm);
 }
 
 .btn-navy-outline:hover {
-  border-color: var(--navy-deep);
-  background-color: var(--bg-canvas-subtle);
+  border-color: var(--navy-accent);
+  background-color: var(--navy-soft);
   transform: scale(1.01);
 }
 
@@ -551,13 +562,13 @@ button, input, textarea {
   gap: 0.25rem;
   font-size: 0.85rem;
   font-weight: 600;
-  color: var(--ink-secondary);
+  color: var(--navy-accent);
   padding: 0.5rem 0.25rem;
   transition: color var(--transition-fast);
 }
 
 .btn-link-terracotta:hover {
-  color: var(--terracotta);
+  color: var(--navy-accent-hover);
 }
 
 .btn-block {
@@ -593,7 +604,7 @@ button, input, textarea {
   font-family: var(--font-mono);
   font-size: 0.72rem;
   font-weight: 600;
-  color: var(--ink-muted);
+  color: var(--navy-accent);
   letter-spacing: 0.08em;
   white-space: nowrap;
 }
@@ -613,6 +624,12 @@ button, input, textarea {
   padding: 0.3rem 0.75rem;
   border-radius: var(--radius-pill);
   box-shadow: var(--shadow-sm);
+  transition: border-color var(--transition-fast), color var(--transition-fast);
+}
+
+.stack-tag:hover {
+  border-color: var(--navy-accent);
+  color: var(--navy-accent);
 }
 
 /* --- Section Headings (Editorial & Minimalist) --- */
@@ -626,7 +643,7 @@ button, input, textarea {
   font-family: var(--font-mono);
   font-size: 0.72rem;
   font-weight: 600;
-  color: var(--terracotta);
+  color: var(--navy-accent);
   letter-spacing: 0.1em;
   text-transform: uppercase;
   margin-bottom: 0.65rem;
@@ -678,7 +695,7 @@ button, input, textarea {
 }
 
 .project-card:hover {
-  border-color: rgba(200, 90, 50, 0.28);
+  border-color: var(--border-hover);
   box-shadow: var(--shadow-hover);
 }
 
@@ -715,7 +732,7 @@ button, input, textarea {
 }
 
 .project-card:hover .browser-frame {
-  border-color: rgba(200, 90, 50, 0.35);
+  border-color: var(--navy-border);
 }
 
 .browser-bar {
@@ -741,12 +758,12 @@ button, input, textarea {
 }
 
 .dot-terracotta {
-  background-color: var(--terracotta);
-  opacity: 0.75;
+  background-color: var(--navy-accent);
+  opacity: 0.8;
 }
 
 .dot-sand {
-  background-color: #D97706;
+  background-color: #3B82F6;
   opacity: 0.65;
 }
 
@@ -765,7 +782,7 @@ button, input, textarea {
   border-radius: var(--radius-pill);
   font-family: var(--font-mono);
   font-size: 0.68rem;
-  color: var(--ink-muted);
+  color: var(--navy-accent);
 }
 
 .browser-launch-glyph {
@@ -809,9 +826,9 @@ button, input, textarea {
   font-family: var(--font-mono);
   font-size: 0.72rem;
   font-weight: 600;
-  color: var(--terracotta);
-  background: var(--terracotta-soft);
-  border: 1px solid var(--terracotta-border);
+  color: var(--navy-accent);
+  background: var(--navy-soft);
+  border: 1px solid var(--navy-border);
   padding: 1px 7px;
   border-radius: var(--radius-xs);
 }
@@ -888,7 +905,7 @@ button, input, textarea {
   font-family: var(--font-mono);
   font-size: 0.75rem;
   font-weight: 600;
-  color: var(--terracotta);
+  color: var(--navy-accent);
   margin-bottom: 1.25rem;
 }
 
@@ -948,13 +965,18 @@ button, input, textarea {
   border: 1px solid var(--border-light);
   border-radius: var(--radius-sm);
   padding: 0.65rem 0.95rem;
+  transition: border-color var(--transition-fast);
+}
+
+.credential-item:hover {
+  border-color: var(--navy-border);
 }
 
 .credential-label {
   font-family: var(--font-mono);
   font-size: 0.68rem;
   font-weight: 600;
-  color: var(--terracotta);
+  color: var(--navy-accent);
   letter-spacing: 0.08em;
 }
 
@@ -1028,13 +1050,18 @@ button, input, textarea {
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
+  transition: border-color var(--transition-fast);
+}
+
+.channel-box:hover {
+  border-color: var(--navy-border);
 }
 
 .channel-type {
   font-family: var(--font-mono);
   font-size: 0.68rem;
   font-weight: 600;
-  color: var(--terracotta);
+  color: var(--navy-accent);
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
@@ -1047,7 +1074,7 @@ button, input, textarea {
 }
 
 .channel-address:hover {
-  color: var(--terracotta);
+  color: var(--navy-accent);
 }
 
 .channel-links-row {
@@ -1061,16 +1088,18 @@ button, input, textarea {
   font-family: var(--font-mono);
   font-size: 0.8rem;
   font-weight: 500;
-  color: var(--ink-heading);
-  background: var(--bg-canvas);
-  border: 1px solid var(--border-light);
+  color: var(--navy-accent);
+  background: var(--navy-soft);
+  border: 1px solid var(--navy-border);
   padding: 0.35rem 0.85rem;
   border-radius: var(--radius-pill);
+  transition: all var(--transition-fast);
 }
 
 .social-tag:hover {
-  border-color: var(--terracotta);
-  color: var(--terracotta);
+  border-color: var(--navy-accent);
+  background: var(--navy-accent);
+  color: #FFFFFF;
 }
 
 /* Boutique Form Styling */
@@ -1115,8 +1144,8 @@ button, input, textarea {
 .form-field textarea:focus {
   outline: none;
   background: #FFFFFF;
-  border-color: var(--terracotta);
-  box-shadow: 0 0 0 3px var(--terracotta-soft);
+  border-color: var(--navy-accent);
+  box-shadow: 0 0 0 3px var(--navy-soft);
 }
 
 .form-field input::placeholder,
@@ -1192,7 +1221,7 @@ button, input, textarea {
 }
 
 .footer-top-link:hover {
-  color: var(--terracotta);
+  color: var(--navy-accent);
 }
 
 /* Mobile minimum touch targets (44px) */
