@@ -3,277 +3,279 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>José Ignacio Fernández Cano — Full Stack Developer & AI Engineering Student</title>
-  <meta name="description" content="Full Stack Developer & AI Engineering Student based in Tucumán, Argentina. Building robust web applications, interactive interfaces, and intelligent software.">
+  <title>José Ignacio Fernández Cano — Full Stack Developer &amp; AI Engineering Student</title>
+  <meta name="description" content="Full Stack Developer &amp; AI Engineering Student based in Tucumán, Argentina. Building robust web applications, interactive interfaces, and intelligent software.">
+  
+  <!-- Modern Editorial & Sans Typographic Hierarchy -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
   <link rel="stylesheet" href="./style.css">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✦</text></svg>">
 </head>
 <body>
 
-  <!-- Ambient Glow Layers -->
-  <div class="ambient-glow hero-glow" aria-hidden="true"></div>
-  <div class="ambient-glow mid-glow" aria-hidden="true"></div>
-  <div class="ambient-glow bottom-glow" aria-hidden="true"></div>
-
-  <!-- Sticky Header -->
+  <!-- Floating Capsule Navigation -->
   <header class="site-header" id="site-header">
-    <div class="container header-container">
-      <a href="#hero" class="brand-logo" aria-label="José Ignacio Fernández Cano — Home">
-        <span class="logo-badge">IF</span>
-        <span class="logo-text">Ignaciofc<span class="accent-dot">.</span>dev</span>
+    <div class="nav-capsule">
+      <a href="#hero" class="brand-monogram" aria-label="José Ignacio Fernández Cano">
+        <span class="monogram-mark">✦</span>
+        <span class="brand-title">Ignaciofc<span class="terracotta-dot">.</span>dev</span>
       </a>
 
-      <div class="nav-cluster">
-        <!-- Bilingual Switcher [ EN | ES ] -->
-        <div class="lang-switcher" role="group" aria-label="Language Selector">
+      <div class="nav-right">
+        <!-- Interactive Language Switcher [ EN | ES ] -->
+        <div class="lang-pill" role="group" aria-label="Language Selector">
           <button type="button" class="lang-btn active" id="lang-en" data-lang="en" aria-pressed="true">EN</button>
           <span class="lang-divider">|</span>
           <button type="button" class="lang-btn" id="lang-es" data-lang="es" aria-pressed="false">ES</button>
         </div>
 
-        <nav class="desktop-nav" aria-label="Primary Navigation">
-          <a href="#work" class="nav-link" data-i18n="nav.work">Projects</a>
-          <a href="#stack" class="nav-link" data-i18n="nav.stack">Capabilities</a>
-          <a href="#about" class="nav-link" data-i18n="nav.about">About &amp; Background</a>
-          <a href="#contact" class="nav-btn" data-i18n="nav.contact">Contact</a>
+        <nav class="desktop-menu" aria-label="Primary Navigation">
+          <a href="#work" class="menu-link" data-i18n="nav.work">Projects</a>
+          <a href="#stack" class="menu-link" data-i18n="nav.stack">Capabilities</a>
+          <a href="#about" class="menu-link" data-i18n="nav.about">Background</a>
+          <a href="#contact" class="btn-nav-commission" data-i18n="nav.contact">Get in Touch</a>
         </nav>
 
-        <button class="mobile-menu-toggle" id="mobileMenuBtn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileDrawer">
-          <span></span>
-          <span></span>
+        <button class="mobile-toggle" id="mobileMenuBtn" aria-label="Toggle Navigation" aria-expanded="false" aria-controls="mobileDrawer">
+          <span class="bar"></span>
+          <span class="bar"></span>
         </button>
       </div>
     </div>
 
-    <!-- Mobile Navigation Drawer -->
+    <!-- Mobile Drawer Container -->
     <div class="mobile-drawer" id="mobileDrawer">
-      <nav class="mobile-nav">
+      <nav class="mobile-menu">
         <a href="#work" class="mobile-link" data-i18n="nav.work">Projects</a>
         <a href="#stack" class="mobile-link" data-i18n="nav.stack">Capabilities</a>
-        <a href="#about" class="mobile-link" data-i18n="nav.about">About &amp; Background</a>
-        <a href="#contact" class="mobile-btn" data-i18n="nav.contact">Contact</a>
+        <a href="#about" class="mobile-link" data-i18n="nav.about">Background</a>
+        <a href="#contact" class="mobile-btn-cta" data-i18n="nav.contact">Get in Touch</a>
       </nav>
     </div>
   </header>
 
   <main id="main-content">
-    <!-- Hero Section -->
+    <!-- Hero Section: Editorial Boutique -->
     <section class="hero-section" id="hero">
       <div class="container hero-container">
-        <div class="role-badge-wrapper">
-          <div class="role-pill">
-            <span class="status-dot"></span>
-            <span class="role-label" data-i18n="hero.role">Full Stack Developer &amp; AI Engineering Student</span>
+        
+        <!-- Live Availability Badge -->
+        <div class="hero-badge-wrap">
+          <div class="availability-badge">
+            <span class="pulse-dot" aria-hidden="true"></span>
+            <span class="badge-text" data-i18n="hero.badge">AVAILABLE FOR SELECT COMMISSIONS</span>
           </div>
         </div>
 
-        <h1 class="hero-headline" data-i18n="hero.title">
-          Building robust web applications, interactive interfaces, and intelligent software.
+        <h1 class="hero-title" data-i18n="hero.title">
+          Building robust <em class="editorial-accent">web applications</em>, interactive interfaces, and intelligent software.
         </h1>
 
-        <p class="hero-subtext" data-i18n="hero.sub">
-          José Ignacio Fernández Cano — Based in Tucumán, Argentina. Working across modern frontend architectures, backend APIs, and machine learning pipelines.
+        <p class="hero-editorial-sub" data-i18n="hero.sub">
+          José Ignacio Fernández Cano — Based in Tucumán, Argentina. Working across modern frontend architectures, backend APIs, and applied machine learning systems.
         </p>
 
         <div class="hero-actions">
-          <a href="#work" class="btn btn-primary">
-            <span data-i18n="hero.cta_work">Explore Live Demos</span>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          <a href="#work" class="btn btn-terracotta">
+            <span data-i18n="hero.cta_work">Explore Selected Work</span>
+            <svg class="btn-arrow" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
-          <a href="#contact" class="btn btn-secondary" data-i18n="hero.cta_contact">Get in Touch</a>
+          <a href="#contact" class="btn btn-navy-outline" data-i18n="hero.cta_contact">Start a Conversation</a>
         </div>
 
-        <!-- Subtle Tech Stack Strip -->
-        <div class="hero-tech-strip">
-          <span class="strip-label" data-i18n="hero.stack_label">Core Stack:</span>
-          <div class="strip-tags">
-            <span>JavaScript / TypeScript</span>
-            <span>React &amp; Next.js</span>
-            <span>Node.js &amp; Express</span>
-            <span>Python &amp; AI/ML</span>
-            <span>MongoDB &amp; SQL</span>
-            <span>Git &amp; Vercel</span>
+        <!-- Curated Stack Strip -->
+        <div class="hero-stack-strip">
+          <span class="stack-strip-lead" data-i18n="hero.stack_label">PRACTICE &amp; TOOLING:</span>
+          <div class="stack-pills-row">
+            <span class="stack-tag">React &amp; Next.js</span>
+            <span class="stack-tag">TypeScript / JS</span>
+            <span class="stack-tag">Node.js &amp; Express</span>
+            <span class="stack-tag">Python &amp; AI/ML</span>
+            <span class="stack-tag">MongoDB &amp; PostgreSQL</span>
+            <span class="stack-tag">Git &amp; Vercel</span>
           </div>
         </div>
+
       </div>
     </section>
 
-    <!-- Selected Work Showcase (Browser Mockups) -->
+    <!-- Selected Work Showcase (Refined Browser Artifacts) -->
     <section class="work-section" id="work">
       <div class="container">
-        <div class="section-header">
-          <span class="section-eyebrow" data-i18n="work.eyebrow">01 // Featured Projects</span>
-          <h2 class="section-title" data-i18n="work.title">Interactive Production Prototypes</h2>
-          <p class="section-lead" data-i18n="work.lead">
-            Full-featured frontend architectures engineered with clean HTML5, modern CSS Grid/Flexbox, and zero-dependency JavaScript state management. Click any window to launch the live build.
+        
+        <div class="section-heading">
+          <span class="editorial-eyebrow" data-i18n="work.eyebrow">01 // SELECTED COMMISSIONS</span>
+          <h2 class="editorial-title" data-i18n="work.title">Interactive Production Prototypes</h2>
+          <p class="editorial-lead" data-i18n="work.lead">
+            Three bespoke concept pieces crafted with semantic HTML5, modern layout systems, and zero-dependency client state machines. Open any live artifact to inspect performance and typography.
           </p>
         </div>
 
-        <div class="projects-list">
+        <div class="projects-stack">
 
           <!-- Project 01: Flowly -->
-          <article class="project-showcase-card">
-            <div class="project-browser-col">
-              <a href="./flowly/" class="browser-mockup" aria-label="Launch Flowly Live Demo">
-                <div class="browser-toolbar">
+          <article class="project-card">
+            <div class="project-media-col">
+              <a href="./flowly/" class="browser-frame" aria-label="Launch Flowly Live Demo">
+                <div class="browser-bar">
                   <div class="browser-dots">
-                    <span class="dot dot-red"></span>
-                    <span class="dot dot-yellow"></span>
-                    <span class="dot dot-green"></span>
+                    <span class="window-dot dot-terracotta"></span>
+                    <span class="window-dot dot-sand"></span>
+                    <span class="window-dot dot-slate"></span>
                   </div>
-                  <div class="browser-address">
-                    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                  <div class="browser-url">
+                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
                     <span>ignaciofc.dev/flowly</span>
                   </div>
-                  <div class="browser-action-icon">↗</div>
+                  <span class="browser-launch-glyph">↗</span>
                 </div>
-                <div class="browser-viewport">
+                <div class="browser-canvas">
                   <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=85" 
-                       alt="Flowly SaaS AI Workflow Automation Platform Preview" 
+                       alt="Flowly SaaS AI Workflow Automation Interface Preview" 
                        width="1200" height="750" loading="eager" fetchpriority="high" decoding="async">
                 </div>
               </a>
             </div>
 
-            <div class="project-details-col">
-              <div class="project-meta-top">
-                <span class="project-index">01</span>
-                <span class="project-category" data-i18n="flowly.tag">B2B SaaS / AI Workflow Automation</span>
+            <div class="project-content-col">
+              <div class="project-meta-line">
+                <span class="project-num">N° 01</span>
+                <span class="category-tag" data-i18n="flowly.tag">B2B SaaS / Workflow Orchestration</span>
               </div>
 
-              <h3 class="project-title">Flowly</h3>
+              <h3 class="project-heading">Flowly</h3>
 
-              <p class="project-description" data-i18n="flowly.desc">
-                Dark-mode platform interface for autonomous B2B workflow orchestration. Engineered with interactive pipeline state visualization, a responsive bento-box metrics grid, and a real-time monthly/annual pricing calculator.
+              <p class="project-summary" data-i18n="flowly.desc">
+                High-contrast platform interface designed for autonomous enterprise workflow pipelines. Engineered with interactive state machines, a responsive bento-grid feature matrix, and a dual-cadence billing calculator.
               </p>
 
-              <div class="tech-pills">
-                <span>HTML5 Semantics</span>
-                <span>CSS Grid Bento</span>
-                <span>Interactive State JS</span>
-                <span>Dark UI System</span>
+              <div class="project-tags-wrap">
+                <span class="editorial-pill">CSS Bento Grid</span>
+                <span class="editorial-pill">Deterministic State</span>
+                <span class="editorial-pill">Fluid Type Scale</span>
+                <span class="editorial-pill">Vanilla JS</span>
               </div>
 
-              <div class="project-links">
-                <a href="./flowly/" class="btn btn-primary btn-sm">
+              <div class="project-cta-row">
+                <a href="./flowly/" class="btn btn-navy btn-sm">
                   <span data-i18n="project.live">Launch Live Demo</span>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
                 </a>
-                <a href="https://github.com/ignaciofc" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
-                  <span data-i18n="project.code">Source Code</span>
+                <a href="https://github.com/ignaciofc" target="_blank" rel="noopener noreferrer" class="btn-link-terracotta">
+                  <span data-i18n="project.code">Inspect Source</span> ↗
                 </a>
               </div>
             </div>
           </article>
 
-          <!-- Project 02: Lumos (Reversed on Desktop for visual rhythm) -->
-          <article class="project-showcase-card reverse-desktop">
-            <div class="project-browser-col">
-              <a href="./lumos/" class="browser-mockup" aria-label="Launch Lumos Live Demo">
-                <div class="browser-toolbar">
+          <!-- Project 02: Lumos (Editorial Balance) -->
+          <article class="project-card reverse-desktop">
+            <div class="project-media-col">
+              <a href="./lumos/" class="browser-frame" aria-label="Launch Lumos Live Demo">
+                <div class="browser-bar">
                   <div class="browser-dots">
-                    <span class="dot dot-red"></span>
-                    <span class="dot dot-yellow"></span>
-                    <span class="dot dot-green"></span>
+                    <span class="window-dot dot-terracotta"></span>
+                    <span class="window-dot dot-sand"></span>
+                    <span class="window-dot dot-slate"></span>
                   </div>
-                  <div class="browser-address">
-                    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                  <div class="browser-url">
+                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
                     <span>ignaciofc.dev/lumos</span>
                   </div>
-                  <div class="browser-action-icon">↗</div>
+                  <span class="browser-launch-glyph">↗</span>
                 </div>
-                <div class="browser-viewport">
+                <div class="browser-canvas">
                   <img src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=1200&q=80" 
-                       alt="Lumos Architectural Lighting E-Commerce Preview" 
+                       alt="Lumos Sculptural Architectural Lighting Lookbook Preview" 
                        width="1200" height="750" loading="lazy" decoding="async">
                 </div>
               </a>
             </div>
 
-            <div class="project-details-col">
-              <div class="project-meta-top">
-                <span class="project-index">02</span>
-                <span class="project-category" data-i18n="lumos.tag">Editorial E-Commerce / Design Objects</span>
+            <div class="project-content-col">
+              <div class="project-meta-line">
+                <span class="project-num">N° 02</span>
+                <span class="category-tag" data-i18n="lumos.tag">Editorial E-Commerce / Atelier Luminaires</span>
               </div>
 
-              <h3 class="project-title">Lumos</h3>
+              <h3 class="project-heading">Lumos</h3>
 
-              <p class="project-description" data-i18n="lumos.desc">
-                Digital storefront for sculptural lighting and architectural objects. Built with an asymmetrical lookbook grid, dynamic material finish selector (Travertine, Brushed Brass, Matte Obsidian), and reactive shopping bag state.
+              <p class="project-summary" data-i18n="lumos.desc">
+                Minimalist boutique catalog celebrating artisanal architectural lighting. Features an asymmetrical lookbook composition, dynamic travertine and brushed bronze finish variant switcher, and quick-bag state mechanics.
               </p>
 
-              <div class="tech-pills">
-                <span>Variant Switcher JS</span>
-                <span>Asymmetrical Grid</span>
-                <span>Editorial Typography</span>
-                <span>Cart State Logic</span>
+              <div class="project-tags-wrap">
+                <span class="editorial-pill">Material Variant Engine</span>
+                <span class="editorial-pill">Asymmetric Lookbook</span>
+                <span class="editorial-pill">Editorial Typography</span>
+                <span class="editorial-pill">Micro Cart Logic</span>
               </div>
 
-              <div class="project-links">
-                <a href="./lumos/" class="btn btn-primary btn-sm">
+              <div class="project-cta-row">
+                <a href="./lumos/" class="btn btn-navy btn-sm">
                   <span data-i18n="project.live">Launch Live Demo</span>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
                 </a>
-                <a href="https://github.com/ignaciofc" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
-                  <span data-i18n="project.code">Source Code</span>
+                <a href="https://github.com/ignaciofc" target="_blank" rel="noopener noreferrer" class="btn-link-terracotta">
+                  <span data-i18n="project.code">Inspect Source</span> ↗
                 </a>
               </div>
             </div>
           </article>
 
           <!-- Project 03: Nómada -->
-          <article class="project-showcase-card">
-            <div class="project-browser-col">
-              <a href="./nomada/" class="browser-mockup" aria-label="Launch Nómada Live Demo">
-                <div class="browser-toolbar">
+          <article class="project-card">
+            <div class="project-media-col">
+              <a href="./nomada/" class="browser-frame" aria-label="Launch Nómada Live Demo">
+                <div class="browser-bar">
                   <div class="browser-dots">
-                    <span class="dot dot-red"></span>
-                    <span class="dot dot-yellow"></span>
-                    <span class="dot dot-green"></span>
+                    <span class="window-dot dot-terracotta"></span>
+                    <span class="window-dot dot-sand"></span>
+                    <span class="window-dot dot-slate"></span>
                   </div>
-                  <div class="browser-address">
-                    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                  <div class="browser-url">
+                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
                     <span>ignaciofc.dev/nomada</span>
                   </div>
-                  <div class="browser-action-icon">↗</div>
+                  <span class="browser-launch-glyph">↗</span>
                 </div>
-                <div class="browser-viewport">
+                <div class="browser-canvas">
                   <img src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?auto=format&fit=crop&w=1200&q=85" 
-                       alt="Nómada Wood-Fire Culinary & Hospitality Experience Preview" 
+                       alt="Nómada Ancestral Fire Cuisine Experience Preview" 
                        width="1200" height="750" loading="lazy" decoding="async">
                 </div>
               </a>
             </div>
 
-            <div class="project-details-col">
-              <div class="project-meta-top">
-                <span class="project-index">03</span>
-                <span class="project-category" data-i18n="nomada.tag">Hospitality / Gastronomy &amp; Booking</span>
+            <div class="project-content-col">
+              <div class="project-meta-line">
+                <span class="project-num">N° 03</span>
+                <span class="category-tag" data-i18n="nomada.tag">Hospitality / Culinary Arts &amp; Bookings</span>
               </div>
 
-              <h3 class="project-title">Nómada</h3>
+              <h3 class="project-heading">Nómada</h3>
 
-              <p class="project-description" data-i18n="nomada.desc">
-                Immersive web experience for a wood-fire tasting restaurant. Implements an accessible 4-tab seasonal menu selector (Starters, Open Fire, Desserts, Cellar) and an interactive table reservation system with instant validation.
+              <p class="project-summary" data-i18n="nomada.desc">
+                Sensory digital presentation for an open-fire tasting room. Incorporates a W3C-compliant 4-chapter tasting menu tablist (Starters, Fire, Sweets, Cellar) and an integrated intimate table booking engine with immediate validation.
               </p>
 
-              <div class="tech-pills">
-                <span>W3C ARIA Tablist</span>
-                <span>Booking Form Engine</span>
-                <span>Responsive Layout</span>
-                <span>Zero Dependencies</span>
+              <div class="project-tags-wrap">
+                <span class="editorial-pill">W3C ARIA Tablist</span>
+                <span class="editorial-pill">Reservation Module</span>
+                <span class="editorial-pill">Earth Palette</span>
+                <span class="editorial-pill">Sub-Second Load</span>
               </div>
 
-              <div class="project-links">
-                <a href="./nomada/" class="btn btn-primary btn-sm">
+              <div class="project-cta-row">
+                <a href="./nomada/" class="btn btn-navy btn-sm">
                   <span data-i18n="project.live">Launch Live Demo</span>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
                 </a>
-                <a href="https://github.com/ignaciofc" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
-                  <span data-i18n="project.code">Source Code</span>
+                <a href="https://github.com/ignaciofc" target="_blank" rel="noopener noreferrer" class="btn-link-terracotta">
+                  <span data-i18n="project.code">Inspect Source</span> ↗
                 </a>
               </div>
             </div>
@@ -283,205 +285,225 @@
       </div>
     </section>
 
-    <!-- Engineering Capabilities / Technical Pillars -->
+    <!-- Engineering Capabilities / Philosophy -->
     <section class="capabilities-section" id="stack">
       <div class="container">
-        <div class="section-header">
-          <span class="section-eyebrow" data-i18n="stack.eyebrow">02 // Technical Capabilities</span>
-          <h2 class="section-title" data-i18n="stack.title">Full Stack &amp; AI Engineering Focus</h2>
-          <p class="section-lead" data-i18n="stack.lead">
-            Combining solid software engineering fundamentals with modern web frameworks and applied artificial intelligence.
+        
+        <div class="section-heading">
+          <span class="editorial-eyebrow" data-i18n="stack.eyebrow">02 // DISCIPLINE &amp; ARCHITECTURE</span>
+          <h2 class="editorial-title" data-i18n="stack.title">Full Stack Craft &amp; Applied AI</h2>
+          <p class="editorial-lead" data-i18n="stack.lead">
+            Merging computer science rigor with editorial interface design. Quiet, resilient software that executes instantly and scales effortlessly.
           </p>
         </div>
 
         <div class="capabilities-grid">
-          <div class="glass-card capability-card">
-            <div class="card-icon-box">01</div>
-            <h3 class="card-title" data-i18n="pillar1.title">Frontend Architecture &amp; UI</h3>
-            <p class="card-body" data-i18n="pillar1.desc">
+          
+          <div class="surface-card capability-box">
+            <span class="card-num-lead">01</span>
+            <h3 class="box-title" data-i18n="pillar1.title">Frontend Architecture &amp; UI</h3>
+            <p class="box-body" data-i18n="pillar1.desc">
               Responsive, accessible interfaces built with HTML5, modern CSS (Grid, Flexbox, fluid clamp typography), JavaScript/TypeScript, and React. Focused on fast initial load times and clean component state.
             </p>
           </div>
 
-          <div class="glass-card capability-card">
-            <div class="card-icon-box">02</div>
-            <h3 class="card-title" data-i18n="pillar2.title">Backend APIs &amp; Full Stack (MERN)</h3>
-            <p class="card-body" data-i18n="pillar2.desc">
+          <div class="surface-card capability-box">
+            <span class="card-num-lead">02</span>
+            <h3 class="box-title" data-i18n="pillar2.title">Backend APIs &amp; Full Stack (MERN)</h3>
+            <p class="box-body" data-i18n="pillar2.desc">
               Designing RESTful APIs, authentication flows, and database schemas using Node.js, Express, MongoDB, and SQL. Experienced with Git workflows and serverless deployments on Vercel.
             </p>
           </div>
 
-          <div class="glass-card capability-card">
-            <div class="card-icon-box">03</div>
-            <h3 class="card-title" data-i18n="pillar3.title">AI Engineering &amp; Python</h3>
-            <p class="card-body" data-i18n="pillar3.desc">
+          <div class="surface-card capability-box">
+            <span class="card-num-lead">03</span>
+            <h3 class="box-title" data-i18n="pillar3.title">AI Engineering &amp; Python</h3>
+            <p class="box-body" data-i18n="pillar3.desc">
               Training in Artificial Intelligence Engineering. Working with Python, data processing pipelines, LLM API integrations, and building practical software powered by machine learning models.
             </p>
           </div>
+
         </div>
       </div>
     </section>
 
-    <!-- About & Background Section -->
+    <!-- Background & Profile -->
     <section class="about-section" id="about">
       <div class="container">
-        <div class="glass-card about-panel">
+        <div class="surface-card about-card">
           <div class="about-grid">
-            <div class="about-left">
-              <span class="section-eyebrow" data-i18n="about.eyebrow">03 // About &amp; Background</span>
-              <h2 class="about-heading" data-i18n="about.title">Engineering Mindset &amp; Academic Foundation</h2>
-              <div class="about-badges">
-                <span class="badge-item">📍 Tucumán, Argentina (UTC-3)</span>
-                <span class="badge-item" data-i18n="about.uni">🎓 AI Engineering — UNSTA</span>
-                <span class="badge-item" data-i18n="about.lang_badge">🌐 Spanish (Native) &amp; English</span>
+            
+            <div class="about-meta-col">
+              <span class="editorial-eyebrow" data-i18n="about.eyebrow">03 // BIOGRAPHY &amp; EDUCATION</span>
+              <h2 class="about-title" data-i18n="about.title">Engineering Foundation &amp; Craft</h2>
+              
+              <div class="about-credentials">
+                <div class="credential-item">
+                  <span class="credential-label" data-i18n="about.loc_label">BASE</span>
+                  <span class="credential-val">Tucumán, Argentina (UTC-3)</span>
+                </div>
+                <div class="credential-item">
+                  <span class="credential-label" data-i18n="about.edu_label">STUDIES</span>
+                  <span class="credential-val" data-i18n="about.uni">AI Engineering — UNSTA</span>
+                </div>
+                <div class="credential-item">
+                  <span class="credential-label" data-i18n="about.lang_label">LANGUAGES</span>
+                  <span class="credential-val" data-i18n="about.lang_badge">Spanish (Native) • English (Professional)</span>
+                </div>
               </div>
             </div>
 
-            <div class="about-right">
-              <p class="about-paragraph" data-i18n="about.p1">
+            <div class="about-narrative-col">
+              <p class="narrative-lead" data-i18n="about.p1">
                 I’m José Ignacio Fernández Cano, a Full Stack Developer and AI Engineering student at UNSTA (Universidad del Norte Santo Tomás de Aquino) in Tucumán, Argentina.
               </p>
-              <p class="about-paragraph" data-i18n="about.p2">
+              <p class="narrative-body" data-i18n="about.p2">
                 My core technical work revolves around building end-to-end web applications with the MERN stack (MongoDB, Express, React, Node.js), crafting high-performance vanilla web interfaces, and writing Python for data analysis and AI integration.
               </p>
-              <p class="about-paragraph" data-i18n="about.p3">
+              <p class="narrative-body" data-i18n="about.p3">
                 I care about clean version control with Git, maintainable code structure, fast serverless deployments, and software that solves real operational problems without unnecessary complexity.
               </p>
             </div>
+
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- Inquiries / Contact -->
     <section class="contact-section" id="contact">
       <div class="container">
         <div class="contact-grid">
-          <!-- Left Column: Direct Info -->
-          <div class="contact-info-col">
-            <span class="section-eyebrow" data-i18n="contact.eyebrow">04 // Contact</span>
-            <h2 class="contact-headline" data-i18n="contact.title">Let’s work together.</h2>
-            <p class="contact-subtext" data-i18n="contact.sub">
+          
+          <!-- Direct Channels -->
+          <div class="contact-details-col">
+            <span class="editorial-eyebrow" data-i18n="contact.eyebrow">04 // INQUIRIES</span>
+            <h2 class="contact-heading" data-i18n="contact.title">Let’s build something thoughtful.</h2>
+            <p class="contact-lead" data-i18n="contact.sub">
               Open to full-stack development roles, freelance web projects, and technical collaborations across the US, Europe, and Latin America.
             </p>
 
-            <div class="direct-channels">
-              <div class="channel-card glass-card">
-                <span class="channel-label" data-i18n="contact.email_label">Direct Email</span>
-                <a href="mailto:joseignaciofernandezcano@gmail.com" class="channel-value">joseignaciofernandezcano@gmail.com</a>
+            <div class="channels-stack">
+              <div class="surface-card channel-box">
+                <span class="channel-type" data-i18n="contact.email_label">Direct Inquiries</span>
+                <a href="mailto:joseignaciofernandezcano@gmail.com" class="channel-address">joseignaciofernandezcano@gmail.com</a>
               </div>
 
-              <div class="channel-card glass-card">
-                <span class="channel-label" data-i18n="contact.wa_label">WhatsApp</span>
-                <a href="https://wa.me/5493814465183" target="_blank" rel="noopener noreferrer" class="channel-value">+54 9 381 446-5183 ↗</a>
+              <div class="surface-card channel-box">
+                <span class="channel-type" data-i18n="contact.wa_label">Direct WhatsApp</span>
+                <a href="https://wa.me/5493814465183" target="_blank" rel="noopener noreferrer" class="channel-address">+54 9 381 446-5183 ↗</a>
               </div>
 
-              <div class="channel-card glass-card">
-                <span class="channel-label" data-i18n="contact.social_label">Profiles &amp; Repositories</span>
-                <div class="social-row">
-                  <a href="https://github.com/ignaciofc" target="_blank" rel="noopener noreferrer" class="social-pill">GitHub ↗</a>
-                  <a href="https://linkedin.com/in/ignaciofc" target="_blank" rel="noopener noreferrer" class="social-pill">LinkedIn ↗</a>
+              <div class="surface-card channel-box">
+                <span class="channel-type" data-i18n="contact.social_label">Network &amp; Repositories</span>
+                <div class="channel-links-row">
+                  <a href="https://github.com/ignaciofc" target="_blank" rel="noopener noreferrer" class="social-tag">GitHub ↗</a>
+                  <a href="https://linkedin.com/in/ignaciofc" target="_blank" rel="noopener noreferrer" class="social-tag">LinkedIn ↗</a>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Right Column: Interactive Form -->
+          <!-- Direct Form -->
           <div class="contact-form-col">
-            <form class="glass-card contact-form" id="contactForm" onsubmit="event.preventDefault(); handleContactSubmit();">
+            <form class="surface-card boutique-form" id="contactForm" onsubmit="event.preventDefault(); handleContactSubmit();">
               <h3 class="form-title" data-i18n="form.heading">Send a Direct Message</h3>
 
-              <div class="form-group">
+              <div class="form-field">
                 <label for="formName" data-i18n="form.name">Your Name</label>
                 <input type="text" id="formName" name="name" required placeholder="Alex Rivera" autocomplete="name">
               </div>
 
-              <div class="form-group">
+              <div class="form-field">
                 <label for="formEmail" data-i18n="form.email">Email Address</label>
                 <input type="email" id="formEmail" name="email" required placeholder="alex@company.com" autocomplete="email">
               </div>
 
-              <div class="form-group">
+              <div class="form-field">
                 <label for="formMessage" data-i18n="form.message">Project or Role Details</label>
                 <textarea id="formMessage" name="message" rows="4" required placeholder="Tell me about your project, timeline, or team..."></textarea>
               </div>
 
-              <button type="submit" class="btn btn-primary btn-block" id="formSubmitBtn" data-i18n="form.submit">
+              <button type="submit" class="btn btn-terracotta btn-block" id="formSubmitBtn" data-i18n="form.submit">
                 Send Message
               </button>
 
-              <div class="form-feedback" id="formAck" role="status" aria-live="polite">
+              <div class="form-feedback-pill" id="formAck" role="status" aria-live="polite">
                 <span data-i18n="form.success">Message received! Thank you — I will get back to you shortly.</span>
               </div>
             </form>
           </div>
+
         </div>
       </div>
     </section>
   </main>
 
-  <!-- Footer -->
+  <!-- Editorial Footer -->
   <footer class="site-footer">
     <div class="container footer-container">
       <div class="footer-left">
-        <span class="footer-brand">Ignaciofc<span class="accent-dot">.</span>dev</span>
-        <span class="footer-role" data-i18n="footer.copy">Full Stack Developer &amp; AI Engineering Student • Tucumán, Argentina</span>
+        <span class="footer-brand">Ignaciofc<span class="terracotta-dot">.</span>dev</span>
+        <span class="footer-sub" data-i18n="footer.copy">Full Stack Developer &amp; AI Engineering Student • Tucumán, Argentina</span>
       </div>
 
       <div class="footer-right">
-        <span class="footer-copyright">© 2026 José Ignacio Fernández Cano</span>
-        <a href="#hero" class="back-top-link">↑ <span data-i18n="footer.top">Top</span></a>
+        <span class="footer-copy">© 2026 José Ignacio Fernández Cano</span>
+        <a href="#hero" class="footer-top-link">↑ <span data-i18n="footer.top">Top</span></a>
       </div>
     </div>
   </footer>
 
-  <!-- Bilingual i18n Dictionary & UI Interactions -->
+  <!-- Native Lightweight Bilingual Script (EN / ES) -->
   <script>
     const translations = {
       en: {
         "nav.work": "Projects",
         "nav.stack": "Capabilities",
-        "nav.about": "About & Background",
-        "nav.contact": "Contact",
-        "hero.role": "Full Stack Developer & AI Engineering Student",
+        "nav.about": "Background",
+        "nav.contact": "Get in Touch",
+        "hero.badge": "AVAILABLE FOR SELECT COMMISSIONS",
         "hero.title": "Building robust web applications, interactive interfaces, and intelligent software.",
-        "hero.sub": "José Ignacio Fernández Cano — Based in Tucumán, Argentina. Working across modern frontend architectures, backend APIs, and machine learning pipelines.",
-        "hero.cta_work": "Explore Live Demos",
-        "hero.cta_contact": "Get in Touch",
-        "hero.stack_label": "Core Stack:",
-        "work.eyebrow": "01 // Featured Projects",
+        "hero.sub": "José Ignacio Fernández Cano — Based in Tucumán, Argentina. Working across modern frontend architectures, backend APIs, and applied machine learning systems.",
+        "hero.cta_work": "Explore Selected Work",
+        "hero.cta_contact": "Start a Conversation",
+        "hero.stack_label": "PRACTICE & TOOLING:",
+        "work.eyebrow": "01 // SELECTED COMMISSIONS",
         "work.title": "Interactive Production Prototypes",
-        "work.lead": "Full-featured frontend architectures engineered with clean HTML5, modern CSS Grid/Flexbox, and zero-dependency JavaScript state management. Click any window to launch the live build.",
-        "flowly.tag": "B2B SaaS / AI Workflow Automation",
-        "flowly.desc": "Dark-mode platform interface for autonomous B2B workflow orchestration. Engineered with interactive pipeline state visualization, a responsive bento-box metrics grid, and a real-time monthly/annual pricing calculator.",
-        "lumos.tag": "Editorial E-Commerce / Design Objects",
-        "lumos.desc": "Digital storefront for sculptural lighting and architectural objects. Built with an asymmetrical lookbook grid, dynamic material finish selector (Travertine, Brushed Brass, Matte Obsidian), and reactive shopping bag state.",
-        "nomada.tag": "Hospitality / Gastronomy & Booking",
-        "nomada.desc": "Immersive web experience for a wood-fire tasting restaurant. Implements an accessible 4-tab seasonal menu selector (Starters, Open Fire, Desserts, Cellar) and an interactive table reservation system with instant validation.",
+        "work.lead": "Three bespoke concept pieces crafted with semantic HTML5, modern layout systems, and zero-dependency client state machines. Open any live artifact to inspect performance and typography.",
+        "flowly.tag": "B2B SaaS / Workflow Orchestration",
+        "flowly.desc": "High-contrast platform interface designed for autonomous enterprise workflow pipelines. Engineered with interactive state machines, a responsive bento-grid feature matrix, and a dual-cadence billing calculator.",
+        "lumos.tag": "Editorial E-Commerce / Atelier Luminaires",
+        "lumos.desc": "Minimalist boutique catalog celebrating artisanal architectural lighting. Features an asymmetrical lookbook composition, dynamic travertine and brushed bronze finish variant switcher, and quick-bag state mechanics.",
+        "nomada.tag": "Hospitality / Culinary Arts & Bookings",
+        "nomada.desc": "Sensory digital presentation for an open-fire tasting room. Incorporates a W3C-compliant 4-chapter tasting menu tablist (Starters, Fire, Sweets, Cellar) and an integrated intimate table booking engine with immediate validation.",
         "project.live": "Launch Live Demo",
-        "project.code": "Source Code",
-        "stack.eyebrow": "02 // Technical Capabilities",
-        "stack.title": "Full Stack & AI Engineering Focus",
-        "stack.lead": "Combining solid software engineering fundamentals with modern web frameworks and applied artificial intelligence.",
+        "project.code": "Inspect Source",
+        "stack.eyebrow": "02 // DISCIPLINE & ARCHITECTURE",
+        "stack.title": "Full Stack Craft & Applied AI",
+        "stack.lead": "Merging computer science rigor with editorial interface design. Quiet, resilient software that executes instantly and scales effortlessly.",
         "pillar1.title": "Frontend Architecture & UI",
         "pillar1.desc": "Responsive, accessible interfaces built with HTML5, modern CSS (Grid, Flexbox, fluid clamp typography), JavaScript/TypeScript, and React. Focused on fast initial load times and clean component state.",
         "pillar2.title": "Backend APIs & Full Stack (MERN)",
         "pillar2.desc": "Designing RESTful APIs, authentication flows, and database schemas using Node.js, Express, MongoDB, and SQL. Experienced with Git workflows and serverless deployments on Vercel.",
         "pillar3.title": "AI Engineering & Python",
         "pillar3.desc": "Training in Artificial Intelligence Engineering. Working with Python, data processing pipelines, LLM API integrations, and building practical software powered by machine learning models.",
-        "about.eyebrow": "03 // About & Background",
-        "about.title": "Engineering Mindset & Academic Foundation",
-        "about.uni": "🎓 AI Engineering — UNSTA",
-        "about.lang_badge": "🌐 Spanish (Native) & English",
+        "about.eyebrow": "03 // BIOGRAPHY & EDUCATION",
+        "about.title": "Engineering Foundation & Craft",
+        "about.loc_label": "BASE",
+        "about.edu_label": "STUDIES",
+        "about.lang_label": "LANGUAGES",
+        "about.uni": "AI Engineering — UNSTA",
+        "about.lang_badge": "Spanish (Native) • English (Professional)",
         "about.p1": "I’m José Ignacio Fernández Cano, a Full Stack Developer and AI Engineering student at UNSTA (Universidad del Norte Santo Tomás de Aquino) in Tucumán, Argentina.",
         "about.p2": "My core technical work revolves around building end-to-end web applications with the MERN stack (MongoDB, Express, React, Node.js), crafting high-performance vanilla web interfaces, and writing Python for data analysis and AI integration.",
         "about.p3": "I care about clean version control with Git, maintainable code structure, fast serverless deployments, and software that solves real operational problems without unnecessary complexity.",
-        "contact.eyebrow": "04 // Contact",
-        "contact.title": "Let’s work together.",
+        "contact.eyebrow": "04 // INQUIRIES",
+        "contact.title": "Let’s build something thoughtful.",
         "contact.sub": "Open to full-stack development roles, freelance web projects, and technical collaborations across the US, Europe, and Latin America.",
-        "contact.email_label": "Direct Email",
-        "contact.wa_label": "WhatsApp",
-        "contact.social_label": "Profiles & Repositories",
+        "contact.email_label": "Direct Inquiries",
+        "contact.wa_label": "Direct WhatsApp",
+        "contact.social_label": "Network & Repositories",
         "form.heading": "Send a Direct Message",
         "form.name": "Your Name",
         "form.email": "Email Address",
@@ -493,48 +515,51 @@
       },
       es: {
         "nav.work": "Proyectos",
-        "nav.stack": "Stack Técnico",
-        "nav.about": "Sobre Mí",
+        "nav.stack": "Capacidades",
+        "nav.about": "Trayectoria",
         "nav.contact": "Contacto",
-        "hero.role": "Desarrollador Full Stack & Estudiante de Ingeniería en IA",
+        "hero.badge": "DISPONIBLE PARA PROYECTOS SELECTOS",
         "hero.title": "Desarrollo aplicaciones web robustas, interfaces interactivas y software inteligente.",
         "hero.sub": "José Ignacio Fernández Cano — Tucumán, Argentina. Desarrollando arquitecturas frontend modernas, APIs backend y modelos de IA.",
-        "hero.cta_work": "Ver Demos en Vivo",
-        "hero.cta_contact": "Contactar",
-        "hero.stack_label": "Stack Principal:",
-        "work.eyebrow": "01 // Proyectos Destacados",
+        "hero.cta_work": "Explorar Proyectos",
+        "hero.cta_contact": "Iniciar Conversación",
+        "hero.stack_label": "PRÁCTICA Y HERRAMIENTAS:",
+        "work.eyebrow": "01 // PROYECTOS DESTACADOS",
         "work.title": "Prototipos Interactivos en Producción",
-        "work.lead": "Arquitecturas frontend completas desarrolladas con HTML5 semántico, CSS Grid/Flexbox moderno y manejo de estado en JavaScript nativo sin dependencias. Haz clic en cualquier ventana para abrir la demo.",
+        "work.lead": "Tres piezas conceptuales desarrolladas con HTML5 semántico, maquetación moderna y lógica de estado en JavaScript nativo sin dependencias. Abre cualquier demo para comprobar rendimiento y tipografía.",
         "flowly.tag": "SaaS B2B / Automatización con IA",
-        "flowly.desc": "Interfaz dark-mode para orquestación de flujos de trabajo B2B. Incluye visualización interactiva de pipelines, grilla bento responsiva de métricas y calculadora de precios mensual/anual en tiempo real.",
-        "lumos.tag": "E-Commerce Editorial / Diseño & Iluminación",
-        "lumos.desc": "Tienda digital de luminarias arquitectónicas. Desarrollada con grilla editorial asimétrica, selector interactivo de materiales (Travertino, Bronce, Obsidiana) y carrito reactivo.",
-        "nomada.tag": "Gastronomía / Menú Interactivo & Reservas",
-        "nomada.desc": "Experiencia web inmersiva para restaurante de fuegos. Implementa un selector accesible de menú por pasos (Entradas, Fuegos, Postres, Cava) y sistema de reserva de mesas con validación.",
+        "flowly.desc": "Interfaz de alto contraste para orquestación de flujos de trabajo empresariales. Diseñada con máquina de estados interactiva, grilla bento de métricas y calculadora de facturación mensual/anual en tiempo real.",
+        "lumos.tag": "E-Commerce Editorial / Luminarias de Autor",
+        "lumos.desc": "Catálogo boutique minimalista de luminarias arquitectónicas. Combina grilla asimétrica tipo lookbook, selector interactivo de acabados en travertino y bronce cepillado, y carrito reactivo.",
+        "nomada.tag": "Gastronomía / Cocina de Fuego & Reservas",
+        "nomada.desc": "Presentación sensorial para restaurante de cocina a la llama. Incorpora menú por pasos accesible (Entradas, Fuegos, Postres, Cava) y motor de reserva de mesas con validación instantánea.",
         "project.live": "Abrir Demo en Vivo",
         "project.code": "Ver Código",
-        "stack.eyebrow": "02 // Capacidades Técnicas",
-        "stack.title": "Enfoque Full Stack & Ingeniería en IA",
-        "stack.lead": "Combinando fundamentos sólidos de ingeniería de software con tecnologías web modernas e inteligencia artificial aplicada.",
+        "stack.eyebrow": "02 // DISCIPLINA Y ARQUITECTURA",
+        "stack.title": "Ingeniería Full Stack & IA Aplicada",
+        "stack.lead": "Uniendo el rigor de la ingeniería de software con el diseño editorial de interfaces. Software sobrio, resiliente y de ejecución instantánea.",
         "pillar1.title": "Arquitectura Frontend & UI",
         "pillar1.desc": "Interfaces responsivas y accesibles construidas con HTML5, CSS moderno (Grid, Flexbox, tipografía fluida con clamp), JavaScript/TypeScript y React. Enfoque en velocidad de carga y estado limpio.",
         "pillar2.title": "APIs Backend & Full Stack (MERN)",
         "pillar2.desc": "Diseño de APIs REST, autenticación y bases de datos con Node.js, Express, MongoDB y SQL. Manejo fluido de Git y despliegues serverless en Vercel.",
         "pillar3.title": "Ingeniería en IA & Python",
         "pillar3.desc": "Formación académica en Ingeniería en Inteligencia Artificial. Desarrollo con Python, procesamiento de datos, integración de APIs de LLMs y modelos de machine learning.",
-        "about.eyebrow": "03 // Sobre Mí & Formación",
-        "about.title": "Perfil Técnico y Base Académica",
-        "about.uni": "🎓 Ingeniería en IA — UNSTA",
-        "about.lang_badge": "🌐 Español (Nativo) & Inglés",
+        "about.eyebrow": "03 // BIOGRAFÍA Y FORMACIÓN",
+        "about.title": "Base de Ingeniería y Criterio Técnico",
+        "about.loc_label": "UBICACIÓN",
+        "about.edu_label": "CARRERA",
+        "about.lang_label": "IDIOMAS",
+        "about.uni": "Ingeniería en IA — UNSTA",
+        "about.lang_badge": "Español (Nativo) • Inglés (Profesional)",
         "about.p1": "Soy José Ignacio Fernández Cano, Desarrollador Full Stack y estudiante de Ingeniería en Inteligencia Artificial en la UNSTA (Universidad del Norte Santo Tomás de Aquino), en Tucumán, Argentina.",
         "about.p2": "Mi trabajo técnico se centra en el desarrollo de aplicaciones web integrales con el stack MERN (MongoDB, Express, React, Node.js), maquetación avanzada sin dependencias y programación en Python para análisis de datos e IA.",
         "about.p3": "Me enfoco en mantener repositorios limpios con Git, código escalable y bien estructurado, despliegues ágiles en la nube y soluciones prácticas listas para producción.",
-        "contact.eyebrow": "04 // Contacto",
-        "contact.title": "Trabajemos juntos.",
+        "contact.eyebrow": "04 // CONTACTO",
+        "contact.title": "Construyamos algo con criterio.",
         "contact.sub": "Disponible para posiciones como desarrollador Full Stack, proyectos web freelance y colaboraciones técnicas en EE.UU., Europa y Latinoamérica.",
-        "contact.email_label": "Email Directo",
-        "contact.wa_label": "WhatsApp",
-        "contact.social_label": "Perfiles y Repositorios",
+        "contact.email_label": "Consultas Directas",
+        "contact.wa_label": "WhatsApp Directo",
+        "contact.social_label": "Perfiles y Código",
         "form.heading": "Enviar un Mensaje Directo",
         "form.name": "Tu Nombre",
         "form.email": "Correo Electrónico",
@@ -553,7 +578,15 @@
       document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.getAttribute('data-i18n');
         if (dict[key]) {
-          el.textContent = dict[key];
+          if (key === 'hero.title') {
+            if (lang === 'es') {
+              el.innerHTML = 'Desarrollo <em class="editorial-accent">aplicaciones web robustas</em>, interfaces interactivas y software inteligente.';
+            } else {
+              el.innerHTML = 'Building robust <em class="editorial-accent">web applications</em>, interactive interfaces, and intelligent software.';
+            }
+          } else {
+            el.textContent = dict[key];
+          }
         }
       });
 
