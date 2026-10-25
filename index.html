@@ -46,7 +46,7 @@
           <a href="#contact" class="btn-nav-commission" data-i18n="nav.contact">Get in Touch</a>
         </nav>
 
-        <button class="mobile-toggle" id="mobileMenuBtn" aria-label="Toggle Navigation" aria-expanded="false" aria-controls="mobileDrawer">
+        <button type="button" class="mobile-toggle" id="mobileMenuBtn" aria-label="Toggle Navigation" aria-expanded="false" aria-controls="mobileDrawer">
           <span class="bar"></span>
           <span class="bar"></span>
         </button>
@@ -609,7 +609,7 @@
     }
 
     let ackTimer = null;
-    function handleContactSubmit() {
+    async function handleContactSubmit() {
       const btn = document.getElementById('formSubmitBtn');
       const ack = document.getElementById('formAck');
       const form = document.getElementById('contactForm');
@@ -618,16 +618,29 @@
       btn.disabled = true;
       btn.style.opacity = '0.6';
 
-      setTimeout(() => {
-        form.reset();
+      try {
+        const formData = new FormData(form);
+        const res = await fetch('https://formsubmit.co/ajax/nachofc2017@gmail.com', {
+          method: 'POST',
+          headers: { 'Accept': 'application/json' },
+          body: formData
+        });
+        if (res.ok) {
+          form.reset();
+          ack.classList.add('visible');
+          if (ackTimer) clearTimeout(ackTimer);
+          ackTimer = setTimeout(() => {
+            ack.classList.remove('visible');
+          }, 6000);
+        } else {
+          window.location.href = `mailto:nachofc2017@gmail.com?subject=Project Inquiry&body=${encodeURIComponent(form.message?.value || '')}`;
+        }
+      } catch (err) {
+        window.location.href = `mailto:nachofc2017@gmail.com?subject=Project Inquiry&body=${encodeURIComponent(form.message?.value || '')}`;
+      } finally {
         btn.disabled = false;
         btn.style.opacity = '1';
-        ack.classList.add('visible');
-        if (ackTimer) clearTimeout(ackTimer);
-        ackTimer = setTimeout(() => {
-          ack.classList.remove('visible');
-        }, 6000);
-      }, 350);
+      }
     }
 
     document.addEventListener('DOMContentLoaded', () => {
@@ -678,7 +691,7 @@
       const revealSelectors = [
         '.section-heading',
         '.project-card',
-        '.capability-card',
+        '.capability-box',
         '.about-card',
         '.contact-details-col',
         '.contact-form-col',
@@ -700,7 +713,7 @@
           observer.observe(el);
         });
 
-        document.querySelectorAll('.capabilities-grid .capability-card').forEach((card, idx) => {
+        document.querySelectorAll('.capabilities-grid .capability-box').forEach((card, idx) => {
           card.style.setProperty('--reveal-delay', `${idx * 110}ms`);
         });
         document.querySelectorAll('.channels-stack .channel-box').forEach((box, idx) => {

@@ -1114,3 +1114,110 @@ body.flowly-body {
 .return-link:hover {
   color: #fff;
 }
+
+/* --- Ponytail: Scroll Reveal & Micro-Interactions --- */
+.reveal-item {
+  opacity: 0;
+  transform: translateY(38px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+  will-change: opacity, transform;
+}
+
+.reveal-item.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.btn-flowly-cta,
+.btn-flowly-outline,
+.btn-tier,
+.btn-flowly-primary {
+  position: relative;
+  overflow: hidden;
+  transform: translate3d(var(--mag-x, 0px), var(--mag-y, 0px), 0);
+  transition:
+    transform 0.24s cubic-bezier(0.16, 1, 0.3, 1),
+    background-color 0.22s ease,
+    border-color 0.22s ease,
+    box-shadow 0.24s ease;
+  will-change: transform;
+}
+
+.btn-flowly-cta::before,
+.btn-flowly-outline::before,
+.btn-tier::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(
+    110deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.18) 50%,
+    transparent 100%
+  );
+  transform: skewX(-20deg);
+  transition: left 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+}
+
+.btn-flowly-cta:hover::before,
+.btn-flowly-outline:hover::before,
+.btn-tier:hover::before {
+  left: 140%;
+}
+
+.btn-flowly-cta:active,
+.btn-flowly-outline:active,
+.btn-tier:active {
+  transform: scale(0.97);
+}
+
+.bento-cell,
+.pricing-card,
+.final-cta-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.bento-cell::after,
+.pricing-card::after,
+.final-cta-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(
+    420px circle at var(--spot-x, 50%) var(--spot-y, 50%),
+    rgba(99, 102, 241, 0.12),
+    transparent 65%
+  );
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.bento-cell:hover::after,
+.pricing-card:hover::after,
+.final-cta-card:hover::after {
+  opacity: 1;
+}
+
+.bento-cell > *,
+.pricing-card > *,
+.final-cta-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-item {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}

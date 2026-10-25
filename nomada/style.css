@@ -857,3 +857,109 @@ body.nomada-body {
 .sub-back-link:hover {
   color: #fff;
 }
+
+/* --- Ponytail: Scroll Reveal & Micro-Interactions --- */
+.reveal-item {
+  opacity: 0;
+  transform: translateY(38px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+  will-change: opacity, transform;
+}
+
+.reveal-item.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.btn-nomada-primary,
+.btn-nomada-outline,
+.btn-book-header,
+.btn-submit-booking {
+  position: relative;
+  overflow: hidden;
+  transform: translate3d(var(--mag-x, 0px), var(--mag-y, 0px), 0);
+  transition:
+    transform 0.24s cubic-bezier(0.16, 1, 0.3, 1),
+    background-color 0.22s ease,
+    border-color 0.22s ease,
+    box-shadow 0.24s ease;
+  will-change: transform;
+}
+
+.btn-nomada-primary::before,
+.btn-nomada-outline::before,
+.btn-book-header::before,
+.btn-submit-booking::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(
+    110deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.22) 50%,
+    transparent 100%
+  );
+  transform: skewX(-20deg);
+  transition: left 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+}
+
+.btn-nomada-primary:hover::before,
+.btn-nomada-outline:hover::before,
+.btn-book-header:hover::before,
+.btn-submit-booking:hover::before {
+  left: 140%;
+}
+
+.btn-nomada-primary:active,
+.btn-nomada-outline:active,
+.btn-book-header:active,
+.btn-submit-booking:active {
+  transform: scale(0.97);
+}
+
+.dish-card,
+.reservation-card-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.dish-card::after,
+.reservation-card-wrapper::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(
+    400px circle at var(--spot-x, 50%) var(--spot-y, 50%),
+    rgba(212, 163, 89, 0.08),
+    transparent 65%
+  );
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.dish-card:hover::after,
+.reservation-card-wrapper:hover::after {
+  opacity: 1;
+}
+
+.dish-card > *,
+.reservation-card-wrapper > * {
+  position: relative;
+  z-index: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-item {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}

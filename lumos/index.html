@@ -460,6 +460,63 @@
           newsletterForm.reset();
         });
       }
+
+      // Ponytail: Scroll Reveal with IntersectionObserver
+      const revealTargets = [
+        '.editorial-section-header',
+        '.lumos-card',
+        '.craft-editorial-lead',
+        '.pillar-box',
+        '.newsletter-card'
+      ];
+      const revealEls = document.querySelectorAll(revealTargets.join(','));
+      if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries, obs) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              obs.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12, rootMargin: '0px 0px -50px 0px' });
+
+        revealEls.forEach(el => {
+          el.classList.add('reveal-item');
+          observer.observe(el);
+        });
+
+        document.querySelectorAll('.asymmetric-grid .lumos-card').forEach((card, i) => {
+          card.style.setProperty('--reveal-delay', `${(i % 3) * 100}ms`);
+        });
+        document.querySelectorAll('.craft-pillars .pillar-box').forEach((pillar, i) => {
+          pillar.style.setProperty('--reveal-delay', `${(i % 2) * 100}ms`);
+        });
+      }
+
+      // Ponytail: MicroKit Magnetic Buttons & Card Cursor Spotlight
+      if (window.matchMedia('(pointer: fine)').matches) {
+        document.querySelectorAll('.lumos-card, .pillar-box').forEach(card => {
+          card.addEventListener('pointermove', e => {
+            const rect = card.getBoundingClientRect();
+            card.style.setProperty('--spot-x', `${e.clientX - rect.left}px`);
+            card.style.setProperty('--spot-y', `${e.clientY - rect.top}px`);
+          });
+        });
+
+        document.querySelectorAll('.btn-bag-primary, .btn-newsletter').forEach(btn => {
+          btn.addEventListener('pointermove', e => {
+            const rect = btn.getBoundingClientRect();
+            const dx = (e.clientX - (rect.left + rect.width / 2)) * 0.14;
+            const dy = (e.clientY - (rect.top + rect.height / 2)) * 0.18;
+            btn.style.setProperty('--mag-x', `${dx.toFixed(1)}px`);
+            btn.style.setProperty('--mag-y', `${dy.toFixed(1)}px`);
+          });
+          btn.addEventListener('pointerleave', () => {
+            btn.style.setProperty('--mag-x', '0px');
+            btn.style.setProperty('--mag-y', '0px');
+          });
+        });
+      }
     });
   </script>
 </body>

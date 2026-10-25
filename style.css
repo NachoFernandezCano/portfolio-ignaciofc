@@ -1411,7 +1411,7 @@ button, input, textarea {
   z-index: 1;
 }
 
-.capability-card:hover,
+.capability-box:hover,
 .channel-box:hover {
   transform: translateY(-3px);
 }
